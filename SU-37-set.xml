@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+SU-37 simulation config.
+
+2006-06-04 Lee Elliott
+************************************************************************
+-->
+
+  <PropertyList>
+    <sim>
+      <flight-model>yasim</flight-model>
+      <status>experimental</status>
+      <author>Lee Elliott</author>
+      <aero>SU-37-yasim</aero>
+      <fuel-fraction>1.0</fuel-fraction>
+
+      <description>Sukoi SU-37 type aircraft (YASim FDM)</description>
+
+      <virtual-cockpit archive="y">true</virtual-cockpit>
+
+      <number-views type="int" archive="y">7</number-views>
+
+      <view n="0">
+        <internal archive="y">true</internal>
+        <config>
+          <x-offset-m archive="y">0.00</x-offset-m>
+          <y-offset-m archive="y">1.45</y-offset-m>
+          <z-offset-m archive="y">5.02</z-offset-m>
+          <pitch-offset-deg>0</pitch-offset-deg>
+          <default-field-of-view-deg>55</default-field-of-view-deg>
+        </config>
+      </view>
+
+      <view n="6">
+        <name>Drop View</name>
+        <type>lookat</type>
+        <config>
+          <eye-lat-deg-path>/sim/view[6]/latitude-deg</eye-lat-deg-path>
+          <eye-lon-deg-path>/sim/view[6]/longitude-deg</eye-lon-deg-path>
+          <eye-alt-ft-path>/sim/view[6]/altitude-ft</eye-alt-ft-path>
+          <eye-roll-deg-path>/sim/view[6]/roll-deg</eye-roll-deg-path>
+          <eye-pitch-deg-path>/sim/view[6]/pitch-deg</eye-pitch-deg-path>
+          <eye-heading-deg-path>/sim/view[6]/heading-deg</eye-heading-deg-path>
+          <at-model type="bool">true</at-model>
+          <at-model-idx type="int">0</at-model-idx>
+          <ground-level-nearplane-m type="double">1.0f</ground-level-nearplane-m>
+          <default-field-of-view-deg type="double">8.0</default-field-of-view-deg>
+          <x-offset-m type="double">0</x-offset-m>
+          <y-offset-m type="double">0</y-offset-m>
+          <z-offset-m type="double">0</z-offset-m>
+          <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+        </config>
+      </view>
+
+      <current-view>
+        <field-of-view>55.0</field-of-view>
+      </current-view>
+
+<!-- Shift the camera target point back -->
+      <view n="1">
+        <config>
+          <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+        </config>
+      </view>
+
+      <view n="2">
+        <config>
+          <x-offset-m archive="y" type="double">5.4</x-offset-m>
+          <z-offset-m archive="y">-19.7</z-offset-m>
+          <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+        </config>
+      </view>
+
+      <view n="3">
+        <config>
+          <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+        </config>
+      </view>
+
+      <view n="5">
+        <config>
+          <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+        </config>
+      </view>
+
+      <sound>
+        <path>Aircraft/SU-37/Sounds/SU-37-sound.xml</path>
+      </sound>
+
+      <panel>
+        <path>Aircraft/SU-37/Panels/SU-37-vfr-panel.xml</path>
+      </panel>
+      <panel_2>
+        <path>Aircraft/SU-37/Panels/SU-37-mini-panel.xml</path>
+      </panel_2>
+
+      <hud>
+        <path>Aircraft/SU-37/Huds/SU-37-hud1.xml</path>
+        <visibility>true</visibility>
+      </hud>
+
+      <model>
+        <path>Aircraft/SU-37/Models/SU-37-model.xml</path>
+        <nozzle-animation type="float">1</nozzle-animation>
+      </model>
+
+      <systems>
+        <autopilot>
+          <path>Aircraft/SU-37/Systems/SU-37-autopilot.xml</path>
+        </autopilot>
+        <electrical>
+          <path>Aircraft/SU-37/Systems/SU-37-electrical.xml</path>
+        </electrical>
+      </systems>
+
+      <chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
+
+<!-- Flap settings -->
+      <flaps>
+        <setting>0.00</setting>
+        <setting>0.08</setting>
+        <setting>0.16</setting>
+        <setting>0.32</setting>
+        <setting>0.48</setting>
+        <setting>0.64</setting>
+        <setting>0.82</setting>
+        <setting>1.00</setting>
+      </flaps>
+
+<!-- AoA Indexer target 7.0 deg -->
+      <aoa-indexer>
+        <too-slow-deg>8.5</too-slow-deg>  <!-- target +1.5 deg -->
+        <slow-deg>7.5</slow-deg>          <!-- target +0.5 deg -->         
+        <fast-deg>6.5</fast-deg>          <!-- target -0.5 deg -->         
+        <too-fast-deg>-5.5</too-fast-deg>  <!-- target -1.5 deg -->         
+      </aoa-indexer>
+
+<!--sub models -->
+      <submodels>
+        <serviceable type="bool">1</serviceable>
+        <path>Aircraft/SU-37/SU-37-submodels.xml</path>
+      </submodels>
+
+<!-- Help -->
+      <help>
+        <title>SU-37</title>
+        <key>
+          <name>Ctrl-z</name>
+          <desc>toggle auto-speedbrake</desc>
+        </key>
+        <key>
+          <name>Ctrl-\</name>
+          <desc>toggle stick mode</desc>
+        </key>
+        <key>
+          <name>d/f</name>
+          <desc>retract/extend slats</desc>
+        </key>
+        <key>
+          <name>j/k</name>
+          <desc>decrease/increase spoilers</desc>
+        </key>
+        <key>
+          <name>K</name>
+          <desc>toggle trajectory markers</desc>
+        </key>
+        <key>
+          <name>U</name>
+          <desc>update drop view position</desc>
+        </key>
+      </help>
+
+    </sim>
+
+<!-- Keyboard mapping -->
+    <input>
+      <keyboard>
+<!-- Toggle auto-flaps, slats and reheat -->
+        <key n="25">
+          <name>CTRL-y</name>
+          <desc>Toggle auto-flaps, slats and reheat</desc>
+          <binding n="0">
+            <command>nasal</command>
+            <script>SU37KBMAPPING.toggle_auto_flaps()</script>
+          </binding>
+          <binding n="1">
+            <command>nasal</command>
+            <script>SU37KBMAPPING.toggle_auto_slats()</script>
+          </binding>
+          <binding n="2">
+            <command>nasal</command>
+            <script>SU37KBMAPPING.toggle_auto_reheat()</script>
+          </binding>
+        </key>
+
+<!-- Toggle auto-speedbrake -->
+        <key n="26">
+          <name>CTRL-z</name>
+          <desc>Toggle auto-speedbrake</desc>
+          <binding>
+            <command>nasal</command>
+            <script>SU37KBMAPPING.toggle_auto_speedbrake()</script>
+          </binding>
+        </key>
+
+<!-- Stick mode -->
+        <key n="28">
+          <name>CTRL-\</name>
+          <desc>Toggle stick mode</desc>
+          <binding>
+            <command>nasal</command>
+            <script>SU37KBMAPPING.toggle_fcs_stick_mode()</script>
+          </binding>
+        </key>
+
+<!-- Slats -->
+        <key n="100">
+          <name>d</name>
+          <desc>Retract Slats.</desc>
+          <binding>
+            <command>property-adjust</command>
+            <property>/controls/flight/slats</property>
+            <step type="double">-0.25</step>
+          </binding>
+        </key>
+        <key n="102">
+          <name>f</name>
+          <desc>Extend Slats.</desc>
+          <binding>
+            <command>property-adjust</command>
+            <property>/controls/flight/slats</property>
+            <step type="double">0.25</step>
+          </binding>
+        </key>
+
+<!-- Trajectory Markers -->
+        <key n="75">
+          <name>K</name>
+          <desc>Toggle trajectory markers</desc>
+          <binding n="0">
+            <command>nasal</command>
+            <script>SU37TRAJMARKER.toggle_traj_mkr()</script>
+          </binding>
+        </key>
+
+<!-- Update Drop View position -->
+        <key n="85">
+          <name>U</name>
+          <desc>Update Drop View position</desc>
+          <binding n="0">
+            <command>nasal</command>
+            <script>SU37DROPVIEW.update_drop_view_pos()</script>
+          </binding>
+        </key>
+      </keyboard>
+    </input>
+
+    <autopilot>
+      <FCS>
+        <controls>
+          <elevon-pitch-norm type="float">0</elevon-pitch-norm>
+          <elevon-roll-norm type="float">0</elevon-roll-norm>
+          <flaperon-flap-norm type="float">0</flaperon-flap-norm>
+          <flaperon-roll-norm type="float">0</flaperon-roll-norm>
+          <rudder-norm type="float">0</rudder-norm>
+          <slats-norm type="float">0</slats-norm>
+          <spoiler-norm type="float">0</spoiler-norm>
+          <engines>
+            <fod-screens-pos-norm type="float">0</fod-screens-pos-norm>
+            <engine n="0">
+              <throttle-norm type="float">0</throttle-norm>
+              <reheat-norm type="float">0</reheat-norm>
+              <vector-norm type="float">0</vector-norm>
+            </engine>
+            <engine n="1">
+              <throttle-norm type="float">0</throttle-norm>
+              <reheat-norm type="float">0</reheat-norm>
+              <vector-norm type="float">0</vector-norm>
+            </engine>
+          </engines>
+        </controls>
+        <internal>
+        </internal>
+        <locks>
+          <auto-flaps type="string">off</auto-flaps>
+          <auto-reheat type="string">off</auto-reheat>
+          <auto-slats type="string">off</auto-slats>
+          <auto-speedbrake type="string">off</auto-speedbrake>
+          <fod-screens type="string">lowered</fod-screens>
+          <pitch type="string">off</pitch>
+          <roll type="string">off</roll>
+          <vfps type="string">off</vfps>
+        </locks>
+        <modes>
+          <auto-speedbrake type="string">off</auto-speedbrake>
+          <stick type="string">direct</stick>
+        </modes>
+        <settings>
+          <aei-open-aoa-deg type="float">4.0</aei-open-aoa-deg>
+          <aei-open-aoa-factor type="float">0.25</aei-open-aoa-factor>
+          <aei-open-min-agl-ft type="float">100.0</aei-open-min-agl-ft>
+          <auto-reheat-threshold type="float">0.8</auto-reheat-threshold>
+          <fod-screens-agl-ft type="float">100.0</fod-screens-agl-ft>
+          <flaps-extend-mach type="float">0.4</flaps-extend-mach>
+          <flaps-extend-factor type="float">7.0</flaps-extend-factor>
+          <slats-extend-mach type="float">0.5</slats-extend-mach>
+          <slats-extend-factor type="float">5</slats-extend-factor>
+          <low-alt-max-pitch-deg type="float">20</low-alt-max-pitch-deg>
+          <max-climb-rate-fps type="float">200</max-climb-rate-fps>
+          <min-climb-rate-fps type="float">200</min-climb-rate-fps>
+          <pitch-climb-agl-ft type="float">20</pitch-climb-agl-ft>
+          <roll-factor type="float">50</roll-factor>
+          <rotate-airspeed-kt type="float">100</rotate-airspeed-kt>
+          <take-off-pitch-deg type="float">11</take-off-pitch-deg>
+          <target-climb-rate-fps type="float">0</target-climb-rate-fps>
+          <target-elevon-pitch-deg type="float">0</target-elevon-pitch-deg>
+          <target-elevon-roll-deg type="float">0</target-elevon-roll-deg>
+          <target-flaperon-roll-deg type="float">0</target-flaperon-roll-deg>
+          <target-vector-pitch-deg type="float">0</target-vector-pitch-deg>
+          <target-vector-roll-deg type="float">0</target-vector-roll-deg>
+        </settings>
+        <store>
+          <elevator-trim type="float">0</elevator-trim>
+        </store>
+      </FCS>
+
+      <settings>
+        <approach-aoa-deg type="float">7.0</approach-aoa-deg>
+        <climb-out-agl-ft type="float">400</climb-out-agl-ft>
+        <gear-up-agl-ft type="float">25</gear-up-agl-ft>
+        <gear-down-airspeed-kt type="float">200</gear-down-airspeed-kt>
+        <steering-heading-deg type="float">0</steering-heading-deg>
+        <target-agl-ft type="float">300</target-agl-ft>
+        <target-altitude-ft type="float">3000</target-altitude-ft>
+        <target-aoa-deg type="float">11</target-aoa-deg>
+        <target-pitch-deg type="float">0</target-pitch-deg>
+        <target-speed-kt type="float">400.0</target-speed-kt>
+        <target-mach type="float">0.7</target-mach>
+      </settings>
+      <locks>
+        <speed trype="string">initialised</speed>
+        <auto-take-off type="string">enabled</auto-take-off>
+        <auto-landing type="string">disabled</auto-landing>
+        <ground-steering type="string">disabled</ground-steering>
+        <rudder-control type="string">initialised</rudder-control>
+        <approach-AoA-lock type="string">initialised</approach-AoA-lock>
+      </locks>
+    </autopilot>
+
+<!-- Start with the Parking Brake on -->
+    <controls>
+      <engines>
+        <engine n="0">
+          <throttle type="double">0</throttle>
+          <reheat type="double">0</reheat>
+        </engine>
+        <engine n="1">
+          <throttle type="double">0</throttle>
+          <reheat type="double">0</reheat>
+        </engine>
+      </engines>
+      <gear>
+        <brake-parking type="double">1.0</brake-parking>
+      </gear>
+    </controls>
+
+<!-- Engine indexes & FOD Screen pos -->
+    <engines>
+      <engine n="0">
+        <engine-num type="int">0</engine-num>
+        <throttle-norm type="float">0</throttle-norm>
+        <reheat-norm type="float">0</reheat-norm>
+      </engine>
+      <engine n="1">
+        <engine-num type="int">1</engine-num>
+        <throttle-norm type="float">0</throttle-norm>
+        <reheat-norm type="float">0</reheat-norm>
+      </engine>
+    </engines>
+
+<!-- Fuel Tank indexes -->
+    <consumables>
+      <fuel>
+        <tank n="0">
+          <tank-num type="int">0</tank-num>
+        </tank>
+        <tank n="1">
+          <tank-num type="int">1</tank-num>
+        </tank>
+        <tank n="2">
+          <tank-num type="int">2</tank-num>
+        </tank>
+        <tank n="3">
+          <tank-num type="int">3</tank-num>
+        </tank>
+      </fuel>
+    </consumables>
+
+    <nasal>
+      <SU37KBMAPPING>
+        <file>Aircraft/SU-37/Nasal/SU-37-keyboard-mapping.nas</file>
+      </SU37KBMAPPING>
+      <SU37DROPVIEW>
+        <file>Aircraft/SU-37/Nasal/SU-37-drop-view.nas</file>
+        <script>initialise();</script>
+      </SU37DROPVIEW>
+      <SU37TRAJMARKER>
+        <file>Aircraft/SU-37/Nasal/SU-37-trajectory-markers.nas</file>
+      </SU37TRAJMARKER>
+      <SU37APFCS>
+        <file>Aircraft/SU-37/Nasal/SU-37-AP-FCS-instrument.nas</file>
+      </SU37APFCS>
+      <SU37FCSTHROTTLES>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-throttles.nas</file>
+        <script>initialise();</script>
+      </SU37FCSTHROTTLES>
+      <SU37FCSSLATS>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-slats.nas</file>
+        <script>initialise();</script>
+      </SU37FCSSLATS>
+      <SU37FCSFLIGHTLISTENERS>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-flight-listeners.nas</file>
+        <script>initialise();</script>
+      </SU37FCSFLIGHTLISTENERS>
+      <SU37FCSLOCKSLISTENERS>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-locks-listeners.nas</file>
+        <script>initialise();</script>
+      </SU37FCSLOCKSLISTENERS>
+      <SU37FCSVELOCITIESLISTENERS>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-velocities-listeners.nas</file>
+        <script>initialise();</script>
+      </SU37FCSVELOCITIESLISTENERS>
+      <SU37FCSSLAVELISTENERS>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-slave-listeners.nas</file>
+        <script>initialise();</script>
+      </SU37FCSSLAVELISTENERS>
+      <SU37APLISTENERS>
+        <file>Aircraft/SU-37/Nasal/SU-37-autopilot-listeners.nas</file>
+        <script>initialise();</script>
+      </SU37APLISTENERS>
+      <SU37AUTOTAKEOFF>
+        <file>Aircraft/SU-37/Nasal/SU-37-auto-take-off.nas</file>
+      </SU37AUTOTAKEOFF>
+      <SU37AUTOLAND>
+        <file>Aircraft/SU-37/Nasal/SU-37-auto-land.nas</file>
+      </SU37AUTOLAND>
+      <SU37FCSCANARDS>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-canards.nas</file>
+        <script>initialise();</script>
+      </SU37FCSCANARDS>
+      <SU37AEIANIMATION>
+        <file>Aircraft/SU-37/Nasal/SU-37-AEI-animation.nas</file>
+        <script>initialise();</script>
+      </SU37AEIANIMATION>
+      <SU37FODSCREENSANIMATION>
+        <file>Aircraft/SU-37/Nasal/SU-37-FOD-screens-animation.nas</file>
+        <script>initialise();</script>
+      </SU37FODSCREENSANIMATION>
+    </nasal>
+
+  </PropertyList>
