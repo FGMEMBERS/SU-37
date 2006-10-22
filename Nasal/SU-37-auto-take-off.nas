@@ -28,7 +28,7 @@ ato_initiation = func {
     setprop("/controls/gear/brake-right", 0);
     setprop("/controls/gear/brake-parking", 0);
 
-    setprop("/autopilot/FCS/modes/stick", "FCS");
+    setprop("/autopilot/FCS/modes/stick", "pitch");
     setprop("/autopilot/FCS/locks/auto-flaps", "off");
     setprop("/autopilot/FCS/locks/auto-slats", "engaged");
     setprop("/autopilot/FCS/locks/auto-reheat", "engaged");
@@ -85,6 +85,7 @@ ato_altitude = func {
     setprop("/autopilot/locks/speed", "speed-with-throttle");
     setprop("/autopilot/locks/auto-take-off", "disabled");
     setprop("/autopilot/locks/auto-landing", "enabled");
+    setprop("/autopilot/FCS/modes/stick", "vfps");
     setprop("/autopilot/FCS/locks/auto-flaps", "off");
     setprop("/autopilot/FCS/locks/auto-slats", "off");
     setprop("/autopilot/FCS/locks/auto-reheat", "off");

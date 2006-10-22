@@ -1438,7 +1438,7 @@
       <chunks>
         <chunk>
           <type>literal</type>
-          <text>Stick Mode:</text>
+          <text>SMode:</text>
         </chunk>
       </chunks>
       <transformations>
@@ -1453,32 +1453,33 @@
       </transformations>
     </layer>
 
-<!-- Stick mode - direct -->
+<!-- FCS Direct mode -->
+<!-- Disengaged -->
     <layer>
       <condition>
-        <equals>
+        <not-equals>
           <property>/autopilot/FCS/modes/stick</property>
           <value>direct</value>
-        </equals>
+        </not-equals>
       </condition>
-      <name>Stick mode - direct</name>
+      <name>FCS Direct mode - disengaged</name>
       <type>text</type>
       <point-size>12</point-size>
       <color>
-        <red>1.0</red>
-        <green>0.0</green>
+        <red>0.0</red>
+        <green>1.0</green>
         <blue>0.0</blue>
       </color>
       <chunks>
         <chunk>
           <type>literal</type>
-          <text>Direct</text>
+          <text>DR</text>
         </chunk>
       </chunks>
       <transformations>
         <transformation>
           <type>x-shift</type>
-          <offset>-80</offset>
+          <offset>-110</offset>
         </transformation>
         <transformation>
           <type>y-shift</type>
@@ -1487,15 +1488,15 @@
       </transformations>
     </layer>
 
-<!-- Stick mode - FCS -->
+<!-- Engaged -->
     <layer>
       <condition>
         <equals>
           <property>/autopilot/FCS/modes/stick</property>
-          <value>FCS</value>
+          <value>direct</value>
         </equals>
       </condition>
-      <name>Stick mode - FCS</name>
+      <name>FCS Direct mode - engaged</name>
       <type>text</type>
       <point-size>12</point-size>
       <color>
@@ -1506,13 +1507,151 @@
       <chunks>
         <chunk>
           <type>literal</type>
-          <text>FCS</text>
+          <text>DR</text>
         </chunk>
       </chunks>
       <transformations>
         <transformation>
           <type>x-shift</type>
-          <offset>-80</offset>
+          <offset>-110</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-18</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+<!-- FCS Pitch mode -->
+<!-- Disengaged -->
+    <layer>
+      <condition>
+        <not-equals>
+          <property>/autopilot/FCS/modes/stick</property>
+          <value>pitch</value>
+        </not-equals>
+      </condition>
+      <name>FCS Pitch mode - disengaged</name>
+      <type>text</type>
+      <point-size>12</point-size>
+      <color>
+        <red>0.0</red>
+        <green>1.0</green>
+        <blue>0.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>PT</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-85</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-18</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+<!-- Engaged -->
+    <layer>
+      <condition>
+        <equals>
+          <property>/autopilot/FCS/modes/stick</property>
+          <value>pitch</value>
+        </equals>
+      </condition>
+      <name>FCS Pitch mode - engaged</name>
+      <type>text</type>
+      <point-size>12</point-size>
+      <color>
+        <red>1.0</red>
+        <green>0.0</green>
+        <blue>0.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>PT</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-85</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-18</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+<!-- FCS VFPS mode -->
+<!-- Disengaged -->
+    <layer>
+      <condition>
+        <not-equals>
+          <property>/autopilot/FCS/modes/stick</property>
+          <value>vfps</value>
+        </not-equals>
+      </condition>
+      <name>FCS VFPS mode - disengaged</name>
+      <type>text</type>
+      <point-size>12</point-size>
+      <color>
+        <red>0.0</red>
+        <green>1.0</green>
+        <blue>0.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>VC</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-60</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-18</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+<!-- Engaged -->
+    <layer>
+      <condition>
+        <equals>
+          <property>/autopilot/FCS/modes/stick</property>
+          <value>vfps</value>
+        </equals>
+      </condition>
+      <name>FCS VFPS mode - engaged</name>
+      <type>text</type>
+      <point-size>12</point-size>
+      <color>
+        <red>1.0</red>
+        <green>0.0</green>
+        <blue>0.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>VC</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-60</offset>
         </transformation>
         <transformation>
           <type>y-shift</type>
@@ -2518,36 +2657,6 @@
       </transformations>
     </layer>
 
-<!-- FCS Direct control factor -->
-<!--
-    <layer>
-      <name>FCS Direct control factor</name>
-      <type>text</type>
-      <point-size>12</point-size>
-      <color>
-        <red>1.0</red>
-        <green>1.0</green>
-        <blue>1.0</blue>
-      </color>
-      <chunks>
-        <chunk>
-          <type>number-value</type>
-          <property>/autopilot/FCS/controls/direct-control-factor</property>
-          <format>%01.3f</format>
-        </chunk>
-      </chunks>
-      <transformations>
-        <transformation>
-          <type>x-shift</type>
-          <offset>0</offset>
-        </transformation>
-        <transformation>
-          <type>y-shift</type>
-          <offset>-60</offset>
-        </transformation>
-      </transformations>
-    </layer>
--->
   </layers>
 
   <actions>
@@ -2722,17 +2831,43 @@
       </binding>
     </action>
 
-<!-- FCS STick mode -->
+<!-- FCS Stick modes -->
     <action>
-      <name>Toggle FCS Stick mode</name>
+      <name>Toggle Direct FCS Stick mode</name>
       <button>0</button>
-      <x>-84</x>
+      <x>-114</x>
       <y>-21</y>
-      <w>45</w>
+      <w>25</w>
       <h>14</h>
       <binding>
         <command>nasal</command>
-        <script>SU37APFCS.toggle_fcs_stick_mode()</script>
+        <script>SU37APFCS.set_fcs_direct_stick_mode()</script>
+      </binding>
+    </action>
+
+    <action>
+      <name>Toggle Pitch FCS Stick mode</name>
+      <button>0</button>
+      <x>-89</x>
+      <y>-21</y>
+      <w>25</w>
+      <h>14</h>
+      <binding>
+        <command>nasal</command>
+        <script>SU37APFCS.set_fcs_pitch_stick_mode()</script>
+      </binding>
+    </action>
+
+    <action>
+      <name>Toggle VFPS FCS Stick mode</name>
+      <button>0</button>
+      <x>-64</x>
+      <y>-21</y>
+      <w>25</w>
+      <h>14</h>
+      <binding>
+        <command>nasal</command>
+        <script>SU37APFCS.set_fcs_vfps_stick_mode()</script>
       </binding>
     </action>
 

@@ -41,8 +41,12 @@ Autopilot
     NV  Nav1 hold
 
 FCS
-  Stick mode                Direct (scaled pilot input)/FCS (stick
-                            controls climb and roll settings)
+  SMode
+      DR                    Direct - stick controls pitch and roll deflection
+                            elevons and flaperons directly.
+      PT                    Pitch - stick controls pitch angle and roll settings.
+      VC                    VFPS - stick controls climb and roll setings.
+
     Auto take-off/landing
       TO                    Auto take-off
       LD                    Auto landing

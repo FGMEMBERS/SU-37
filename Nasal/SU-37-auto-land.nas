@@ -11,7 +11,7 @@ atl_initiation = func {
   fcs_approach_aoa_deg = getprop("/autopilot/settings/approach-aoa-deg");
   current_vfps = getprop("/velocities/vertical-speed-fps");
 
-  setprop("/autopilot/FCS/modes/stick", "FCS");
+  setprop("/autopilot/FCS/modes/stick", "vfps");
   setprop("/autopilot/FCS/locks/auto-flaps", "engaged");
   setprop("/autopilot/FCS/locks/auto-slats", "engaged");
   setprop("/autopilot/FCS/locks/auto-speedbrake", "engaged");

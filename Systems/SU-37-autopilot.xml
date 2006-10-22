@@ -11,7 +11,7 @@
     Filters
     ===============
 -->
-<!-- FCS input filters -->
+<!-- FCS listener filters -->
   <filter>
     <name>Aileron input Filter - used by the FCS</name>
     <debug>false</debug>

@@ -124,14 +124,19 @@ toggle_nav1_hold = func {
   }
 }
 #--------------------------------------------------------------------
-toggle_fcs_stick_mode = func {
-  fcs_stick_mode = getprop("/autopilot/FCS/modes/stick");
+set_fcs_direct_stick_mode = func {
   
-  if(fcs_stick_mode == "FCS") {
-    setprop("/autopilot/FCS/modes/stick", "direct");
-  } else {
-    setprop("/autopilot/FCS/modes/stick", "FCS");
-  }
+  setprop("/autopilot/FCS/modes/stick", "direct");
+}
+#--------------------------------------------------------------------
+set_fcs_pitch_stick_mode = func {
+  
+  setprop("/autopilot/FCS/modes/stick", "pitch");
+}
+#--------------------------------------------------------------------
+set_fcs_vfps_stick_mode = func {
+  
+  setprop("/autopilot/FCS/modes/stick", "vfps");
 }
 #--------------------------------------------------------------------
 toggle_fcs_auto_flaps = func {

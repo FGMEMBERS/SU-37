@@ -169,6 +169,33 @@ SU-37 simulation config.
           <name>U</name>
           <desc>update drop view position</desc>
         </key>
+        <line></line>
+        <line>Autopilot</line>
+        <line>  Altitude</line>
+        <line>    AH - Altitude hold</line>
+        <line>    TF - Terrain follow/AGL hold</line>
+        <line>    PH - Pitch hold</line>
+        <line>    AO - AoA hold</line>
+        <line>    VC - VFPS hold</line>
+        <line>    GS - Glideslope hold</line>
+        <line>    MC - Mach Climb</line>
+        <line></line>
+        <line>  Heading</line>
+        <line>    WL - Wing leveler</line>
+        <line>    TH - True Heading hold</line>
+        <line>    DG - DG Heading hold</line>
+        <line>    NV - Nav1 hold</line>
+        <line></line>
+        <line>FCS</line>
+        <line>  SMode</line>
+        <line>    DR - Stick controls elevon and flaperon directly</line>
+        <line>    PT - Stick controls pitch and roll settings</line>
+        <line>    VC - Stick controls climb and roll settings</line>
+        <line></line>
+        <line>  AF - Auto flaps</line>
+        <line>  AS - Auto slats</line>
+        <line>  SB - Auto speedbrake</line>
+        <line>  AR - Auto reheat</line>
       </help>
 
     </sim>
@@ -257,8 +284,10 @@ SU-37 simulation config.
     </input>
 
     <autopilot>
+<!-- FCS -->
       <FCS>
         <controls>
+          <canard-incidence-deg type="double">0.0</canard-incidence-deg>
           <elevon-pitch-norm type="float">0</elevon-pitch-norm>
           <elevon-roll-norm type="float">0</elevon-roll-norm>
           <flaperon-flap-norm type="float">0</flaperon-flap-norm>
@@ -287,9 +316,9 @@ SU-37 simulation config.
           <auto-reheat type="string">off</auto-reheat>
           <auto-slats type="string">off</auto-slats>
           <auto-speedbrake type="string">off</auto-speedbrake>
-          <fod-screens type="string">lowered</fod-screens>
           <pitch type="string">off</pitch>
           <roll type="string">off</roll>
+          <thrust-vectoring type="string">engaged</thrust-vectoring>
           <vfps type="string">off</vfps>
         </locks>
         <modes>
@@ -308,7 +337,9 @@ SU-37 simulation config.
           <slats-extend-factor type="float">5</slats-extend-factor>
           <low-alt-max-pitch-deg type="float">20</low-alt-max-pitch-deg>
           <max-climb-rate-fps type="float">200</max-climb-rate-fps>
-          <min-climb-rate-fps type="float">200</min-climb-rate-fps>
+          <min-climb-rate-fps type="float">-180</min-climb-rate-fps>
+          <max-pitch-deg type="float">70</max-pitch-deg>
+          <min-pitch-deg type="float">-60</min-pitch-deg>
           <pitch-climb-agl-ft type="float">20</pitch-climb-agl-ft>
           <roll-factor type="float">50</roll-factor>
           <rotate-airspeed-kt type="float">100</rotate-airspeed-kt>
@@ -325,6 +356,12 @@ SU-37 simulation config.
         </store>
       </FCS>
 
+<!-- Autopilot -->
+      <locks>
+        <auto-take-off type="string">enabled</auto-take-off>
+        <auto-landing type="string">disabled</auto-landing>
+        <ground-steering type="string">disabled</ground-steering>
+      </locks>
       <settings>
         <approach-aoa-deg type="float">7.0</approach-aoa-deg>
         <climb-out-agl-ft type="float">400</climb-out-agl-ft>
@@ -334,18 +371,11 @@ SU-37 simulation config.
         <target-agl-ft type="float">300</target-agl-ft>
         <target-altitude-ft type="float">3000</target-altitude-ft>
         <target-aoa-deg type="float">11</target-aoa-deg>
-        <target-pitch-deg type="float">0</target-pitch-deg>
+        <target-climb-rate-fps type="double">0</target-climb-rate-fps>
+        <target-pitch-deg type="double">0</target-pitch-deg>
         <target-speed-kt type="float">400.0</target-speed-kt>
         <target-mach type="float">0.7</target-mach>
       </settings>
-      <locks>
-        <speed trype="string">initialised</speed>
-        <auto-take-off type="string">enabled</auto-take-off>
-        <auto-landing type="string">disabled</auto-landing>
-        <ground-steering type="string">disabled</ground-steering>
-        <rudder-control type="string">initialised</rudder-control>
-        <approach-AoA-lock type="string">initialised</approach-AoA-lock>
-      </locks>
     </autopilot>
 
 <!-- Start with the Parking Brake on -->
@@ -411,6 +441,14 @@ SU-37 simulation config.
       <SU37APFCS>
         <file>Aircraft/SU-37/Nasal/SU-37-AP-FCS-instrument.nas</file>
       </SU37APFCS>
+      <SU37FCSSTICKMODE>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-stick-mode.nas</file>
+        <script>initialise();</script>
+      </SU37FCSSTICKMODE>
+      <SU37FCSELEVATORINPUT>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-elevator-input.nas</file>
+        <script>initialise();</script>
+      </SU37FCSELEVATORINPUT>
       <SU37FCSTHROTTLES>
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-throttles.nas</file>
         <script>initialise();</script>
@@ -423,10 +461,10 @@ SU-37 simulation config.
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-flight-listeners.nas</file>
         <script>initialise();</script>
       </SU37FCSFLIGHTLISTENERS>
-      <SU37FCSLOCKSLISTENERS>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-locks-listeners.nas</file>
+      <SU37FCSSPEEDLOCK>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-speed-lock.nas</file>
         <script>initialise();</script>
-      </SU37FCSLOCKSLISTENERS>
+      </SU37FCSSPEEDLOCK>
       <SU37FCSVELOCITIESLISTENERS>
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-velocities-listeners.nas</file>
         <script>initialise();</script>

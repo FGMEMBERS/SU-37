@@ -11,30 +11,39 @@ altitude_lock = func {
   # Set the necessary locks for each pitch hold function.
   altitude_lock = getprop("/autopilot/locks/altitude");
   if(altitude_lock == "altitude-hold") {
+    setprop("/autopilot/FCS/modes/stick", "vfps");
     setprop("/autopilot/FCS/locks/pitch", "engaged");
     setprop("/autopilot/FCS/locks/vfps", "engaged");
   } elsif (altitude_lock == "agl-hold") {
+    setprop("/autopilot/FCS/modes/stick", "vfps");
     setprop("/autopilot/FCS/locks/pitch", "engaged");
     setprop("/autopilot/FCS/locks/vfps", "engaged");
   } elsif (altitude_lock == "pitch-hold") {
+    setprop("/autopilot/FCS/modes/stick", "pitch");
     setprop("/autopilot/FCS/locks/pitch", "engaged");
     setprop("/autopilot/FCS/locks/vfps", "off");
   } elsif (altitude_lock == "aoa-hold") {
+    setprop("/autopilot/FCS/modes/stick", "pitch");
     setprop("/autopilot/FCS/locks/pitch", "engaged");
     setprop("/autopilot/FCS/locks/vfps", "off");
   } elsif (altitude_lock == "vfps-hold") {
+    setprop("/autopilot/FCS/modes/stick", "vfps");
     setprop("/autopilot/FCS/locks/pitch", "engaged");
     setprop("/autopilot/FCS/locks/vfps", "engaged");
   } elsif (altitude_lock == "gs1-hold") {
+    setprop("/autopilot/FCS/modes/stick", "vfps");
     setprop("/autopilot/FCS/locks/pitch", "engaged");
     setprop("/autopilot/FCS/locks/vfps", "engaged");
   } elsif (altitude_lock == "mach-climb") {
+    setprop("/autopilot/FCS/modes/stick", "vfps");
     setprop("/autopilot/FCS/locks/pitch", "engaged");
     setprop("/autopilot/FCS/locks/vfps", "engaged");
   } elsif (altitude_lock == "climb-out") {
+    setprop("/autopilot/FCS/modes/stick", "pitch");
     setprop("/autopilot/FCS/locks/pitch", "engaged");
     setprop("/autopilot/FCS/locks/vfps", "off");
   } elsif (altitude_lock == "ground-roll") {
+    setprop("/autopilot/FCS/modes/stick", "pitch");
     setprop("/autopilot/FCS/locks/pitch", "engaged");
     setprop("/autopilot/FCS/locks/vfps", "off");
   }
