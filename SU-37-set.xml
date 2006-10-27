@@ -294,17 +294,19 @@ SU-37 simulation config.
           <flaperon-roll-norm type="float">0</flaperon-roll-norm>
           <rudder-norm type="float">0</rudder-norm>
           <slats-norm type="float">0</slats-norm>
-          <spoiler-norm type="float">0</spoiler-norm>
+          <speedbrake-norm type="float">0</speedbrake-norm>
           <engines>
             <fod-screens-pos-norm type="float">0</fod-screens-pos-norm>
             <engine n="0">
-              <throttle-norm type="float">0</throttle-norm>
+              <aei-norm type="double">0</aei-norm>
               <reheat-norm type="float">0</reheat-norm>
+              <throttle-norm type="float">0</throttle-norm>
               <vector-norm type="float">0</vector-norm>
             </engine>
             <engine n="1">
-              <throttle-norm type="float">0</throttle-norm>
+              <aei-norm type="double">0</aei-norm>
               <reheat-norm type="float">0</reheat-norm>
+              <throttle-norm type="float">0</throttle-norm>
               <vector-norm type="float">0</vector-norm>
             </engine>
           </engines>
@@ -343,6 +345,8 @@ SU-37 simulation config.
           <pitch-climb-agl-ft type="float">20</pitch-climb-agl-ft>
           <roll-factor type="float">50</roll-factor>
           <rotate-airspeed-kt type="float">100</rotate-airspeed-kt>
+          <speedbrake-extend-kt type="double">0</speedbrake-extend-kt>
+          <speedbrake-extend-mach type="double">0</speedbrake-extend-mach>
           <take-off-pitch-deg type="float">11</take-off-pitch-deg>
           <target-climb-rate-fps type="float">0</target-climb-rate-fps>
           <target-elevon-pitch-deg type="float">0</target-elevon-pitch-deg>
@@ -431,66 +435,88 @@ SU-37 simulation config.
       <SU37KBMAPPING>
         <file>Aircraft/SU-37/Nasal/SU-37-keyboard-mapping.nas</file>
       </SU37KBMAPPING>
+
       <SU37DROPVIEW>
         <file>Aircraft/SU-37/Nasal/SU-37-drop-view.nas</file>
         <script>initialise();</script>
       </SU37DROPVIEW>
+
       <SU37TRAJMARKER>
         <file>Aircraft/SU-37/Nasal/SU-37-trajectory-markers.nas</file>
       </SU37TRAJMARKER>
+
       <SU37APFCS>
         <file>Aircraft/SU-37/Nasal/SU-37-AP-FCS-instrument.nas</file>
       </SU37APFCS>
+
       <SU37FCSSTICKMODE>
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-stick-mode.nas</file>
         <script>initialise();</script>
       </SU37FCSSTICKMODE>
-      <SU37FCSELEVATORINPUT>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-elevator-input.nas</file>
+
+      <SU37FCSELEVONPITCHINPUT>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-elevon-pitch-input.nas</file>
         <script>initialise();</script>
-      </SU37FCSELEVATORINPUT>
+      </SU37FCSELEVONPITCHINPUT>
+
+      <SU37FCSELEVONROLLINPUT>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-elevon-roll-input.nas</file>
+        <script>initialise();</script>
+      </SU37FCSELEVONROLLINPUT>
+
+      <SU37FCSFLAPERONFLAPS>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-flaperon-flaps.nas</file>
+        <script>initialise();</script>
+      </SU37FCSFLAPERONFLAPS>
+
       <SU37FCSTHROTTLES>
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-throttles.nas</file>
         <script>initialise();</script>
       </SU37FCSTHROTTLES>
+
       <SU37FCSSLATS>
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-slats.nas</file>
         <script>initialise();</script>
       </SU37FCSSLATS>
-      <SU37FCSFLIGHTLISTENERS>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-flight-listeners.nas</file>
+
+      <SU37FCSAUTOSPEEDBRAKE>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-auto-speedbrake.nas</file>
         <script>initialise();</script>
-      </SU37FCSFLIGHTLISTENERS>
-      <SU37FCSSPEEDLOCK>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-speed-lock.nas</file>
-        <script>initialise();</script>
-      </SU37FCSSPEEDLOCK>
+      </SU37FCSAUTOSPEEDBRAKE>
+
       <SU37FCSVELOCITIESLISTENERS>
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-velocities-listeners.nas</file>
         <script>initialise();</script>
       </SU37FCSVELOCITIESLISTENERS>
+
       <SU37FCSSLAVELISTENERS>
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-slave-listeners.nas</file>
         <script>initialise();</script>
       </SU37FCSSLAVELISTENERS>
+
       <SU37APLISTENERS>
         <file>Aircraft/SU-37/Nasal/SU-37-autopilot-listeners.nas</file>
         <script>initialise();</script>
       </SU37APLISTENERS>
+
       <SU37AUTOTAKEOFF>
         <file>Aircraft/SU-37/Nasal/SU-37-auto-take-off.nas</file>
       </SU37AUTOTAKEOFF>
+
       <SU37AUTOLAND>
         <file>Aircraft/SU-37/Nasal/SU-37-auto-land.nas</file>
       </SU37AUTOLAND>
+
       <SU37FCSCANARDS>
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-canards.nas</file>
         <script>initialise();</script>
       </SU37FCSCANARDS>
+
       <SU37AEIANIMATION>
         <file>Aircraft/SU-37/Nasal/SU-37-AEI-animation.nas</file>
         <script>initialise();</script>
       </SU37AEIANIMATION>
+
       <SU37FODSCREENSANIMATION>
         <file>Aircraft/SU-37/Nasal/SU-37-FOD-screens-animation.nas</file>
         <script>initialise();</script>

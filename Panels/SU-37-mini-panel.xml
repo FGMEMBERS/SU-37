@@ -104,7 +104,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
     <engine-reheat-control>/controls/engines/engine[1]/reheat</engine-reheat-control>
     <engine-reheat-display>/engines/engine[1]/reheat-norm</engine-reheat-display>
    </params>
-   <x>286</x>
+   <x>296</x>
    <y>31</y>
    <w>12</w>
    <h>60</h>

@@ -20,6 +20,6 @@ fod_screens = func {
   }
   # This doesn't need a high refresh rate but set it higher than
   # the animation interpolation period.
-  settimer(fod_screens, 1.0);
+  settimer(fod_screens, 1);
 }
 #--------------------------------------------------------------------

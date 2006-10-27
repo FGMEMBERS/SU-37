@@ -5,7 +5,7 @@
 
 <PropertyList>
 
-  <path>SU-37-005-125d.ac</path>
+  <path>SU-37-005-125e.ac</path>
   <offsets>
     <z-m>0.0</z-m>
     <pitch-deg>0</pitch-deg>
@@ -168,7 +168,7 @@
     </axis>
   </animation>
 
-<!-- Spoiler -->
+<!-- Speedbrake -->
 <!-- Sselect non-visibile parts when extended -->
   <animation>
     <type>select</type>
@@ -178,7 +178,7 @@
     <object-name>HULL_Speedbrake_Well</object-name>
     <condition>
       <greater-than>
-        <property>surface-positions/spoiler-pos-norm</property>
+        <property>surface-positions/speedbrake-pos-norm</property>
         <value>0.0</value>
       </greater-than>
     </condition>
@@ -188,7 +188,7 @@
   <animation>
 	<type>rotate</type>
 	<object-name>HULL_Speedbrake_Inner</object-name>
-	<property>surface-positions/spoiler-pos-norm</property>
+	<property>surface-positions/speedbrake-pos-norm</property>
 	<factor>-45</factor>
     <center>
       <x-m>8.95</x-m>
@@ -205,7 +205,7 @@
   <animation>
 	<type>rotate</type>
 	<object-name>HULL_Speedbrake_Outer</object-name>
-	<property>surface-positions/spoiler-pos-norm</property>
+	<property>surface-positions/speedbrake-pos-norm</property>
 	<factor>-45</factor>
     <center>
       <x-m>8.95</x-m>
@@ -224,7 +224,7 @@
 	<type>rotate</type>
 	<object-name>HULL_Speedbrake_Arm_Outer</object-name>
 	<object-name>HULL_Speedbrake_Arm_Inner</object-name>
-	<property>surface-positions/spoiler-pos-norm</property>
+	<property>surface-positions/speedbrake-pos-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -259,7 +259,7 @@
   <animation>
     <type>translate</type>
 	<object-name>HULL_Speedbrake_Arm_Inner</object-name>
-    <property>surface-positions/spoiler-pos-norm</property>
+    <property>surface-positions/speedbrake-pos-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -284,7 +284,6 @@
       <z>-0.157</z>
     </axis>
   </animation>
-
 
 <!-- U/C -->
 <!-- Nose -->
@@ -4493,6 +4492,75 @@
     </axis>
   </animation>
 
+<!-- Reheat -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>L_Reheat</object-name>
+  </animation>
+
+  <animation>
+	<type>translate</type>
+	<object-name>L_Reheat</object-name>
+	<offset-m>18.43</offset-m>
+	<axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+	</axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>L_Reheat</object-name>
+    <condition>
+      <greater-than>
+        <property>/engines/engine[0]/n2</property>
+        <value>99.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>L_Reheat</object-name>
+    <property>engines/engine[0]/reheat-norm</property>
+    <x-factor>1</x-factor>
+    <x-offset>0</x-offset>
+    <x-max>1</x-max>
+    <x-min>0</x-min>
+    <y-factor>0</y-factor>
+    <y-offset>1</y-offset>
+    <z-factor>0</z-factor>
+    <z-offset>1</z-offset>
+  </animation>
+
+  <animation> 
+    <type>blend</type>
+    <object-name>L_Reheat</object-name>
+    <property>engines/engine[0]/reheat-norm</property>
+    <factor>-1.0</factor>
+    <offset>1.0</offset>
+    <max>1.0</max>
+    <min>0.0</min>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>L_Reheat</object-name>
+    <property>engines/engine[0]/vector-norm</property>
+    <factor>-720</factor>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
 <!-- Right Outer -->
 <!-- Vectoring -->
   <animation>
@@ -6568,6 +6636,75 @@
     <center>
       <x-m>18.43</x-m>
       <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Reheat -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>R_Reheat</object-name>
+  </animation>
+
+  <animation>
+	<type>translate</type>
+	<object-name>R_Reheat</object-name>
+	<offset-m>18.43</offset-m>
+	<axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+	</axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>R_Reheat</object-name>
+    <condition>
+      <greater-than>
+        <property>/engines/engine[1]/n2</property>
+        <value>99.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>R_Reheat</object-name>
+    <property>engines/engine[]/reheat-norm</property>
+    <x-factor>1</x-factor>
+    <x-offset>0</x-offset>
+    <x-max>1</x-max>
+    <x-min>0</x-min>
+    <y-factor>0</y-factor>
+    <y-offset>1</y-offset>
+    <z-factor>0</z-factor>
+    <z-offset>1</z-offset>
+  </animation>
+
+  <animation> 
+    <type>blend</type>
+    <object-name>R_Reheat</object-name>
+    <property>engines/engine[1]/reheat-norm</property>
+    <factor>-1.0</factor>
+    <offset>1.0</offset>
+    <max>1.0</max>
+    <min>0.0</min>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>R_Reheat</object-name>
+    <property>engines/engine[1]/vector-norm</property>
+    <factor>-720</factor>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>-1.15</y-m>
       <z-m>-0.2</z-m>
     </center>
     <axis>

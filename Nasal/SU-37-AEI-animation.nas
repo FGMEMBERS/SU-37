@@ -1,7 +1,7 @@
 # FCS AEI animation handler.
 #--------------------------------------------------------------------
 initialise = func {
-  settimer(aei_doors, 4);
+  setlistener("/autopilot/FCS/inputs/alpha-deg-filtered", aei_doors);
 }
 #--------------------------------------------------------------------
 aei_doors = func {
@@ -9,16 +9,19 @@ aei_doors = func {
   # This animation script has no effect upon the aerodynamic
   # behaviour.
 
-  fcs_aei_open_aoa_deg = getprop("/autopilot/FCS/settings/aei-open-aoa-deg");
-  fcs_aei_open_aoa_factor = getprop("/autopilot/FCS/settings/aei-open-aoa-factor");
-  fcs_aei_open_min_agl_ft = getprop("/autopilot/FCS/settings/aei-open-min-agl-ft");
+  fcs_aei_open_aoa_deg = props.globals.getNode("/autopilot/FCS/settings/aei-open-aoa-deg");
+  fcs_aei_open_aoa_factor = props.globals.getNode("/autopilot/FCS/settings/aei-open-aoa-factor");
+  fcs_aei_open_min_agl_ft = props.globals.getNode("/autopilot/FCS/settings/aei-open-min-agl-ft");
+  fcs_aei_norm0 = props.globals.getNode("/autopilot/FCS/controls/engines/engine[0]/aei-norm");
+  fcs_aei_norm1 = props.globals.getNode("/autopilot/FCS/controls/engines/engine[1]/aei-norm");
 
-  altitude_agl_ft = getprop("/position/altitude-agl-ft");
-  aoa_deg = getprop("/orientation/alpha-deg");
+  altitude_agl_ft = props.globals.getNode("/position/altitude-agl-ft");
 
-  if(altitude_agl_ft > fcs_aei_open_min_agl_ft) {
-    if(aoa_deg > fcs_aei_open_aoa_deg) {
-      fcs_aei_norm = fcs_aei_open_aoa_factor * (aoa_deg - fcs_aei_open_aoa_deg);
+  aoa_deg = cmdarg().getValue();
+
+  if(aoa_deg > fcs_aei_open_aoa_deg.getValue()) {
+    if(altitude_agl_ft.getValue() > fcs_aei_open_min_agl_ft.getValue()) {
+      fcs_aei_norm = fcs_aei_open_aoa_factor.getValue() * (aoa_deg - fcs_aei_open_aoa_deg.getValue());
       if(fcs_aei_norm > 1) {
         fcs_aei_norm = 1;
       }
@@ -28,8 +31,7 @@ aei_doors = func {
   } else {
     fcs_aei_norm = 0;
   }
-  setprop("/autopilot/FCS/controls/engines/engine[0]/aei-norm", fcs_aei_norm);
-  setprop("/autopilot/FCS/controls/engines/engine[1]/aei-norm", fcs_aei_norm);
-  settimer(aei_doors, 0.1);
+  fcs_aei_norm0.setDoubleValue(fcs_aei_norm);
+  fcs_aei_norm1.setDoubleValue(fcs_aei_norm);
 }
 #--------------------------------------------------------------------

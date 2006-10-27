@@ -77,16 +77,16 @@
 
 <!-- AP Filters -->
   <filter>
-    <name>Pitch Filter</name>
+    <name>Target Pitch Filter</name>
     <debug>false</debug>
     <type>noise-spike</type>
     <input>/autopilot/settings/target-pitch-deg</input>
     <output>/autopilot/internal/target-pitch-deg-filtered</output>
-    <max-rate-of-change>6.0</max-rate-of-change>
+    <max-rate-of-change>10.0</max-rate-of-change>
   </filter>
 
   <filter>
-    <name>Roll Filter</name>
+    <name>Target Roll Filter</name>
     <debug>false</debug>
     <type>noise-spike</type>
     <input>/autopilot/settings/target-roll-deg</input>
@@ -148,6 +148,25 @@
     <max-rate-of-change>20.0</max-rate-of-change>
   </filter>
 
+<!-- Reheat animation filters -->
+  <filter>
+    <name>Engine[0] reheat control filter</name>
+    <debug>false</debug>
+    <type>noise-spike</type>
+    <input>/autopilot/FCS/controls/engines/engine[0]/reheat-norm</input>
+    <output>/autopilot/FCS/controls/engines/engine[0]/reheat-norm-filtered</output>
+    <max-rate-of-change>0.5</max-rate-of-change>
+  </filter>
+
+  <filter>
+    <name>Engine[1] reheat control filter</name>
+    <debug>false</debug>
+    <type>noise-spike</type>
+    <input>/autopilot/FCS/controls/engines/engine[1]/reheat-norm</input>
+    <output>/autopilot/FCS/controls/engines/engine[1]/reheat-norm-filtered</output>
+    <max-rate-of-change>0.5</max-rate-of-change>
+  </filter>
+
 <!--
     ======================
     Flight surface drivers
@@ -177,7 +196,7 @@
       <beta>1.0</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>
-      <Ti>4.0</Ti>
+      <Ti>3.0</Ti>
       <Td>0.2</Td>
       <u_min>-1.0</u_min>
       <u_max>1.0</u_max>
@@ -513,7 +532,7 @@
       <beta>1.0</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>
-      <Ti>30.0</Ti>
+      <Ti>20.0</Ti>
       <Td>0.1</Td>
       <u_min>0.0</u_min>
       <u_max>1.0</u_max>
@@ -723,10 +742,10 @@
       <prop>/velocities/airspeed-kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/FCS/settings/spoiler-extend-speed-kt</prop>
+      <prop>/autopilot/FCS/settings/speedbrake-extend-kt</prop>
     </reference>
     <output>
-      <prop>/autopilot/FCS/controls/spoiler-norm</prop>
+      <prop>/autopilot/FCS/controls/speedbrake-norm</prop>
     </output>
     <config>
       <Ts>0.02</Ts>
@@ -753,10 +772,10 @@
       <prop>/velocities/mach</prop>
     </input>
     <reference>
-      <prop>/autopilot/FCS/settings/spoiler-extend-mach</prop>
+      <prop>/autopilot/FCS/settings/speedbrake-extend-mach</prop>
     </reference>
     <output>
-      <prop>/autopilot/FCS/controls/spoiler-norm</prop>
+      <prop>/autopilot/FCS/controls/speedbrake-norm</prop>
     </output>
     <config>
       <Ts>0.02</Ts>

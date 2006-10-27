@@ -2503,7 +2503,7 @@
       <chunks>
         <chunk>
           <type>number-value</type>
-          <property>/autopilot/FCS/controls/spoiler-norm</property>
+          <property>/autopilot/FCS/controls/speedbrake-norm</property>
           <format>%02.2f</format>
         </chunk>
       </chunks>

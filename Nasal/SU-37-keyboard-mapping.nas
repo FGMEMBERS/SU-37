@@ -3,20 +3,10 @@ toggle_fcs_stick_mode = func {
   fcs_stick_mode = getprop("/autopilot/FCS/modes/stick");
   
   if(fcs_stick_mode == "FCS") {
-    set_direct_mode();
+    setprop("/autopilot/FCS/modes/stick", "direct");
   } elsif(fcs_stick_mode == "direct") {
-    set_fcs_mode();
+    setprop("/autopilot/FCS/modes/stick", "FCS");
   }
-}
-#--------------------------------------------------------------------
-set_direct_mode = func {
-  setprop("/autopilot/FCS/modes/stick", "direct");
-  setprop("/autopilot/loaks/heading", "");
-  setprop("/autopilot/loaks/altitude", "");
-}
-#--------------------------------------------------------------------
-set_fcs_mode = func {
-  setprop("/autopilot/FCS/modes/stick", "FCS");
 }
 #--------------------------------------------------------------------
 toggle_auto_speedbrake = func {

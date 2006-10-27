@@ -5,8 +5,10 @@
 # throttle and throttle range 0.9-1 controls reheat.
 #--------------------------------------------------------------------
 initialise = func {
-  settimer(throttle_left, 0.1);
-  settimer(throttle_right, 0.1);
+  setprop("/engines/engine[0]/n2", 0.0);
+  setprop("/engines/engine[1]/n2", 0.0);
+  settimer(throttle_left, 0.2);
+  settimer(throttle_right, 0.2);
 }
 #--------------------------------------------------------------------
 throttle_left = func {
@@ -16,6 +18,7 @@ throttle_left = func {
   fcs_auto_reheat_threshold = getprop("/autopilot/FCS/settings/auto-reheat-threshold");
   throttle_input = getprop("/controls/engines/engine[0]/throttle");
   reheat_input = getprop("/controls/engines/engine[0]/reheat");
+  n2 = getprop("/engines/engine[0]/n2");
 
   if(fcs_auto_reheat_lock == "engaged") {
     fcs_throttle_factor = 1 / fcs_auto_reheat_threshold;
@@ -41,8 +44,10 @@ throttle_left = func {
     fcs_reheat_norm = reheat_input;
   }
   setprop("/autopilot/FCS/controls/engines/engine[0]/throttle-norm", fcs_throttle_norm);
-  setprop("/autopilot/FCS/controls/engines/engine[0]/reheat-norm", fcs_reheat_norm);
-  settimer(throttle_left, 0.1);
+  if(n2 > 99) {
+    setprop("/autopilot/FCS/controls/engines/engine[0]/reheat-norm", fcs_reheat_norm);
+  }
+  settimer(throttle_left, 0.2);
 }
 #--------------------------------------------------------------------
 throttle_right = func {
@@ -52,6 +57,7 @@ throttle_right = func {
   fcs_auto_reheat_threshold = getprop("/autopilot/FCS/settings/auto-reheat-threshold");
   throttle_input = getprop("/controls/engines/engine[1]/throttle");
   reheat_input = getprop("/controls/engines/engine[1]/reheat");
+  n2 = getprop("/engines/engine[1]/n2");
 
   if(fcs_auto_reheat_lock == "engaged") {
     fcs_throttle_factor = 1 / fcs_auto_reheat_threshold;
@@ -77,7 +83,9 @@ throttle_right = func {
     fcs_reheat_norm = reheat_input;
   }
   setprop("/autopilot/FCS/controls/engines/engine[1]/throttle-norm", fcs_throttle_norm);
-  setprop("/autopilot/FCS/controls/engines/engine[1]/reheat-norm", fcs_reheat_norm);
-  settimer(throttle_right, 0.1);
+  if(n2 > 99) {
+    setprop("/autopilot/FCS/controls/engines/engine[1]/reheat-norm", fcs_reheat_norm);
+  }
+  settimer(throttle_right, 0.2);
 }
 #--------------------------------------------------------------------

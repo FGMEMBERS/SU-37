@@ -2,8 +2,6 @@
 #--------------------------------------------------------------------
 initialise = func {
   setlistener("/autopilot/FCS/inputs/mach-filtered", mach_monitor);
-  setlistener("/autopilot/settings/target-speed-kt", target_speed_kt_monitor);
-  setlistener("/autopilot/settings/target-mach", target_mach_monitor);
 }
 #--------------------------------------------------------------------
 mach_monitor = func {
@@ -31,21 +29,5 @@ flaperon_flaps = func {
       setprop("/autopilot/FCS/controls/flaperon-flap-norm", 0);
     }
   }
-}
-#--------------------------------------------------------------------
-target_speed_kt_monitor = func {
-
-  target_speed_kt = getprop("/autopilot/settings/target-speed-kt");
-  spoiler_extend_speed_kt = target_speed_kt + 10;
-  
-  setprop("/autopilot/FCS/settings/spoiler-extend-speed-kt", spoiler_extend_speed_kt);
-}
-#--------------------------------------------------------------------
-target_mach_monitor = func {
-
-  target_mach = getprop("/autopilot/settings/target-mach");
-  spoiler_extend_mach = target_mach + 0.015;
-  
-  setprop("/autopilot/FCS/settings/spoiler-extend-mach", spoiler_extend_mach);
 }
 #--------------------------------------------------------------------

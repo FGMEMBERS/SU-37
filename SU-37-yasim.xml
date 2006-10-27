@@ -308,12 +308,12 @@
              drag="20.0"/>
 
 <!-- FCS input controls -->
-    <control-input axis="/autopilot/FCS/controls/spoiler-norm"
+    <control-input axis="/autopilot/FCS/controls/speedbrake-norm"
                    control="SPOILER"/>
 
 <!-- Outputs -->
     <control-output control="SPOILER"
-                    prop="/surface-positions/spoiler-pos-norm"/>
+                    prop="/surface-positions/speedbrake-pos-norm"/>
 
 <!-- Control speeds -->
     <control-speed control="SPOILER"
@@ -387,10 +387,10 @@
                     prop="/engines/engine[0]/vector-norm"/>
 
     <control-speed control="THROTTLE"
-                   transition-time="1.0"/>
+                   transition-time="2.0"/>
 
     <control-speed control="REHEAT"
-                   transition-time="1.0"/>
+                   transition-time="2.0"/>
 
   </jet>
 
@@ -406,7 +406,7 @@
     <control-input axis="/autopilot/FCS/controls/engines/engine[1]/throttle-norm"
                    control="THROTTLE"/>
 
-    <control-input axis="/autopilot/FCS/controls/engines/engine[1]/reheat-norm"
+    <control-input axis="/autopilot/FCS/controls/engines/engine[1]/reheat-norm-filtered"
                    control="REHEAT"/>
 
     <control-input axis="/autopilot/FCS/controls/engines/engine[1]/vector-norm"
@@ -430,10 +430,10 @@
                     prop="/engines/engine[1]/vector-norm"/>
 
     <control-speed control="THROTTLE"
-                   transition-time="1.0"/>
+                   transition-time="2.0"/>
 
     <control-speed control="REHEAT"
-                   transition-time="1.0"/>
+                   transition-time="2.0"/>
 
   </jet>
 
