@@ -1,33 +1,37 @@
 # FCS slats handlers.
 #--------------------------------------------------------------------
+# Globals
+fcs_auto_slats_lock = props.globals.getNode("/autopilot/FCS/locks/auto-slats", 1);
+fcs_slats_extend_mach = props.globals.getNode("/autopilot/FCS/settings/slats-extend-mach", 1);
+fcs_slats_extend_factor = props.globals.getNode("/autopilot/FCS/settings/slats-extend-factor", 1);
+fcs_slats_norm = props.globals.getNode("/autopilot/FCS/controls/slats-norm", 1);
+raw_slats_input = props.globals.getNode("/controls/flight/slats", 1);
+#--------------------------------------------------------------------
+# Functions
+#--------------------------------------------------------------------
 initialise = func {
-  settimer(slats, 0.1);
+  setlistener("/autopilot/FCS/internal/mach-filtered", slats);
 }
 #--------------------------------------------------------------------
 slats = func {
-  # Slats functions
+  # Monitor mach and extend the slats if in auto-flap mode.  If not in auto-slats mode
+  # apply the raw slats input
 
-  fcs_auto_slats_lock = getprop("/autopilot/FCS/locks/auto-slats");
-  fcs_slats_extend_mach = getprop("/autopilot/FCS/settings/slats-extend-mach");
-  fcs_slats_extend_factor = getprop("/autopilot/FCS/settings/slats-extend-factor");
-  mach = getprop("/velocities/mach");
-  slats_input = getprop("/controls/flight/slats");
+  mach = cmdarg().getValue();
 
-  if(fcs_auto_slats_lock == "engaged") {
-    if(mach < fcs_slats_extend_mach) {
-      fcs_slats_norm = fcs_slats_extend_factor * (fcs_slats_extend_mach - mach);
-      if(fcs_slats_norm < 0) {
-        fcs_slats_norm = 0;
-      } elsif(fcs_slats_norm > 1) {
-        fcs_slats_norm = 1;
+  if(fcs_auto_slats_lock.getValue() == "engaged") {
+    if(mach < fcs_slats_extend_mach.getValue()) {
+      fsn = fcs_slats_extend_factor.getValue() * (fcs_slats_extend_mach.getValue() - mach);
+      if(fsn > 1) {
+        fcs_slats_norm.setDoubleValue(1);
+      } else {
+        fcs_slats_norm.setDoubleValue(fsn);
       }
     } else {
-      fcs_slats_norm = 0;
+      fcs_slats_norm.setDoubleValue(0);
     }
   } else {
-    fcs_slats_norm = slats_input;
+    fcs_slats_norm.setDoubleValue(raw_slats_input.getValue());
   }
-  setprop("/autopilot/FCS/controls/slats-norm", fcs_slats_norm);
-  settimer(slats, 0.1);
 }
 #--------------------------------------------------------------------

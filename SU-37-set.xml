@@ -88,6 +88,11 @@ SU-37 simulation config.
         <path>Aircraft/SU-37/Sounds/SU-37-sound.xml</path>
       </sound>
 
+      <model>
+        <path>Aircraft/SU-37/Models/SU-37-model.xml</path>
+        <nozzle-animation type="float">1</nozzle-animation>
+      </model>
+
       <panel>
         <path>Aircraft/SU-37/Panels/SU-37-vfr-panel.xml</path>
       </panel>
@@ -99,11 +104,6 @@ SU-37 simulation config.
         <path>Aircraft/SU-37/Huds/SU-37-hud1.xml</path>
         <visibility>true</visibility>
       </hud>
-
-      <model>
-        <path>Aircraft/SU-37/Models/SU-37-model.xml</path>
-        <nozzle-animation type="float">1</nozzle-animation>
-      </model>
 
       <systems>
         <autopilot>
@@ -169,6 +169,10 @@ SU-37 simulation config.
           <name>U</name>
           <desc>update drop view position</desc>
         </key>
+        <key>
+          <name>Ctrl-k</name>
+          <desc>Try this heading into the wind, at 205kt and 2000ft - it might work</desc>
+        </key>
         <line></line>
         <line>Autopilot</line>
         <line>  Altitude</line>
@@ -195,6 +199,7 @@ SU-37 simulation config.
         <line>  AF - Auto flaps</line>
         <line>  AS - Auto slats</line>
         <line>  SB - Auto speedbrake</line>
+        <line>  CI - Cubed Input (Direct mode only)</line>
         <line>  AR - Auto reheat</line>
       </help>
 
@@ -203,6 +208,16 @@ SU-37 simulation config.
 <!-- Keyboard mapping -->
     <input>
       <keyboard>
+<!-- AM -->
+        <key n="11">
+          <name>CTRL-k</name>
+          <desc>AM</desc>
+          <binding>
+            <command>nasal</command>
+            <script>SU37AM.m01()</script>
+          </binding>
+        </key>
+
 <!-- Toggle auto-flaps, slats and reheat -->
         <key n="25">
           <name>CTRL-y</name>
@@ -288,26 +303,26 @@ SU-37 simulation config.
       <FCS>
         <controls>
           <canard-incidence-deg type="double">0.0</canard-incidence-deg>
-          <elevon-pitch-norm type="float">0</elevon-pitch-norm>
-          <elevon-roll-norm type="float">0</elevon-roll-norm>
-          <flaperon-flap-norm type="float">0</flaperon-flap-norm>
-          <flaperon-roll-norm type="float">0</flaperon-roll-norm>
-          <rudder-norm type="float">0</rudder-norm>
-          <slats-norm type="float">0</slats-norm>
-          <speedbrake-norm type="float">0</speedbrake-norm>
+          <elevon-pitch-norm type="double">0</elevon-pitch-norm>
+          <elevon-roll-norm type="double">0</elevon-roll-norm>
+          <flaperon-flaps-norm type="double">0</flaperon-flaps-norm>
+          <flaperon-roll-norm type="double">0</flaperon-roll-norm>
+          <rudder-norm type="double">0</rudder-norm>
+          <slats-norm type="double">0</slats-norm>
+          <speedbrake-norm type="double">0</speedbrake-norm>
           <engines>
-            <fod-screens-pos-norm type="float">0</fod-screens-pos-norm>
+            <fod-screens-pos-norm type="double">0</fod-screens-pos-norm>
             <engine n="0">
               <aei-norm type="double">0</aei-norm>
-              <reheat-norm type="float">0</reheat-norm>
-              <throttle-norm type="float">0</throttle-norm>
-              <vector-norm type="float">0</vector-norm>
+              <reheat-norm type="double">0</reheat-norm>
+              <throttle-norm type="double">0</throttle-norm>
+              <vector-norm type="double">0</vector-norm>
             </engine>
             <engine n="1">
               <aei-norm type="double">0</aei-norm>
-              <reheat-norm type="float">0</reheat-norm>
-              <throttle-norm type="float">0</throttle-norm>
-              <vector-norm type="float">0</vector-norm>
+              <reheat-norm type="double">0</reheat-norm>
+              <throttle-norm type="double">0</throttle-norm>
+              <vector-norm type="double">0</vector-norm>
             </engine>
           </engines>
         </controls>
@@ -318,6 +333,7 @@ SU-37 simulation config.
           <auto-reheat type="string">off</auto-reheat>
           <auto-slats type="string">off</auto-slats>
           <auto-speedbrake type="string">off</auto-speedbrake>
+          <cubed-input type="string">off</cubed-input>
           <pitch type="string">off</pitch>
           <roll type="string">off</roll>
           <thrust-vectoring type="string">engaged</thrust-vectoring>
@@ -338,6 +354,10 @@ SU-37 simulation config.
           <slats-extend-mach type="float">0.5</slats-extend-mach>
           <slats-extend-factor type="float">5</slats-extend-factor>
           <low-alt-max-pitch-deg type="float">20</low-alt-max-pitch-deg>
+          <m03-delay type="float">2.0</m03-delay>
+          <m04-delay type="float">4.4</m04-delay>
+          <m05-delay type="float">8.0</m05-delay>
+          <m06-delay type="float">10.0</m06-delay>
           <max-climb-rate-fps type="float">200</max-climb-rate-fps>
           <min-climb-rate-fps type="float">-180</min-climb-rate-fps>
           <max-pitch-deg type="float">70</max-pitch-deg>
@@ -372,7 +392,7 @@ SU-37 simulation config.
         <gear-up-agl-ft type="float">25</gear-up-agl-ft>
         <gear-down-airspeed-kt type="float">200</gear-down-airspeed-kt>
         <steering-heading-deg type="float">0</steering-heading-deg>
-        <target-agl-ft type="float">300</target-agl-ft>
+        <target-agl-ft type="float">600</target-agl-ft>
         <target-altitude-ft type="float">3000</target-altitude-ft>
         <target-aoa-deg type="float">11</target-aoa-deg>
         <target-climb-rate-fps type="double">0</target-climb-rate-fps>
@@ -469,30 +489,30 @@ SU-37 simulation config.
         <script>initialise();</script>
       </SU37FCSFLAPERONFLAPS>
 
-      <SU37FCSTHROTTLES>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-throttles.nas</file>
+      <SU37FCSFLAPERONROLL>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-flaperon-roll.nas</file>
         <script>initialise();</script>
-      </SU37FCSTHROTTLES>
+      </SU37FCSFLAPERONROLL>
 
       <SU37FCSSLATS>
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-slats.nas</file>
         <script>initialise();</script>
       </SU37FCSSLATS>
 
+      <SU37FCSTHROTTLES>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-throttles.nas</file>
+        <script>initialise();</script>
+      </SU37FCSTHROTTLES>
+
+      <SU37FCSTHRUSTVECTORING>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-thrust-vectoring.nas</file>
+        <script>initialise();</script>
+      </SU37FCSTHRUSTVECTORING>
+
       <SU37FCSAUTOSPEEDBRAKE>
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-auto-speedbrake.nas</file>
         <script>initialise();</script>
       </SU37FCSAUTOSPEEDBRAKE>
-
-      <SU37FCSVELOCITIESLISTENERS>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-velocities-listeners.nas</file>
-        <script>initialise();</script>
-      </SU37FCSVELOCITIESLISTENERS>
-
-      <SU37FCSSLAVELISTENERS>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-slave-listeners.nas</file>
-        <script>initialise();</script>
-      </SU37FCSSLAVELISTENERS>
 
       <SU37APLISTENERS>
         <file>Aircraft/SU-37/Nasal/SU-37-autopilot-listeners.nas</file>
@@ -521,6 +541,10 @@ SU-37 simulation config.
         <file>Aircraft/SU-37/Nasal/SU-37-FOD-screens-animation.nas</file>
         <script>initialise();</script>
       </SU37FODSCREENSANIMATION>
+
+      <SU37AM>
+        <file>Aircraft/SU-37/Nasal/SU-37-AM.nas</file>
+      </SU37AM>
     </nasal>
 
   </PropertyList>

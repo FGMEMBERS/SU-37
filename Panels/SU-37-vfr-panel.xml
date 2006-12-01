@@ -86,7 +86,6 @@ Hacked by Lee Elliott for the SU-37 mock panel
   </instrument>
 
 <!-- controls visual feedback cluster -->
-
   <instrument include="../../Instruments/gear-indicator.xml">
    <name>Gear Indicator Light</name>
    <x>320</x>
@@ -115,7 +114,6 @@ Hacked by Lee Elliott for the SU-37 mock panel
 
 
 <!-- radio nav instruments  -->
-
   <instrument include="../../Instruments/nav1.xml">
    <name>VOR 2 Gauge</name>
    <params>
@@ -134,7 +132,6 @@ Hacked by Lee Elliott for the SU-37 mock panel
   </instrument>
 
 <!-- end radio nav instruments -->
-
   <instrument include="../../Instruments/gyro.xml">
    <name>Directional Gauge</name>
    <x>100</x>
@@ -144,7 +141,6 @@ Hacked by Lee Elliott for the SU-37 mock panel
   </instrument>
 
 <!-- radio stack -->
-
   <instrument include="../../Instruments/markerbeacon.xml">
    <name>Marker Beacon Indicators</name>
    <x>798</x>
@@ -186,7 +182,6 @@ Hacked by Lee Elliott for the SU-37 mock panel
   </instrument>
 
 <!-- end radio stack -->
-
   <instrument include="Instruments/throttle-quadrant.xml">
    <name>Engine 0 throttle quadrant</name>
    <params>

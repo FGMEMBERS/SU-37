@@ -2295,7 +2295,7 @@
       <chunks>
         <chunk>
           <type>number-value</type>
-          <property>/autopilot/FCS/controls/flaperon-flap-norm</property>
+          <property>/autopilot/FCS/controls/flaperon-flaps-norm</property>
           <format>%01.3f</format>
         </chunk>
       </chunks>
@@ -2511,6 +2511,75 @@
         <transformation>
           <type>x-shift</type>
           <offset>60</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-46</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+<!-- FCS Cubed input -->
+<!-- Off -->
+    <layer>
+      <condition>
+        <equals>
+          <property>/autopilot/FCS/locks/cubed-input</property>
+          <value>off</value>
+        </equals>
+      </condition>
+      <name>FCS Cubed input - off</name>
+      <type>text</type>
+      <point-size>12</point-size>
+      <color>
+        <red>0.0</red>
+        <green>1.0</green>
+        <blue>0.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>CI</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>135</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-46</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+<!-- Engaged -->
+    <layer>
+      <condition>
+        <equals>
+          <property>/autopilot/FCS/locks/cubed-input</property>
+          <value>engaged</value>
+        </equals>
+      </condition>
+      <name>FCS cubed input - engaged</name>
+      <type>text</type>
+      <point-size>12</point-size>
+      <color>
+        <red>1.0</red>
+        <green>0.0</green>
+        <blue>0.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>CI</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>135</offset>
         </transformation>
         <transformation>
           <type>y-shift</type>
@@ -2937,6 +3006,20 @@
       <binding>
         <command>nasal</command>
         <script>SU37APFCS.toggle_fcs_auto_speedbrake()</script>
+      </binding>
+    </action>
+
+<!-- FCS Auto-speedbrake -->
+    <action>
+      <name>Toggle FCS cubed input</name>
+      <button>0</button>
+      <x>132</x>
+      <y>-49</y>
+      <w>25</w>
+      <h>14</h>
+      <binding>
+        <command>nasal</command>
+        <script>SU37APFCS.toggle_fcs_cubed_input()</script>
       </binding>
     </action>
 

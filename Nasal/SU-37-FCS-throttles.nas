@@ -4,6 +4,10 @@
 # When auto-reheat is engaged: throttle range 0-0.9 controls the 
 # throttle and throttle range 0.9-1 controls reheat.
 #--------------------------------------------------------------------
+# Globals
+#--------------------------------------------------------------------
+# Functions
+#--------------------------------------------------------------------
 initialise = func {
   setprop("/engines/engine[0]/n2", 0.0);
   setprop("/engines/engine[1]/n2", 0.0);

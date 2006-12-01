@@ -1,25 +1,28 @@
 # FCS AEI animation handler.
 #--------------------------------------------------------------------
+# Globals
+fcs_fod_screens_agl_ft = props.globals.getNode("/autopilot/FCS/settings/fod-screens-agl-ft", 1);
+fcs_fod_screens_norm = props.globals.getNode("/autopilot/FCS/controls/engines/fod-screens-norm", 1);
+#--------------------------------------------------------------------
+# Functions
+#--------------------------------------------------------------------
 initialise = func {
-  settimer(fod_screens, 4);
+#  setlistener("/position/altitude-agl-ft", fod_screens);
+  setlistener("/autopilot/FCS/internal/altitude-agl-ft-filtered", fod_screens);
 }
 #--------------------------------------------------------------------
 fod_screens = func {
   # FOD screens animation.
-  # Check that agl and lower them when below the set agl.
+  # Check the agl and lower the screens when below the set agl.
   # This animation script has no effect upon the aerodynamic
   # behaviour.
 
-  fcs_fod_screens_agl_ft = getprop("/autopilot/FCS/settings/fod-screens-agl-ft");
-  altitude_agl_ft = getprop("/position/altitude-agl-ft");
+  altitude_agl_ft = cmdarg().getValue();
 
-  if(altitude_agl_ft < fcs_fod_screens_agl_ft) {
-    interpolate("/autopilot/FCS/controls/engines/fod-screens-pos-norm", 1, 0.5);
+  if(altitude_agl_ft < fcs_fod_screens_agl_ft.getValue()) {
+    fcs_fod_screens_norm.setDoubleValue(1);
   } else {
-    interpolate("/autopilot/FCS/controls/engines/fod-screens-pos-norm", 0, 0.5);
+    fcs_fod_screens_norm.setDoubleValue(0);
   }
-  # This doesn't need a high refresh rate but set it higher than
-  # the animation interpolation period.
-  settimer(fod_screens, 1);
 }
 #--------------------------------------------------------------------

@@ -2088,7 +2088,7 @@
 	<object-name>ENG_Left_Screen</object-name>
     <condition>
       <greater-than>
-        	<property>autopilot/FCS/controls/engines/fod-screens-pos-norm</property>
+        	<property>autopilot/FCS/internal/fod-screens-norm-filtered</property>
         <value>0.0</value>
       </greater-than>
     </condition>
@@ -2097,7 +2097,7 @@
   <animation>
 	<type>rotate</type>
 	<object-name>ENG_Left_Screen</object-name>
-	<property>autopilot/FCS/controls/engines/fod-screens-pos-norm</property>
+    	<property>autopilot/FCS/internal/fod-screens-norm-filtered</property>
 	<factor>40</factor>
 	<axis>
 		<x1-m>12.000</x1-m> <x2-m>12.000</x2-m>
@@ -2113,7 +2113,7 @@
 	<object-name>ENG_Right_Screen</object-name>
     <condition>
       <greater-than>
-        	<property>autopilot/FCS/controls/engines/fod-screens-pos-norm</property>
+        	<property>autopilot/FCS/internal/fod-screens-norm-filtered</property>
         <value>0.0</value>
       </greater-than>
     </condition>
@@ -2122,7 +2122,7 @@
   <animation>
 	<type>rotate</type>
 	<object-name>ENG_Right_Screen</object-name>
-	<property>autopilot/FCS/controls/engines/fod-screens-pos-norm</property>
+    	<property>autopilot/FCS/internal/fod-screens-norm-filtered</property>
 	<factor>-40</factor>
 	<axis>
 		<x1-m>12.000</x1-m> <x2-m>12.000</x2-m>

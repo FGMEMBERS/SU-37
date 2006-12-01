@@ -1,7 +1,12 @@
 # FCS canards handlers.
 #--------------------------------------------------------------------
+# Globals
+fcs_canard_incidence_deg = props.globals.getNode("/autopilot/FCS/controls/canard-incidence-deg", 1);
+#--------------------------------------------------------------------
+# Functions
+#--------------------------------------------------------------------
 initialise = func {
-  setlistener("/autopilot/FCS/inputs/alpha-deg-filtered", canards);
+  setlistener("/autopilot/FCS/internal/alpha-deg-filtered", canards);
 }
 #--------------------------------------------------------------------
 canards = func {
@@ -10,7 +15,6 @@ canards = func {
   # work
 
   aoa_deg = cmdarg().getValue();
-  fcs_canard_incidence_deg = props.globals.getNode("/autopilot/FCS/controls/canard-incidence-deg", 1);
 
   if(aoa_deg > -10.0) {
     if(aoa_deg < 70.0) {

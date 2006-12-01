@@ -48,7 +48,6 @@ Hacked by Lee Elliott for the SU-37 mock panel
 
 <!-- controls cluster -->
 <!-- Throttles -->
-
   <instrument include="Instruments/throttle-quadrant.xml">
    <name>Throttle quadrant</name>
    <params>
@@ -161,7 +160,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
       <h>14</h>
     </instrument>
 
-    <instrument include="../../Instruments/controls.xml">
+    <instrument include="Instruments/controls.xml">
       <name>Control Position Indicators</name>
       <x>168</x>
       <y>75</y>
@@ -170,7 +169,6 @@ Hacked by Lee Elliott for the SU-37 mock panel
     </instrument>
 
 <!-- Digital instruments -->
-
   <instrument include="Instruments/digital-wind-speed-direction.xml">
    <name>Wind display</name>
    <x>270</x>
@@ -190,15 +188,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
    <w>120</w>
    <h>40</h>
   </instrument>
-<!--
-  <instrument include="Instruments/digital-flap.xml">
-    <name>Flap setting display</name>
-    <x>360</x>
-    <y>13</y>
-    <w>120</w>
-    <h>20</h>
-  </instrument>
--->
+
 <!-- Right Column 1 -->
   <instrument include="Instruments/digital-alt.xml">
     <name>Altitude display</name>
@@ -337,22 +327,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
     <h>32</h>
   </instrument>
 
-<!-- Text AP Block -->
-<!--
-  <instrument include="Instruments/text-autopilot.xml">
-   <name>AP display</name>
-   <params>
-    <ah-select>autopilot/locks/altitude</ah-select>
-    <tf-select>autopilot/locks/altitude</tf-select>
-    <to-select>autopilot/locks/altitude</to-select>
-    <gs-select>autopilot/locks/altitude</gs-select>
-   </params>
-   <x>530</x>
-   <y>130</y>
-   <w>200</w>
-   <h>16</h>
-  </instrument>
--->
+<!-- APFC Block -->
   <instrument include="Instruments/APFCS.xml">
    <name>AP/FCS Instrument</name>
    <params>

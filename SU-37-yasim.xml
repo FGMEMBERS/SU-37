@@ -13,7 +13,7 @@
     <control-setting axis="/autopilot/FCS/controls/engines/engine[1]/throttle-norm" value="0.6"/>
     <control-setting axis="/autopilot/FCS/controls/engines/engine[0]/reheat-norm" value="0.0"/>
     <control-setting axis="/autopilot/FCS/controls/engines/engine[1]/reheat-norm" value="0.0"/>
-    <control-setting axis="/autopilot/FCS/controls/flaperon-flap-norm" value="1"/>
+    <control-setting axis="/autopilot/FCS/controls/flaperon-flaps-norm" value="1"/>
     <control-setting axis="/autopilot/FCS/controls/slats-norm" value="1"/>
     <control-setting axis="/autopilot/FCS/controls/canard-incidence-deg" value="-9.0"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
@@ -25,7 +25,7 @@
     <control-setting axis="/autopilot/FCS/controls/engines/engine[1]/throttle-norm" value="1.0"/>
     <control-setting axis="/autopilot/FCS/controls/engines/engine[0]/reheat-norm" value="1.0"/>
     <control-setting axis="/autopilot/FCS/controls/engines/engine[1]/reheat-norm" value="1.0"/>
-    <control-setting axis="/autopilot/FCS/controls/flaperon-flap-norm" value="0"/>
+    <control-setting axis="/autopilot/FCS/controls/flaperon-flaps-norm" value="0"/>
     <control-setting axis="/autopilot/FCS/controls/slats-norm" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
   </cruise>
@@ -82,7 +82,7 @@
           drag="1.3"/>
 
 <!-- FCS input controls -->
-    <control-input axis="/autopilot/FCS/controls/flaperon-flap-norm"
+    <control-input axis="/autopilot/FCS/controls/flaperon-flaps-norm"
                    control="FLAP0"/>
 
     <control-input axis="/autopilot/FCS/controls/flaperon-roll-norm"
