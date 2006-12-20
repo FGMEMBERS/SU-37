@@ -11,8 +11,8 @@
   <approach speed="120" aoa="7">
     <control-setting axis="/autopilot/FCS/controls/engines/engine[0]/throttle-norm" value="0.6"/>
     <control-setting axis="/autopilot/FCS/controls/engines/engine[1]/throttle-norm" value="0.6"/>
-    <control-setting axis="/autopilot/FCS/controls/engines/engine[0]/reheat-norm" value="0.0"/>
-    <control-setting axis="/autopilot/FCS/controls/engines/engine[1]/reheat-norm" value="0.0"/>
+    <control-setting axis="/autopilot/FCS/controls/engines/engine[0]/reheat-norm-filtered" value="0.0"/>
+    <control-setting axis="/autopilot/FCS/controls/engines/engine[1]/reheat-norm-filtered" value="0.0"/>
     <control-setting axis="/autopilot/FCS/controls/flaperon-flaps-norm" value="1"/>
     <control-setting axis="/autopilot/FCS/controls/slats-norm" value="1"/>
     <control-setting axis="/autopilot/FCS/controls/canard-incidence-deg" value="-9.0"/>
@@ -23,8 +23,8 @@
   <cruise speed="1000" alt="55000">
     <control-setting axis="/autopilot/FCS/controls/engines/engine[0]/throttle-norm" value="1.0"/>
     <control-setting axis="/autopilot/FCS/controls/engines/engine[1]/throttle-norm" value="1.0"/>
-    <control-setting axis="/autopilot/FCS/controls/engines/engine[0]/reheat-norm" value="1.0"/>
-    <control-setting axis="/autopilot/FCS/controls/engines/engine[1]/reheat-norm" value="1.0"/>
+    <control-setting axis="/autopilot/FCS/controls/engines/engine[0]/reheat-norm-filtered" value="1.0"/>
+    <control-setting axis="/autopilot/FCS/controls/engines/engine[1]/reheat-norm-filtered" value="1.0"/>
     <control-setting axis="/autopilot/FCS/controls/flaperon-flaps-norm" value="0"/>
     <control-setting axis="/autopilot/FCS/controls/slats-norm" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
@@ -363,7 +363,7 @@
     <control-input axis="/autopilot/FCS/controls/engines/engine[0]/throttle-norm"
                    control="THROTTLE"/>
 
-    <control-input axis="/autopilot/FCS/controls/engines/engine[0]/reheat-norm"
+    <control-input axis="/autopilot/FCS/controls/engines/engine[0]/reheat-norm-filtered"
                    control="REHEAT"/>
 
     <control-input axis="/autopilot/FCS/controls/engines/engine[0]/vector-norm"

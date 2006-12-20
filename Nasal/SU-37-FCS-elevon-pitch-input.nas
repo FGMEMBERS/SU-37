@@ -11,18 +11,19 @@ fcs_min_climb_rate_fps = props.globals.getNode("/autopilot/FCS/settings/min-clim
 fcs_max_pitch_deg = props.globals.getNode("/autopilot/FCS/settings/max-pitch-deg", 1);
 fcs_min_pitch_deg = props.globals.getNode("/autopilot/FCS/settings/min-pitch-deg", 1);
 ap_altitude_lock = props.globals.getNode("/autopilot/locks/altitude", 1);
+raw_elevator_input = props.globals.getNode("/controls/flight/elevator", 1);
 #--------------------------------------------------------------------
 # Functions
 #--------------------------------------------------------------------
 initialise = func {
   setprop("/autopilot/locks/altitude", "");
-  setlistener("/autopilot/FCS/inputs/elevator-filtered", elevon_pitch_input);
+  settimer(elevon_pitch_input, 0.1);
 }
 #--------------------------------------------------------------------
 elevon_pitch_input = func {
   # Monitor pilot elevator input.
 
-  raw_elevator_input = cmdarg().getValue();
+  rei = raw_elevator_input.getValue();
 
   # If an AP altitude hold mode is set then ignore pilot input.
   # Otherwise, if the FCS stick mode is pitch or vfps then we're in FCS mode so set the
@@ -32,26 +33,27 @@ elevon_pitch_input = func {
 
   if(ap_altitude_lock.getValue() == "") {
     if(fcs_stick_mode.getValue() == "pitch") {
-      if(raw_elevator_input > 0) {
-        target_pitch_deg.setDoubleValue(fcs_min_pitch_deg.getValue() * raw_elevator_input);
+      if(rei > 0) {
+        target_pitch_deg.setDoubleValue(fcs_min_pitch_deg.getValue() * rei);
       } else {
-        target_pitch_deg.setDoubleValue(fcs_max_pitch_deg.getValue() * (-1 * raw_elevator_input));
+        target_pitch_deg.setDoubleValue(fcs_max_pitch_deg.getValue() * (-1 * rei));
       }
     } elsif(fcs_stick_mode.getValue() == "vfps") {
-      if(raw_elevator_input > 0) {
-        target_climb_rate_fps.setDoubleValue(fcs_min_climb_rate_fps.getValue() * raw_elevator_input);
+      if(rei > 0) {
+        target_climb_rate_fps.setDoubleValue(fcs_min_climb_rate_fps.getValue() * rei);
       } else {
-        target_climb_rate_fps.setDoubleValue(fcs_max_climb_rate_fps.getValue() * (-1 * raw_elevator_input));
+        target_climb_rate_fps.setDoubleValue(fcs_max_climb_rate_fps.getValue() * (-1 * rei));
       }
     } else {
       if(fcs_cubed_input_lock.getValue() == "engaged") {
-        fcs_elevon_pitch_norm.setDoubleValue((raw_elevator_input * raw_elevator_input * raw_elevator_input));
+        fcs_elevon_pitch_norm.setDoubleValue((rei * rei * rei));
       } else {
-        fcs_elevon_pitch_norm.setDoubleValue(raw_elevator_input);
+        fcs_elevon_pitch_norm.setDoubleValue(rei);
       }
       target_climb_rate_fps.setDoubleValue(0.0);
       target_pitch_deg.setDoubleValue(0.0);
     }
   }
+  settimer(elevon_pitch_input, 0.1);
 }
 #--------------------------------------------------------------------

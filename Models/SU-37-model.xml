@@ -5,7 +5,7 @@
 
 <PropertyList>
 
-  <path>SU-37-005-125e.ac</path>
+  <path>SU-37-005-125f.ac</path>
   <offsets>
     <z-m>0.0</z-m>
     <pitch-deg>0</pitch-deg>
@@ -2088,7 +2088,7 @@
 	<object-name>ENG_Left_Screen</object-name>
     <condition>
       <greater-than>
-        	<property>autopilot/FCS/internal/fod-screens-norm-filtered</property>
+        	<property>autopilot/FCS/controls/engines/fod-screens-norm</property>
         <value>0.0</value>
       </greater-than>
     </condition>
@@ -2097,7 +2097,7 @@
   <animation>
 	<type>rotate</type>
 	<object-name>ENG_Left_Screen</object-name>
-    	<property>autopilot/FCS/internal/fod-screens-norm-filtered</property>
+      	<property>autopilot/FCS/controls/engines/fod-screens-norm</property>
 	<factor>40</factor>
 	<axis>
 		<x1-m>12.000</x1-m> <x2-m>12.000</x2-m>
@@ -2113,7 +2113,7 @@
 	<object-name>ENG_Right_Screen</object-name>
     <condition>
       <greater-than>
-        	<property>autopilot/FCS/internal/fod-screens-norm-filtered</property>
+        	<property>autopilot/FCS/controls/engines/fod-screens-norm</property>
         <value>0.0</value>
       </greater-than>
     </condition>
@@ -2122,7 +2122,7 @@
   <animation>
 	<type>rotate</type>
 	<object-name>ENG_Right_Screen</object-name>
-    	<property>autopilot/FCS/internal/fod-screens-norm-filtered</property>
+       	<property>autopilot/FCS/controls/engines/fod-screens-norm</property>
 	<factor>-40</factor>
 	<axis>
 		<x1-m>12.000</x1-m> <x2-m>12.000</x2-m>
@@ -4515,7 +4515,7 @@
     <condition>
       <greater-than>
         <property>/engines/engine[0]/n2</property>
-        <value>99.0</value>
+        <value>98.0</value>
       </greater-than>
     </condition>
   </animation>
@@ -6668,7 +6668,7 @@
     <condition>
       <greater-than>
         <property>/engines/engine[1]/n2</property>
-        <value>99.0</value>
+        <value>98.0</value>
       </greater-than>
     </condition>
   </animation>
@@ -6676,7 +6676,7 @@
   <animation>
     <type>scale</type>
     <object-name>R_Reheat</object-name>
-    <property>engines/engine[]/reheat-norm</property>
+    <property>engines/engine[1]/reheat-norm</property>
     <x-factor>1</x-factor>
     <x-offset>0</x-offset>
     <x-max>1</x-max>

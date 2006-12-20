@@ -1425,15 +1425,54 @@
       </transformations>
     </layer>
 
-<!-- Stick mode -->
+<!-- Stick mode - diengaged -->
     <layer>
-      <name>Stick mode</name>
+      <condition>
+        <equals>
+          <property>/autopilot/FCS/modes/stick</property>
+          <value></value>
+        </equals>
+      </condition>
+      <name>Stick mode - disengaged</name>
       <type>text</type>
       <point-size>12</point-size>
       <color>
         <red>0.7</red>
         <green>0.7</green>
         <blue>0.7</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>SMode:</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>-165</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-18</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+    <layer>
+      <condition>
+        <not-equals>
+          <property>/autopilot/FCS/modes/stick</property>
+          <value></value>
+        </not-equals>
+      </condition>
+      <name>Stick mode - engaged</name>
+      <type>text</type>
+      <point-size>12</point-size>
+      <color>
+        <red>1.0</red>
+        <green>0.0</green>
+        <blue>0.0</blue>
       </color>
       <chunks>
         <chunk>
@@ -2726,6 +2765,75 @@
       </transformations>
     </layer>
 
+<!-- FCS Auto-spin-recovery -->
+<!-- Off -->
+    <layer>
+      <condition>
+        <equals>
+          <property>/autopilot/FCS/locks/auto-spin-recovery</property>
+          <value>off</value>
+        </equals>
+      </condition>
+      <name>FCS Auto-spin-recovery - off</name>
+      <type>text</type>
+      <point-size>12</point-size>
+      <color>
+        <red>0.0</red>
+        <green>1.0</green>
+        <blue>0.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>ASR</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>35</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-60</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
+<!-- Enabled -->
+    <layer>
+      <condition>
+        <equals>
+          <property>/autopilot/FCS/locks/auto-spin-recovery</property>
+          <value>enabled</value>
+        </equals>
+      </condition>
+      <name>FCS Auto-spin-recovery - enabled</name>
+      <type>text</type>
+      <point-size>12</point-size>
+      <color>
+        <red>1.0</red>
+        <green>0.0</green>
+        <blue>0.0</blue>
+      </color>
+      <chunks>
+        <chunk>
+          <type>literal</type>
+          <text>ARS</text>
+        </chunk>
+      </chunks>
+      <transformations>
+        <transformation>
+          <type>x-shift</type>
+          <offset>35</offset>
+        </transformation>
+        <transformation>
+          <type>y-shift</type>
+          <offset>-60</offset>
+        </transformation>
+      </transformations>
+    </layer>
+
   </layers>
 
   <actions>
@@ -3009,7 +3117,7 @@
       </binding>
     </action>
 
-<!-- FCS Auto-speedbrake -->
+<!-- FCS Cubed Input -->
     <action>
       <name>Toggle FCS cubed input</name>
       <button>0</button>
@@ -3037,6 +3145,19 @@
       </binding>
     </action>
 
+<!-- FCS Auto-spin-recovery -->
+    <action>
+      <name>Toggle FCS Auto-spin-recovery</name>
+      <button>0</button>
+      <x>32</x>
+      <y>-64</y>
+      <w>36</w>
+      <h>14</h>
+      <binding>
+        <command>nasal</command>
+        <script>SU37APFCS.toggle_fcs_auto_spin_recovery()</script>
+      </binding>
+    </action>
 
   </actions>
 

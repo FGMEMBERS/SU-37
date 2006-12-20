@@ -159,7 +159,7 @@ SU-37 simulation config.
         </key>
         <key>
           <name>j/k</name>
-          <desc>decrease/increase spoilers</desc>
+          <desc>decrease/increase speedbrake</desc>
         </key>
         <key>
           <name>K</name>
@@ -171,7 +171,7 @@ SU-37 simulation config.
         </key>
         <key>
           <name>Ctrl-k</name>
-          <desc>Try this heading into the wind, at 205kt and 2000ft - it might work</desc>
+          <desc>Try this heading into the wind, at 205kt and > 2000ft - it might work</desc>
         </key>
         <line></line>
         <line>Autopilot</line>
@@ -201,6 +201,7 @@ SU-37 simulation config.
         <line>  SB - Auto speedbrake</line>
         <line>  CI - Cubed Input (Direct mode only)</line>
         <line>  AR - Auto reheat</line>
+        <line>  ASR - Auto spin recovery</line>
       </help>
 
     </sim>
@@ -333,6 +334,7 @@ SU-37 simulation config.
           <auto-reheat type="string">off</auto-reheat>
           <auto-slats type="string">off</auto-slats>
           <auto-speedbrake type="string">off</auto-speedbrake>
+          <auto-spin-recovery type="string">off</auto-spin-recovery>
           <cubed-input type="string">off</cubed-input>
           <pitch type="string">off</pitch>
           <roll type="string">off</roll>
@@ -368,12 +370,6 @@ SU-37 simulation config.
           <speedbrake-extend-kt type="double">0</speedbrake-extend-kt>
           <speedbrake-extend-mach type="double">0</speedbrake-extend-mach>
           <take-off-pitch-deg type="float">11</take-off-pitch-deg>
-          <target-climb-rate-fps type="float">0</target-climb-rate-fps>
-          <target-elevon-pitch-deg type="float">0</target-elevon-pitch-deg>
-          <target-elevon-roll-deg type="float">0</target-elevon-roll-deg>
-          <target-flaperon-roll-deg type="float">0</target-flaperon-roll-deg>
-          <target-vector-pitch-deg type="float">0</target-vector-pitch-deg>
-          <target-vector-roll-deg type="float">0</target-vector-roll-deg>
         </settings>
         <store>
           <elevator-trim type="float">0</elevator-trim>
@@ -545,6 +541,11 @@ SU-37 simulation config.
       <SU37AM>
         <file>Aircraft/SU-37/Nasal/SU-37-AM.nas</file>
       </SU37AM>
+
+      <SU37FCSSPINRECVR>
+        <file>Aircraft/SU-37/Nasal/SU-37-FCS-auto-spin-recovery.nas</file>
+        <script>initialise();</script>
+      </SU37FCSSPINRECVR>
     </nasal>
 
   </PropertyList>

@@ -7,11 +7,12 @@ fcs_aei_open_min_agl_ft = props.globals.getNode("/autopilot/FCS/settings/aei-ope
 fcs_aei_norm0 = props.globals.getNode("/autopilot/FCS/controls/engines/engine[0]/aei-norm", 1);
 fcs_aei_norm1 = props.globals.getNode("/autopilot/FCS/controls/engines/engine[1]/aei-norm", 1);
 altitude_agl_ft = props.globals.getNode("/position/altitude-agl-ft", 1);
+aoa_deg = props.globals.getNode("/orientation/alpha-deg", 1);
 #--------------------------------------------------------------------
 # Functions
 #--------------------------------------------------------------------
 initialise = func {
-  setlistener("/autopilot/FCS/internal/alpha-deg-filtered", aei_doors);
+  settimer(aei_doors, 0.2);
 }
 #--------------------------------------------------------------------
 aei_doors = func {
@@ -19,11 +20,11 @@ aei_doors = func {
   # This animation script has no effect upon the aerodynamic
   # behaviour.
 
-  aoa_deg = cmdarg().getValue();
+  ad = aoa_deg.getValue();
 
-  if(aoa_deg > fcs_aei_open_aoa_deg.getValue()) {
+  if(ad > fcs_aei_open_aoa_deg.getValue()) {
     if(altitude_agl_ft.getValue() > fcs_aei_open_min_agl_ft.getValue()) {
-      fcs_aei_norm = fcs_aei_open_aoa_factor.getValue() * (aoa_deg - fcs_aei_open_aoa_deg.getValue());
+      fcs_aei_norm = fcs_aei_open_aoa_factor.getValue() * (ad - fcs_aei_open_aoa_deg.getValue());
       if(fcs_aei_norm > 1) {
         fcs_aei_norm = 1;
       }
@@ -35,5 +36,7 @@ aei_doors = func {
   }
   fcs_aei_norm0.setDoubleValue(fcs_aei_norm);
   fcs_aei_norm1.setDoubleValue(fcs_aei_norm);
+
+  settimer(aei_doors, 0.2);
 }
 #--------------------------------------------------------------------

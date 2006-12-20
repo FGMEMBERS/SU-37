@@ -7,12 +7,15 @@ fcs_elevon_roll_norm = props.globals.getNode("/autopilot/FCS/controls/elevon-rol
 fcs_stick_mode = props.globals.getNode("/autopilot/FCS/modes/stick", 1);
 fcs_roll_factor = props.globals.getNode("/autopilot/FCS/settings/roll-factor", 1);
 ap_heading_lock = props.globals.getNode("/autopilot/locks/heading", 1);
+raw_aileron_input = props.globals.getNode("/controls/flight/aileron", 1);
 #--------------------------------------------------------------------
 # Functions
 #--------------------------------------------------------------------
 initialise = func {
-  setprop("/autopilot/locks/heading", "");
-  setlistener("/autopilot/FCS/inputs/aileron-filtered", elevon_roll_input);
+  fcs_elevon_roll_norm.setValue(0);
+  ap_heading_lock.setValue("");
+  raw_aileron_input.setValue(0);
+  settimer(elevon_roll_input, 0.1);
 }
 #--------------------------------------------------------------------
 elevon_roll_input = func {
@@ -23,19 +26,20 @@ elevon_roll_input = func {
   # If the FCS stick mode is direct then we're in direct mode so feed the input
   # straight to the controls and zero the fcs roll target.
 
-  raw_aileron_input = cmdarg().getValue();
+  rai = raw_aileron_input.getValue();
 
   if(ap_heading_lock.getValue() == "") {
     if(fcs_stick_mode.getValue() != "direct") {
-      target_roll_deg.setDoubleValue(fcs_roll_factor.getValue() * raw_aileron_input);
+      target_roll_deg.setDoubleValue(fcs_roll_factor.getValue() * rai);
     } else {
       if(fcs_cubed_input_lock.getValue() == "engaged") {
-        fcs_elevon_roll_norm.setDoubleValue((raw_aileron_input * raw_aileron_input * raw_aileron_input));
+        fcs_elevon_roll_norm.setValue((rai * rai * rai));
       } else {
-        fcs_elevon_roll_norm.setDoubleValue(raw_aileron_input);
+        fcs_elevon_roll_norm.setValue(rai);
       }
       target_roll_deg.setDoubleValue(0.0);
     }
   }
+  settimer(elevon_roll_input, 0.1);
 }
 #--------------------------------------------------------------------

@@ -207,3 +207,14 @@ toggle_fcs_auto_reheat = func {
   }
 }
 #--------------------------------------------------------------------
+toggle_fcs_auto_spin_recovery = func {
+
+  fcs_auto_spin_recovery_lock = getprop("/autopilot/FCS/locks/auto-spin-recovery");
+
+  if(fcs_auto_spin_recovery_lock == "enabled") {
+    setprop("/autopilot/FCS/locks/auto-spin-recovery", "off");
+  } else {
+    setprop("/autopilot/FCS/locks/auto-spin-recovery", "enabled");
+  }
+}
+#--------------------------------------------------------------------

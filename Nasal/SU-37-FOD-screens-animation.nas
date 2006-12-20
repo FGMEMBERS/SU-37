@@ -3,12 +3,12 @@
 # Globals
 fcs_fod_screens_agl_ft = props.globals.getNode("/autopilot/FCS/settings/fod-screens-agl-ft", 1);
 fcs_fod_screens_norm = props.globals.getNode("/autopilot/FCS/controls/engines/fod-screens-norm", 1);
+altitude_agl_ft = props.globals.getNode("/position/altitude-agl-ft", 1);
 #--------------------------------------------------------------------
 # Functions
 #--------------------------------------------------------------------
 initialise = func {
-#  setlistener("/position/altitude-agl-ft", fod_screens);
-  setlistener("/autopilot/FCS/internal/altitude-agl-ft-filtered", fod_screens);
+  settimer(fod_screens, 0.2);
 }
 #--------------------------------------------------------------------
 fod_screens = func {
@@ -17,12 +17,11 @@ fod_screens = func {
   # This animation script has no effect upon the aerodynamic
   # behaviour.
 
-  altitude_agl_ft = cmdarg().getValue();
-
-  if(altitude_agl_ft < fcs_fod_screens_agl_ft.getValue()) {
+  if(altitude_agl_ft.getValue() < fcs_fod_screens_agl_ft.getValue()) {
     fcs_fod_screens_norm.setDoubleValue(1);
   } else {
     fcs_fod_screens_norm.setDoubleValue(0);
   }
+  settimer(fod_screens, 0.2);
 }
 #--------------------------------------------------------------------

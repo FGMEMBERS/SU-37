@@ -6,22 +6,21 @@ fcs_flaps_extend_mach = props.globals.getNode("/autopilot/FCS/settings/flaps-ext
 fcs_flaps_extend_factor = props.globals.getNode("/autopilot/FCS/settings/flaps-extend-factor", 1);
 fcs_flaperon_flaps_norm = props.globals.getNode("/autopilot/FCS/controls/flaperon-flaps-norm", 1);
 raw_flaps_input = props.globals.getNode("/controls/flight/flaps", 1);
+mach = props.globals.getNode("/velocities/mach", 1);
 #--------------------------------------------------------------------
 # Functions
 #--------------------------------------------------------------------
 initialise = func {
-  setlistener("/autopilot/FCS/internal/mach-filtered", flaperon_flaps);
+  settimer(flaperon_flaps, 0.1);
 }
 #--------------------------------------------------------------------
 flaperon_flaps = func {
   # Monitor mach and extend the flaps if in auto-flap mode.  If not in auto-flap mode
   # apply the raw flap input
 
-  mach = cmdarg().getValue();
-
   if(fcs_auto_flaps_lock.getValue() == "engaged") {
-    if(mach < fcs_flaps_extend_mach.getValue()) {
-      fffn = fcs_flaps_extend_factor.getValue() * (fcs_flaps_extend_mach.getValue() - mach);
+    if(mach.getValue() < fcs_flaps_extend_mach.getValue()) {
+      fffn = fcs_flaps_extend_factor.getValue() * (fcs_flaps_extend_mach.getValue() - mach.getValue());
       if(fffn > 1) {
         fcs_flaperon_flaps_norm.setDoubleValue(1);
       } else {
@@ -33,5 +32,6 @@ flaperon_flaps = func {
   } else {
     fcs_flaperon_flaps_norm.setDoubleValue(raw_flaps_input.getValue());
   }
+  settimer(flaperon_flaps, 0.1);
 }
 #--------------------------------------------------------------------

@@ -11,51 +11,22 @@
     Filters
     ===============
 -->
-<!-- FCS listener filters -->
   <filter>
-    <name>Aileron input Filter - used by the FCS</name>
+    <name>Current Yaw Rate degps Filter - used by the FCS</name>
     <debug>false</debug>
     <type>noise-spike</type>
-    <input>/controls/flight/aileron</input>
-    <output>/autopilot/FCS/inputs/aileron-filtered</output>
-    <max-rate-of-change>2.0</max-rate-of-change>
+    <input>/orientation/yaw-rate-degps</input>
+    <output>/autopilot/FCS/internal/yaw-rate-degps-filtered</output>
+    <max-rate-of-change>720.0</max-rate-of-change>
   </filter>
 
   <filter>
-    <name>Elevator input Filter - used by the FCS</name>
+    <name>Current Roll deg Filter - used by the FCS</name>
     <debug>false</debug>
     <type>noise-spike</type>
-    <input>/controls/flight/elevator</input>
-    <output>/autopilot/FCS/inputs/elevator-filtered</output>
-    <max-rate-of-change>2.0</max-rate-of-change>
-  </filter>
-
-  <filter>
-    <name>Flaps input Filter - used by the FCS</name>
-    <debug>false</debug>
-    <type>noise-spike</type>
-    <input>/controls/flight/flaps</input>
-    <output>/autopilot/FCS/inputs/flaps-filtered</output>
-    <max-rate-of-change>2.0</max-rate-of-change>
-  </filter>
-
-<!-- De-linking filters -->
-  <filter>
-    <name>Current AoA (alpha-deg) Filter - used by the FCS</name>
-    <debug>false</debug>
-    <type>noise-spike</type>
-    <input>/orientation/alpha-deg</input>
-    <output>/autopilot/FCS/internal/alpha-deg-filtered</output>
-    <max-rate-of-change>180.0</max-rate-of-change>
-  </filter>
-
-  <filter>
-    <name>Current Mach Filter - used by the FCS</name>
-    <debug>false</debug>
-    <type>noise-spike</type>
-    <input>/velocities/mach</input>
-    <output>/autopilot/FCS/internal/mach-filtered</output>
-    <max-rate-of-change>0.1</max-rate-of-change>
+    <input>/orientation/roll-deg</input>
+    <output>/autopilot/FCS/internal/roll-deg-filtered</output>
+    <max-rate-of-change>720.0</max-rate-of-change>
   </filter>
 
   <filter>
@@ -67,24 +38,6 @@
     <max-rate-of-change>100</max-rate-of-change>
   </filter>
 
-  <filter>
-    <name>Left elevon-pos-norm Filter - used by the FCS</name>
-    <debug>false</debug>
-    <type>noise-spike</type>
-    <input>/surface-positions/left-elevon-pos-norm</input>
-    <output>/autopilot/FCS/internal/left-elevon-pos-norm-filtered</output>
-    <max-rate-of-change>2.0</max-rate-of-change>
-  </filter>
-
-  <filter>
-    <name>Right elevon-pos-norm Filter - used by the FCS</name>
-    <debug>false</debug>
-    <type>noise-spike</type>
-    <input>/surface-positions/right-elevon-pos-norm</input>
-    <output>/autopilot/FCS/internal/right-elevon-pos-norm-filtered</output>
-    <max-rate-of-change>2.0</max-rate-of-change>
-  </filter>
-
 <!-- AP Filters -->
   <filter>
     <name>Target Pitch Filter</name>
@@ -92,7 +45,7 @@
     <type>noise-spike</type>
     <input>/autopilot/settings/target-pitch-deg</input>
     <output>/autopilot/internal/target-pitch-deg-filtered</output>
-    <max-rate-of-change>8.0</max-rate-of-change>
+    <max-rate-of-change>16.0</max-rate-of-change>
   </filter>
 
   <filter>
@@ -121,25 +74,7 @@
     <output>/autopilot/internal/target-altitude-ft-filtered</output>
     <max-rate-of-change>200.0</max-rate-of-change>
   </filter>
-  
-  <filter>
-    <name>Current AoA (alpha-deg) Filter - used by the FCS</name>
-    <debug>false</debug>
-    <type>noise-spike</type>
-    <input>/orientation/alpha-deg</input>
-    <output>/autopilot/FCS/internal/alpha-deg-filtered</output>
-    <max-rate-of-change>180.0</max-rate-of-change>
-  </filter>
-  
-  <filter>
-    <name>Current Mach Filter - used by the FCS</name>
-    <debug>false</debug>
-    <type>noise-spike</type>
-    <input>/velocities/mach</input>
-    <output>/autopilot/FCS/internal/mach-filtered</output>
-    <max-rate-of-change>0.01</max-rate-of-change>
-  </filter>
-  
+
   <filter>
     <name>GS1 Filter</name>
     <debug>false</debug>
@@ -155,7 +90,7 @@
     <type>noise-spike</type>
     <input>/autopilot/internal/nav1-heading-error-deg</input>
     <output>/autopilot/internal/nav1-heading-error-deg-filtered</output>
-    <max-rate-of-change>20.0</max-rate-of-change>
+    <max-rate-of-change>30.0</max-rate-of-change>
   </filter>
 
 <!-- Reheat animation filters -->
@@ -174,16 +109,6 @@
     <type>noise-spike</type>
     <input>/autopilot/FCS/controls/engines/engine[1]/reheat-norm</input>
     <output>/autopilot/FCS/controls/engines/engine[1]/reheat-norm-filtered</output>
-    <max-rate-of-change>0.5</max-rate-of-change>
-  </filter>
-
-<!-- FOD screens animation filters -->
-  <filter>
-    <name>FOD screens control filter</name>
-    <debug>false</debug>
-    <type>noise-spike</type>
-    <input>/autopilot/FCS/controls/engines/fod-screens-norm</input>
-    <output>/autopilot/FCS/internal/fod-screens-norm-filtered</output>
     <max-rate-of-change>0.5</max-rate-of-change>
   </filter>
 
@@ -312,7 +237,7 @@
       <beta>1.0</beta>
       <alpha>0.1</alpha>
       <gamma>0.0</gamma>
-      <Ti>40</Ti>
+      <Ti>30</Ti>
       <Td>0.0000001</Td>
       <u_min>-50.0</u_min>
       <u_max>50.0</u_max>
@@ -807,6 +732,66 @@
       <Td>0.00000000000000000000000000001</Td>
       <u_min>0</u_min>
       <u_max>1.0</u_max>
+    </config>
+  </pid-controller>
+
+<!-- Auto Spin Recovery Pitch driver -->
+  <pid-controller>
+    <name>Auto Spin Recovery Elevon pitch driver</name>
+    <debug>false</debug>
+    <enable>
+      <prop>/autopilot/FCS/locks/pitch</prop>
+      <value>ASR</value>
+    </enable>
+    <input>
+      <prop>/orientation/pitch-deg</prop>
+    </input>
+    <reference>
+      <value>4.0</value>
+    </reference>
+    <output>
+      <prop>/autopilot/FCS/controls/elevon-pitch-norm</prop>
+    </output>
+    <config>
+      <Ts>0.02</Ts>
+      <Kp>-0.004</Kp>
+      <beta>1.0</beta>
+      <alpha>0.1</alpha>
+      <gamma>0.0</gamma>
+      <Ti>4.0</Ti>
+      <Td>0.0000000000000000000000000000000000001</Td>
+      <u_min>-1</u_min>
+      <u_max>1</u_max>
+    </config>
+  </pid-controller>
+
+<!-- Auto Spin Recovery Roll driver -->
+  <pid-controller>
+    <name>Auto Spin Recovery Elevon roll driver</name>
+    <debug>false</debug>
+    <enable>
+      <prop>/autopilot/FCS/locks/roll</prop>
+      <value>ASR</value>
+    </enable>
+    <input>
+      <prop>/orientation/roll-deg</prop>
+    </input>
+    <reference>
+      <value>0.0</value>
+    </reference>
+    <output>
+      <prop>/autopilot/FCS/controls/elevon-roll-norm</prop>
+    </output>
+    <config>
+      <Ts>0.02</Ts>
+      <Kp>0.005</Kp>
+      <beta>1.0</beta>
+      <alpha>0.1</alpha>
+      <gamma>0.0</gamma>
+      <Ti>4.0</Ti>
+      <Td>0.0000000000000000000000000000000000001</Td>
+      <u_min>-1</u_min>
+      <u_max>1</u_max>
     </config>
   </pid-controller>
 
