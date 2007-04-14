@@ -205,6 +205,12 @@ SU-37 simulation config.
       </help>
 
     </sim>
+		
+    <ai>
+      <submodels>
+        <trajectory-markers type="bool">0</trajectory-markers>
+      </submodels>
+    </ai>
 
 <!-- Keyboard mapping -->
     <input>
