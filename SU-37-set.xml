@@ -64,7 +64,7 @@ SU-37 simulation config.
 
       <view n="2">
         <config>
-          <x-offset-m archive="y" type="double">5.4</x-offset-m>
+          <y-offset-m archive="y" type="double">5.4</y-offset-m>
           <z-offset-m archive="y">-19.7</z-offset-m>
           <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
         </config>
