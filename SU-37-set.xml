@@ -119,9 +119,6 @@ SU-37 simulation config.
         <autopilot>
           <path>Aircraft/SU-37/Systems/SU-37-autopilot.xml</path>
         </autopilot>
-        <electrical>
-          <path>Aircraft/SU-37/Systems/SU-37-electrical.xml</path>
-        </electrical>
       </systems>
 
       <chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
@@ -137,6 +134,17 @@ SU-37 simulation config.
         <setting>0.82</setting>
         <setting>1.00</setting>
       </flaps>
+
+<!-- TFA popup dialogue -->
+      <gui>
+        <dialogs>
+          <TFA-popup>
+            <config>
+              <dialog include="Dialogs/TFA-popup.xml"/>
+            </config>
+          </TFA-popup>
+        </dialogs>
+      </gui>
 
 <!-- AoA Indexer target 7.0 deg -->
       <aoa-indexer>
@@ -404,7 +412,7 @@ SU-37 simulation config.
         <gear-up-agl-ft type="float">25</gear-up-agl-ft>
         <gear-down-airspeed-kt type="float">200</gear-down-airspeed-kt>
         <steering-heading-deg type="float">0</steering-heading-deg>
-        <target-agl-ft type="float">600</target-agl-ft>
+        <target-agl-ft type="float">200</target-agl-ft>
         <target-altitude-ft type="float">3000</target-altitude-ft>
         <target-aoa-deg type="float">11</target-aoa-deg>
         <target-climb-rate-fps type="double">0</target-climb-rate-fps>
@@ -462,6 +470,31 @@ SU-37 simulation config.
         </tank>
       </fuel>
     </consumables>
+
+<!-- Terrain Following/Avoidance Radar -->
+    <instrumentation>
+      <radar>
+        <range type="int" archive="y">40</range>
+        <minimized type="bool" archive="y">true</minimized>
+      </radar>
+      <terrain-radar>
+        <hi-elev>
+          <alt-ft type="double">-9999.9</alt-ft>
+          <lat-deg type="double">-9999.9</lat-deg>
+          <lon-deg type="double">-9999.9</lon-deg>
+          <dist-m type="double">-9999.9</dist-m>
+          <collision-status type="string">initialised</collision-status>
+        </hi-elev>
+        <settings>
+          <mode type="string">extend</mode>
+          <state type="string">off</state>
+          <range-m type="double">2500</range-m>
+          <step-m type="double">250</step-m>
+          <max-climb-rate-fps type="double">120</max-climb-rate-fps>
+          <hi-elev-markers type="bool">false</hi-elev-markers>
+        </settings>
+      </terrain-radar>
+    </instrumentation>
 
     <nasal>
       <SU37KBMAPPING>
@@ -562,6 +595,10 @@ SU-37 simulation config.
         <file>Aircraft/SU-37/Nasal/SU-37-FCS-auto-spin-recovery.nas</file>
         <script>initialise();</script>
       </SU37FCSSPINRECVR>
+
+      <SU37TFA>
+        <file>Aircraft/SU-37/Nasal/SU-37-tfa.nas</file>
+      </SU37TFA>
     </nasal>
 
   </PropertyList>

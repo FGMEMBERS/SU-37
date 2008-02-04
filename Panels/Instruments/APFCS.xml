@@ -2875,6 +2875,10 @@
         <command>nasal</command>
         <script>SU37APFCS.toggle_agl_hold()</script>
       </binding>
+      <binding>
+        <command>dialog-show</command>
+        <dialog-name>TFA-popup</dialog-name>
+      </binding>
     </action>
 
     <action>

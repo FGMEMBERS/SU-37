@@ -2423,64 +2423,47 @@
   </animation>
 
 <!-- Nozzle animations -->
-<!-- Left Outer -->
+<!-- Left -->
 <!-- Vectoring -->
   <animation>
     <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PO00</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO00</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PO01</object-name>
+    <object-name>ENG_Left_Nozzle_PO02</object-name>
+    <object-name>ENG_Left_Nozzle_PO03</object-name>
+    <object-name>ENG_Left_Nozzle_PO04</object-name>
+    <object-name>ENG_Left_Nozzle_PO05</object-name>
+    <object-name>ENG_Left_Nozzle_PO06</object-name>
+    <object-name>ENG_Left_Nozzle_PO07</object-name>
+    <object-name>ENG_Left_Nozzle_PO08</object-name>
+    <object-name>ENG_Left_Nozzle_PO09</object-name>
+    <object-name>ENG_Left_Nozzle_PO10</object-name>
+    <object-name>ENG_Left_Nozzle_PO11</object-name>
+    <object-name>ENG_Left_Nozzle_PO12</object-name>
+    <object-name>ENG_Left_Nozzle_PO13</object-name>
+    <object-name>ENG_Left_Nozzle_PO14</object-name>
+    <object-name>ENG_Left_Nozzle_PO15</object-name>
+    <object-name>ENG_Left_Nozzle_PI00</object-name>
+    <object-name>ENG_Left_Nozzle_PI01</object-name>
+    <object-name>ENG_Left_Nozzle_PI02</object-name>
+    <object-name>ENG_Left_Nozzle_PI03</object-name>
+    <object-name>ENG_Left_Nozzle_PI04</object-name>
+    <object-name>ENG_Left_Nozzle_PI05</object-name>
+    <object-name>ENG_Left_Nozzle_PI06</object-name>
+    <object-name>ENG_Left_Nozzle_PI07</object-name>
+    <object-name>ENG_Left_Nozzle_PI08</object-name>
+    <object-name>ENG_Left_Nozzle_PI09</object-name>
+    <object-name>ENG_Left_Nozzle_PI10</object-name>
+    <object-name>ENG_Left_Nozzle_PI11</object-name>
+    <object-name>ENG_Left_Nozzle_PI12</object-name>
+    <object-name>ENG_Left_Nozzle_PI13</object-name>
+    <object-name>ENG_Left_Nozzle_PI14</object-name>
+    <object-name>ENG_Left_Nozzle_PI15</object-name>
     <property>engines/engine[0]/vector-norm</property>
     <factor>-720</factor>
     <center>
       <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
+      <y-m>0.0</y-m>
       <z-m>-0.2</z-m>
     </center>
     <axis>
@@ -2490,6 +2473,7 @@
     </axis>
   </animation>
 
+<!-- Position the petals around the nozzle -->
   <animation>
     <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PO01</object-name>
@@ -2503,54 +2487,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO01</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO02</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -2574,54 +2510,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO02</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO03</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PO03</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>67.5</factor>
@@ -2639,57 +2527,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO03</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO04</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PO04</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>90</factor>
+    <factor>90.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>-1.15</y-m>
@@ -2698,54 +2538,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO04</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO05</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -2769,57 +2561,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO05</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO06</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PO06</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>135</factor>
+    <factor>135.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>-1.15</y-m>
@@ -2828,54 +2572,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO06</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO07</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -2899,57 +2595,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO07</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO08</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PO08</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>180</factor>
+    <factor>180.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>-1.15</y-m>
@@ -2958,54 +2606,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO08</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO09</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -3029,57 +2629,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO09</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO10</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PO10</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>225</factor>
+    <factor>225.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>-1.15</y-m>
@@ -3088,54 +2640,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO10</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO11</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -3159,57 +2663,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO11</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO12</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PO12</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>270</factor>
+    <factor>270.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>-1.15</y-m>
@@ -3218,54 +2674,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO12</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO13</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -3289,57 +2697,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO13</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO14</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PO14</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>315</factor>
+    <factor>315.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>-1.15</y-m>
@@ -3348,54 +2708,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO14</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO15</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -3419,55 +2731,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PO15</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Left Inner -->
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI00</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PI00</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>11.25</factor>
@@ -3479,53 +2742,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI00</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI01</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -3549,53 +2765,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI01</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI02</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PI02</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>56.25</factor>
@@ -3607,53 +2776,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI02</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI03</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -3677,53 +2799,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI03</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI04</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PI04</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>101.25</factor>
@@ -3735,53 +2810,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI04</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI05</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -3805,53 +2833,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI05</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI06</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PI06</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>146.25</factor>
@@ -3863,53 +2844,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI06</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI07</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -3933,53 +2867,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI07</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI08</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PI08</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>191.25</factor>
@@ -3991,53 +2878,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI08</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI09</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -4061,53 +2901,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI09</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI10</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PI10</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>236.25</factor>
@@ -4119,53 +2912,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI10</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI11</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -4189,53 +2935,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI11</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI12</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PI12</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>281.25</factor>
@@ -4247,53 +2946,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI12</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI13</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -4317,53 +2969,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI13</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI14</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Left_Nozzle_PI14</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>326.25</factor>
@@ -4375,53 +2980,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI14</object-name>
-    <property>engines/engine[0]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Left_Nozzle_PI15</object-name>
-    <property>engines/engine[0]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -4443,8 +3001,40 @@
     </axis>
   </animation>
 
+<!-- Open/Close the petals -->
   <animation>
     <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO00</object-name>
+    <object-name>ENG_Left_Nozzle_PO01</object-name>
+    <object-name>ENG_Left_Nozzle_PO02</object-name>
+    <object-name>ENG_Left_Nozzle_PO03</object-name>
+    <object-name>ENG_Left_Nozzle_PO04</object-name>
+    <object-name>ENG_Left_Nozzle_PO05</object-name>
+    <object-name>ENG_Left_Nozzle_PO06</object-name>
+    <object-name>ENG_Left_Nozzle_PO07</object-name>
+    <object-name>ENG_Left_Nozzle_PO08</object-name>
+    <object-name>ENG_Left_Nozzle_PO09</object-name>
+    <object-name>ENG_Left_Nozzle_PO10</object-name>
+    <object-name>ENG_Left_Nozzle_PO11</object-name>
+    <object-name>ENG_Left_Nozzle_PO12</object-name>
+    <object-name>ENG_Left_Nozzle_PO13</object-name>
+    <object-name>ENG_Left_Nozzle_PO14</object-name>
+    <object-name>ENG_Left_Nozzle_PO15</object-name>
+    <object-name>ENG_Left_Nozzle_PI00</object-name>
+    <object-name>ENG_Left_Nozzle_PI01</object-name>
+    <object-name>ENG_Left_Nozzle_PI02</object-name>
+    <object-name>ENG_Left_Nozzle_PI03</object-name>
+    <object-name>ENG_Left_Nozzle_PI04</object-name>
+    <object-name>ENG_Left_Nozzle_PI05</object-name>
+    <object-name>ENG_Left_Nozzle_PI06</object-name>
+    <object-name>ENG_Left_Nozzle_PI07</object-name>
+    <object-name>ENG_Left_Nozzle_PI08</object-name>
+    <object-name>ENG_Left_Nozzle_PI09</object-name>
+    <object-name>ENG_Left_Nozzle_PI10</object-name>
+    <object-name>ENG_Left_Nozzle_PI11</object-name>
+    <object-name>ENG_Left_Nozzle_PI12</object-name>
+    <object-name>ENG_Left_Nozzle_PI13</object-name>
+    <object-name>ENG_Left_Nozzle_PI14</object-name>
     <object-name>ENG_Left_Nozzle_PI15</object-name>
     <property>engines/engine[0]/n2</property>
     <interpolation>
@@ -4463,7 +3053,7 @@
     </interpolation>
     <center>
       <x-m>18.99</x-m>
-      <y-m>-1.15</y-m>
+      <y-m>0.0</y-m>
       <z-m>0.37</z-m>
     </center>
     <axis>
@@ -4482,7 +3072,7 @@
     <factor>-720</factor>
     <center>
       <x-m>18.43</x-m>
-      <y-m>-1.15</y-m>
+      <y-m>0.0</y-m>
       <z-m>-0.2</z-m>
     </center>
     <axis>
@@ -4538,7 +3128,7 @@
     <type>blend</type>
     <object-name>L_Reheat</object-name>
     <property>engines/engine[0]/reheat-norm</property>
-    <factor>-1.0</factor>
+    <factor>-0.999</factor>
     <offset>1.0</offset>
     <max>1.0</max>
     <min>0.0</min>
@@ -4551,7 +3141,7 @@
     <factor>-720</factor>
     <center>
       <x-m>0.0</x-m>
-      <y-m>-1.15</y-m>
+      <y-m>0.0</y-m>
       <z-m>-0.2</z-m>
     </center>
     <axis>
@@ -4561,64 +3151,47 @@
     </axis>
   </animation>
 
-<!-- Right Outer -->
+<!-- Right -->
 <!-- Vectoring -->
   <animation>
     <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PO00</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO00</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PO01</object-name>
+    <object-name>ENG_Right_Nozzle_PO02</object-name>
+    <object-name>ENG_Right_Nozzle_PO03</object-name>
+    <object-name>ENG_Right_Nozzle_PO04</object-name>
+    <object-name>ENG_Right_Nozzle_PO05</object-name>
+    <object-name>ENG_Right_Nozzle_PO06</object-name>
+    <object-name>ENG_Right_Nozzle_PO07</object-name>
+    <object-name>ENG_Right_Nozzle_PO08</object-name>
+    <object-name>ENG_Right_Nozzle_PO09</object-name>
+    <object-name>ENG_Right_Nozzle_PO10</object-name>
+    <object-name>ENG_Right_Nozzle_PO11</object-name>
+    <object-name>ENG_Right_Nozzle_PO12</object-name>
+    <object-name>ENG_Right_Nozzle_PO13</object-name>
+    <object-name>ENG_Right_Nozzle_PO14</object-name>
+    <object-name>ENG_Right_Nozzle_PO15</object-name>
+    <object-name>ENG_Right_Nozzle_PI00</object-name>
+    <object-name>ENG_Right_Nozzle_PI01</object-name>
+    <object-name>ENG_Right_Nozzle_PI02</object-name>
+    <object-name>ENG_Right_Nozzle_PI03</object-name>
+    <object-name>ENG_Right_Nozzle_PI04</object-name>
+    <object-name>ENG_Right_Nozzle_PI05</object-name>
+    <object-name>ENG_Right_Nozzle_PI06</object-name>
+    <object-name>ENG_Right_Nozzle_PI07</object-name>
+    <object-name>ENG_Right_Nozzle_PI08</object-name>
+    <object-name>ENG_Right_Nozzle_PI09</object-name>
+    <object-name>ENG_Right_Nozzle_PI10</object-name>
+    <object-name>ENG_Right_Nozzle_PI11</object-name>
+    <object-name>ENG_Right_Nozzle_PI12</object-name>
+    <object-name>ENG_Right_Nozzle_PI13</object-name>
+    <object-name>ENG_Right_Nozzle_PI14</object-name>
+    <object-name>ENG_Right_Nozzle_PI15</object-name>
     <property>engines/engine[1]/vector-norm</property>
     <factor>-720</factor>
     <center>
       <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
+      <y-m>0.0</y-m>
       <z-m>-0.2</z-m>
     </center>
     <axis>
@@ -4628,6 +3201,7 @@
     </axis>
   </animation>
 
+<!-- Position the petals around the nozzle -->
   <animation>
     <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PO01</object-name>
@@ -4641,54 +3215,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO01</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO02</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -4712,54 +3238,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO02</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO03</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PO03</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>67.5</factor>
@@ -4777,57 +3255,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO03</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO04</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PO04</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>90</factor>
+    <factor>90.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>1.15</y-m>
@@ -4836,54 +3266,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO04</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO05</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -4907,57 +3289,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO05</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO06</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PO06</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>135</factor>
+    <factor>135.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>1.15</y-m>
@@ -4966,54 +3300,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO06</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO07</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -5037,57 +3323,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO07</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO08</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PO08</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>180</factor>
+    <factor>180.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>1.15</y-m>
@@ -5096,54 +3334,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO08</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO09</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -5167,57 +3357,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO09</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO10</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PO10</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>225</factor>
+    <factor>225.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>1.15</y-m>
@@ -5226,54 +3368,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO10</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO11</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -5297,57 +3391,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO11</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO12</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PO12</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>270</factor>
+    <factor>270.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>1.15</y-m>
@@ -5356,54 +3402,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO12</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO13</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -5427,57 +3425,9 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO13</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO14</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PO14</object-name>
     <property>sim/model/nozzle-animation</property>
-    <factor>315</factor>
+    <factor>315.0</factor>
     <center>
       <x-m>18.99</x-m>
       <y-m>1.15</y-m>
@@ -5486,54 +3436,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO14</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO15</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -5557,55 +3459,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PO15</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Right Inner -->
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI00</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PI00</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>11.25</factor>
@@ -5617,54 +3470,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI00</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI01</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -5688,54 +3493,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI01</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI02</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PI02</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>56.25</factor>
@@ -5747,54 +3504,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI02</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI03</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -5818,54 +3527,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI03</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI04</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PI04</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>101.25</factor>
@@ -5877,54 +3538,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI04</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI05</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -5948,54 +3561,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI05</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI06</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PI06</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>146.25</factor>
@@ -6007,54 +3572,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI06</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI07</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -6078,54 +3595,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI07</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI08</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PI08</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>191.25</factor>
@@ -6137,54 +3606,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI08</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI09</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -6208,54 +3629,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI09</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI10</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PI10</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>236.25</factor>
@@ -6267,54 +3640,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI10</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI11</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -6338,54 +3663,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI11</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI12</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PI12</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>281.25</factor>
@@ -6397,54 +3674,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI12</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI13</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -6468,54 +3697,6 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI13</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI14</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
     <object-name>ENG_Right_Nozzle_PI14</object-name>
     <property>sim/model/nozzle-animation</property>
     <factor>326.25</factor>
@@ -6527,54 +3708,6 @@
     <axis>
       <x>1.0</x>
       <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI14</object-name>
-    <property>engines/engine[1]/n2</property>
-    <interpolation>
-      <entry>
-        <ind>0.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>90.0</ind>
-        <dep>0.0</dep>
-      </entry>
-      <entry>
-        <ind>100.0</ind>
-        <dep>-16.0</dep>
-      </entry>
-    </interpolation>
-    <center>
-      <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
-      <z-m>0.37</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
-<!-- Vectoring -->
-  <animation>
-    <type>rotate</type>
-    <object-name>ENG_Right_Nozzle_PI15</object-name>
-    <property>engines/engine[1]/vector-norm</property>
-    <factor>-720</factor>
-    <center>
-      <x-m>18.43</x-m>
-      <y-m>1.15</y-m>
-      <z-m>-0.2</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
       <z>0.0</z>
     </axis>
   </animation>
@@ -6596,8 +3729,40 @@
     </axis>
   </animation>
 
+<!-- Open/Close the petals -->
   <animation>
     <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO00</object-name>
+    <object-name>ENG_Right_Nozzle_PO01</object-name>
+    <object-name>ENG_Right_Nozzle_PO02</object-name>
+    <object-name>ENG_Right_Nozzle_PO03</object-name>
+    <object-name>ENG_Right_Nozzle_PO04</object-name>
+    <object-name>ENG_Right_Nozzle_PO05</object-name>
+    <object-name>ENG_Right_Nozzle_PO06</object-name>
+    <object-name>ENG_Right_Nozzle_PO07</object-name>
+    <object-name>ENG_Right_Nozzle_PO08</object-name>
+    <object-name>ENG_Right_Nozzle_PO09</object-name>
+    <object-name>ENG_Right_Nozzle_PO10</object-name>
+    <object-name>ENG_Right_Nozzle_PO11</object-name>
+    <object-name>ENG_Right_Nozzle_PO12</object-name>
+    <object-name>ENG_Right_Nozzle_PO13</object-name>
+    <object-name>ENG_Right_Nozzle_PO14</object-name>
+    <object-name>ENG_Right_Nozzle_PO15</object-name>
+    <object-name>ENG_Right_Nozzle_PI00</object-name>
+    <object-name>ENG_Right_Nozzle_PI01</object-name>
+    <object-name>ENG_Right_Nozzle_PI02</object-name>
+    <object-name>ENG_Right_Nozzle_PI03</object-name>
+    <object-name>ENG_Right_Nozzle_PI04</object-name>
+    <object-name>ENG_Right_Nozzle_PI05</object-name>
+    <object-name>ENG_Right_Nozzle_PI06</object-name>
+    <object-name>ENG_Right_Nozzle_PI07</object-name>
+    <object-name>ENG_Right_Nozzle_PI08</object-name>
+    <object-name>ENG_Right_Nozzle_PI09</object-name>
+    <object-name>ENG_Right_Nozzle_PI10</object-name>
+    <object-name>ENG_Right_Nozzle_PI11</object-name>
+    <object-name>ENG_Right_Nozzle_PI12</object-name>
+    <object-name>ENG_Right_Nozzle_PI13</object-name>
+    <object-name>ENG_Right_Nozzle_PI14</object-name>
     <object-name>ENG_Right_Nozzle_PI15</object-name>
     <property>engines/engine[1]/n2</property>
     <interpolation>
@@ -6616,7 +3781,7 @@
     </interpolation>
     <center>
       <x-m>18.99</x-m>
-      <y-m>1.15</y-m>
+      <y-m>0.0</y-m>
       <z-m>0.37</z-m>
     </center>
     <axis>
@@ -6691,7 +3856,7 @@
     <type>blend</type>
     <object-name>R_Reheat</object-name>
     <property>engines/engine[1]/reheat-norm</property>
-    <factor>-1.0</factor>
+    <factor>-0.999</factor>
     <offset>1.0</offset>
     <max>1.0</max>
     <min>0.0</min>
@@ -6704,7 +3869,7 @@
     <factor>-720</factor>
     <center>
       <x-m>0.0</x-m>
-      <y-m>-1.15</y-m>
+      <y-m>0.0</y-m>
       <z-m>-0.2</z-m>
     </center>
     <axis>
