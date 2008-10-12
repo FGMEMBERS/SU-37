@@ -15,10 +15,10 @@ initialise = func {
   setlistener("/autopilot/FCS/modes/stick", fcs_stick_mode);
 }
 #--------------------------------------------------------------------
-fcs_stick_mode = func {
+fcs_stick_mode = func(n) {
   # Monitor the FCS stick mode and set/clear appropriate locks.
 
-  fcs_stick_mode = cmdarg().getValue();
+  fcs_stick_mode = n.getValue();
 
   if(fcs_stick_mode == "direct") {
     ap_altitude_lock.setValue("");
