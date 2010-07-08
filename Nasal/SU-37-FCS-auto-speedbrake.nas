@@ -6,6 +6,9 @@ fcs_speedbrake_extend_kt = props.globals.getNode("/autopilot/FCS/settings/speedb
 fcs_speedbrake_extend_mach = props.globals.getNode("/autopilot/FCS/settings/speedbrake-extend-mach", 1);
 ap_speed_lock = props.globals.getNode("/autopilot/locks/speed", 1);
 #--------------------------------------------------------------------
+# Spoilers direct control.
+var dir_speedbrake_input = props.globals.getNode("/controls/flight/spoilers");
+#--------------------------------------------------------------------
 initialise = func {
   setprop("/autopilot/locks/speed", "");
   setlistener("/autopilot/locks/speed", ap_speed_lock_monitor);
@@ -16,6 +19,7 @@ initialise = func {
   setprop(p, getprop(p));
   p = "/autopilot/settings/target-mach";
   setprop(p, getprop(p));
+  fcs_speedbrake_norm.alias(dir_speedbrake_input);
 }
 #--------------------------------------------------------------------
 ap_speed_lock_monitor = func {
@@ -24,24 +28,30 @@ ap_speed_lock_monitor = func {
   # If the AP speed lock is not set i.e. direct control of throttles
   # set both fcs auto speedbrake lock and mode to off as there's no
   # target.
+  # Set speed break direct input by-pass on-off.
 
   if(ap_speed_lock.getValue() == "speed-with-throttle") {
     if(fcs_auto_speedbrake_lock.getValue() == "engaged") {
       fcs_auto_speedbrake_mode.setValue("kias");
+      fcs_speedbrake_norm.unalias(dir_speedbrake_input);
     } else {
+    fcs_speedbrake_norm.alias(dir_speedbrake_input);
       fcs_auto_speedbrake_mode.setValue("off");
       fcs_speedbrake_norm.setValue(0);
     }
   } elsif(ap_speed_lock.getValue() == "mach-with-throttle") {
     if(fcs_auto_speedbrake_lock.getValue() == "engaged") {
       fcs_auto_speedbrake_mode.setValue("mach");
+      fcs_speedbrake_norm.unalias(dir_speedbrake_input);
     } else {
+    fcs_norm.alias(dir_speedbrake_input);
       fcs_auto_speedbrake_mode.setValue("off");
-      fcs_speedbrake_norm.setValue(0);
+      dir_speedbrake_input.setValue(0);
     }
   } else {
     fcs_auto_speedbrake_lock.setValue("off");
     fcs_auto_speedbrake_mode.setValue("off");
+    fcs_speedbrake_norm.alias(dir_speedbrake_input);
   }
 }
 #--------------------------------------------------------------------
