@@ -1,0 +1,3882 @@
+<?xml version="1.0"?>
+
+<!-- SU-37 model config file - Lee Elliott -->
+<!-- 2006-09-16 -->
+
+<PropertyList>
+
+  <path>SU-37-005-125h.ac</path>
+  <offsets>
+    <z-m>0.0</z-m>
+    <pitch-deg>0</pitch-deg>
+  </offsets>
+
+
+<!-- ** Control Surfaces ** -->
+<!-- Rudders -->
+<!-- Left -->
+  <animation>
+	<type>rotate</type>
+	<object-name>TF_Left_Rudder</object-name>
+	<property>surface-positions/left-rudder-pos-norm</property>
+	<factor>-25</factor>
+	<axis>
+		<x1-m>16.793</x1-m> <x2-m>17.309</x2-m>
+		<y1-m>-2.040</y1-m> <y2-m>-2.040</y2-m>
+		<z1-m>0.672</z1-m> <z2-m>2.700</z2-m>
+	</axis>
+  </animation>
+
+<!-- Right -->
+  <animation>
+	<type>rotate</type>
+	<object-name>TF_Right_Rudder</object-name>
+	<property>surface-positions/right-rudder-pos-norm</property>
+	<factor>-25</factor>
+	<axis>
+		<x1-m>16.793</x1-m> <x2-m>17.309</x2-m>
+		<y1-m>2.040</y1-m> <y2-m>2.040</y2-m>
+		<z1-m>0.672</z1-m> <z2-m>2.700</z2-m>
+	</axis>
+  </animation>
+
+<!-- Elevons -->
+<!-- Left -->
+  <animation>
+	<type>rotate</type>
+	<object-name>ELV_Elevon_Left</object-name>
+	<property>surface-positions/left-elevon-pos-norm</property>
+	<factor>25</factor>
+    <center>
+      <x-m>17.56</x-m>
+      <y-m>-2.0</y-m>
+      <z-m>-0.165</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Right -->
+  <animation>
+	<type>rotate</type>
+	<object-name>ELV_Elevon_Right</object-name>
+	<property>surface-positions/right-elevon-pos-norm</property>
+	<factor>25</factor>
+    <center>
+      <x-m>17.56</x-m>
+      <y-m>2.0</y-m>
+      <z-m>-0.165</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Flaperons -->
+<!-- Left -->
+  <animation>
+	<type>rotate</type>
+	<object-name>WNG_Left_Flaperon</object-name>
+	<property>surface-positions/left-flaperon-pos-norm</property>
+	<factor>-30</factor>
+	<axis>
+		<x1-m>14.385</x1-m> <x2-m>15.700</x2-m>
+		<y1-m>-2.15</y1-m> <y2-m>-5.250</y2-m>
+		<z1-m>0.2</z1-m> <z2-m>0.2</z2-m>
+	</axis>
+  </animation>
+
+<!-- Right -->
+  <animation>
+	<type>rotate</type>
+	<object-name>WNG_Right_Flaperon</object-name>
+	<property>surface-positions/right-flaperon-pos-norm</property>
+	<factor>30</factor>
+	<axis>
+		<x1-m>14.385</x1-m> <x2-m>15.700</x2-m>
+		<y1-m>2.15</y1-m> <y2-m>5.250</y2-m>
+		<z1-m>0.2</z1-m> <z2-m>0.2</z2-m>
+	</axis>
+  </animation>
+
+<!-- Slats -->
+<!-- Left -->
+  <animation>
+	<type>rotate</type>
+	<object-name>WNG_Left_Slat</object-name>
+	<property>surface-positions/left-slat-pos-norm</property>
+	<factor>25</factor>
+	<axis>
+		<x1-m>11.176</x1-m> <x2-m>14.726</x2-m>
+		<y1-m>-2.15</y1-m> <y2-m>-6.50</y2-m>
+		<z1-m>0.444</z1-m> <z2-m>0.302</z2-m>
+	</axis>
+  </animation>
+
+<!-- Right -->
+  <animation>
+	<type>rotate</type>
+	<object-name>WNG_Right_Slat</object-name>
+	<property>surface-positions/right-slat-pos-norm</property>
+	<factor>-25</factor>
+	<axis>
+		<x1-m>11.176</x1-m> <x2-m>14.726</x2-m>
+		<y1-m>2.15</y1-m> <y2-m>6.50</y2-m>
+		<z1-m>0.444</z1-m> <z2-m>0.302</z2-m>
+	</axis>
+  </animation>
+
+<!-- Canards -->
+<!-- Left -->
+  <animation>
+	<type>rotate</type>
+	<object-name>CNRD_Left</object-name>
+	<property>surface-positions/canard-pos-deg</property>
+	<factor>1</factor>
+    <center>
+      <x-m>8.80</x-m>
+      <y-m>-1.80</y-m>
+      <z-m>0.25</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Right -->
+  <animation>
+	<type>rotate</type>
+	<object-name>CNRD_Right</object-name>
+	<property>surface-positions/canard-pos-deg</property>
+	<factor>1</factor>
+    <center>
+      <x-m>8.80</x-m>
+      <y-m>1.80</y-m>
+      <z-m>0.25</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Speedbrake -->
+<!-- Sselect non-visibile parts when extended -->
+  <animation>
+    <type>select</type>
+    <object-name>HULL_Speedbrake_Inner</object-name>
+    <object-name>HULL_Speedbrake_Arm_Outer</object-name>
+    <object-name>HULL_Speedbrake_Arm_Inner</object-name>
+    <object-name>HULL_Speedbrake_Well</object-name>
+    <condition>
+      <greater-than>
+        <property>surface-positions/speedbrake-pos-norm</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+<!-- Extend Spoiler Panel -->
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_Speedbrake_Inner</object-name>
+	<property>surface-positions/speedbrake-pos-norm</property>
+	<factor>-45</factor>
+    <center>
+      <x-m>8.95</x-m>
+      <y-m>0.0</y-m>
+      <z-m>1.176</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_Speedbrake_Outer</object-name>
+	<property>surface-positions/speedbrake-pos-norm</property>
+	<factor>-45</factor>
+    <center>
+      <x-m>8.95</x-m>
+      <y-m>0.0</y-m>
+      <z-m>1.176</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Rotate Strut Arm -->
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_Speedbrake_Arm_Outer</object-name>
+	<object-name>HULL_Speedbrake_Arm_Inner</object-name>
+	<property>surface-positions/speedbrake-pos-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.3333</ind>
+        <dep>10.4</dep>
+      </entry>
+      <entry>
+        <ind>0.6666</ind>
+        <dep>18.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>22.7</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>11.900</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.707</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Extend Inner Arm -->
+  <animation>
+    <type>translate</type>
+	<object-name>HULL_Speedbrake_Arm_Inner</object-name>
+    <property>surface-positions/speedbrake-pos-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.3333</ind>
+        <dep>-0.10</dep>
+      </entry>
+      <entry>
+        <ind>0.6666</ind>
+        <dep>-0.3</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>-0.55</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>-0.157</z>
+    </axis>
+  </animation>
+
+<!-- U/C -->
+<!-- Nose -->
+<!-- De-select non-visibile parts when retracted -->
+  <animation>
+    <type>select</type>
+    <object-name>HULL_Nose_WWell</object-name>
+	<object-name>HULL_Nose_Door_Front_Int</object-name>
+	<object-name>HULL_Nose_Door_Rear_Int</object-name>
+    <object-name>UC_Nose_Upper_Strut</object-name>
+    <object-name>UC_Nose_Lower_Strut</object-name>
+	<object-name>UC_Nose_LLights</object-name>
+	<object-name>UC_Nose_Upright_Brace</object-name>
+    <object-name>UC_Nose_WGuard</object-name>
+    <object-name>UC_Nose_Tyres</object-name>
+    <object-name>UC_Nose_Hubs</object-name>
+    <object-name>UC_Nose_BSArm</object-name>
+    <object-name>UC_Nose_Rear_Post</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[0]/position-norm</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+<!-- Upper Strut group -->
+<!-- Steering -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_Upper_Strut</object-name>
+	<object-name>UC_Nose_LLights</object-name>
+	<object-name>UC_Nose_Upright_Brace</object-name>
+	<property>surface-positions/left-rudder-pos-norm</property>
+	<factor>-53</factor>
+	<axis>
+		<x1-m>7.624</x1-m> <x2-m>7.472</x2-m>
+		<y1-m>0.0</y1-m> <y2-m>0.0</y2-m>
+		<z1-m>-0.074</z1-m> <z2-m>-1.582</z2-m>
+	</axis>
+  </animation>
+
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_Upper_Strut</object-name>
+	<object-name>UC_Nose_LLights</object-name>
+	<object-name>UC_Nose_Upright_Brace</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>95.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>95.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.66</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.15</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Rear Post -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_Rear_Post</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>95.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>95.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.66</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.15</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_Rear_Post</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-54.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-54.0</dep>
+      </entry>
+      <entry>
+        <ind>0.64</ind>
+        <dep>-44.0</dep>
+      </entry>
+      <entry>
+        <ind>0.92</ind>
+        <dep>-14.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.71</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.79</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Lower Strut -->
+<!-- Steering -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_Lower_Strut</object-name>
+	<property>surface-positions/left-rudder-pos-norm</property>
+	<factor>-53</factor>
+	<axis>
+		<x1-m>7.624</x1-m> <x2-m>7.472</x2-m>
+		<y1-m>0.0</y1-m> <y2-m>0.0</y2-m>
+		<z1-m>-0.074</z1-m> <z2-m>-1.582</z2-m>
+	</axis>
+  </animation>
+
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_Lower_Strut</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>95.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>95.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.66</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.15</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>translate</type>
+	<object-name>UC_Nose_Lower_Strut</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+	<factor>0.14</factor>
+    <axis>
+      <x>0.1007</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+<!-- Tyres, Hubs & Swing-arm -->
+<!-- Steering -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_Tyres</object-name>
+	<object-name>UC_Nose_Hubs</object-name>
+	<object-name>UC_Nose_BSArm</object-name>
+	<property>surface-positions/left-rudder-pos-norm</property>
+	<factor>-53</factor>
+	<axis>
+		<x1-m>7.624</x1-m> <x2-m>7.472</x2-m>
+		<y1-m>0.0</y1-m> <y2-m>0.0</y2-m>
+		<z1-m>-0.074</z1-m> <z2-m>-1.582</z2-m>
+	</axis>
+  </animation>
+
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_Tyres</object-name>
+	<object-name>UC_Nose_Hubs</object-name>
+	<object-name>UC_Nose_BSArm</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>95.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>95.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.66</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.15</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_Tyres</object-name>
+	<object-name>UC_Nose_Hubs</object-name>
+	<object-name>UC_Nose_BSArm</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.3333</ind>
+        <dep>-26</dep>
+      </entry>
+      <entry>
+        <ind>0.6666</ind>
+        <dep>-42</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>-56</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.31</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-1.47</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Wheel Guard -->
+<!-- Steering -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_WGuard</object-name>
+	<property>surface-positions/left-rudder-pos-norm</property>
+	<factor>-53</factor>
+	<axis>
+		<x1-m>7.624</x1-m> <x2-m>7.472</x2-m>
+		<y1-m>0.0</y1-m> <y2-m>0.0</y2-m>
+		<z1-m>-0.074</z1-m> <z2-m>-1.582</z2-m>
+	</axis>
+  </animation>
+
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_WGuard</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>95.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>95.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>7.66</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.15</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_WGuard</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+	<factor>-60</factor>
+    <center>
+      <x-m>7.31</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-1.47</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Counter-rotate -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_WGuard</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+	<factor>60</factor>
+    <center>
+      <x-m>7.57</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-1.97</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Doors -->
+<!-- Front Door -->
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_Nose_Door_Front_Ext</object-name>
+	<object-name>HULL_Nose_Door_Front_Int</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>95</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>95</dep>
+      </entry>
+    </interpolation>
+	<axis>
+		<x1-m>5.35</x1-m> <x2-m>7.77</x2-m>
+		<y1-m>0.25</y1-m> <y2-m>0.25</y2-m>
+		<z1-m>-0.10</z1-m> <z2-m>-0.02</z2-m>
+	</axis>
+  </animation>
+
+<!-- Rear Door -->
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_Nose_Door_Rear_Ext</object-name>
+	<object-name>HULL_Nose_Door_Rear_Int</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>-41</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>8.70</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.11</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Left Main -->
+<!-- De-select non-visibile parts when retracted -->
+  <animation>
+    <type>select</type>
+    <object-name>HULL_LM_WWell</object-name>
+	<object-name>HULL_LMR_Door_Int</object-name>
+	<object-name>HULL_LMF_Door_Int</object-name>
+    <object-name>UC_Main_Left_Upper_Strut</object-name>
+    <object-name>UC_Main_Left_Tyre</object-name>
+	<object-name>UC_Main_Left_Hub</object-name>
+	<object-name>UC_Main_Left_Upper_DArm</object-name>
+	<object-name>UC_Main_Left_Lower_DArm</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+<!-- Upper Strut -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Upper_Strut</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Upper_Strut</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>3.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>3.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Upper_Strut</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.6</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+<!-- Hub (Lower Strut) -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Hub</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Hub</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>3.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>3.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Hub</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.6</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>translate</type>
+	<object-name>UC_Main_Left_Hub</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+	<factor>0.8</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+<!-- Tyre -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Tyre</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Tyre</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>3.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>3.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Tyre</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.6</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>translate</type>
+	<object-name>UC_Main_Left_Tyre</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+	<factor>0.8</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+<!-- Upper Damper Arm -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Upper_DArm</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Upper_DArm</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>4.5</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>4.5</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Upper_DArm</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.6</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Upper_DArm</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>13.47</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-1.07</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Lower Damper Arm -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Lower_DArm</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Lower_DArm</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>4.5</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>4.5</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Lower_DArm</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.6</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Lower_DArm</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>13.47</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-1.07</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Lower_DArm</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>110</factor>
+    <center>
+      <x-m>13.58</x-m>
+      <y-m>-1.63</y-m>
+      <z-m>-1.37</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Doors -->
+<!-- Front -->
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_LMF_Door_Ext</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-110.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>-110.0</dep>
+      </entry>
+    </interpolation>
+	<axis>
+		<x1-m>11.20</x1-m> <x2-m>11.91</x2-m>
+		<y1-m>-1.97</y1-m> <y2-m>-1.94</y2-m>
+		<z1-m>0.13</z1-m> <z2-m>0.12</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_LMF_Door_Int</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-110.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>-110.0</dep>
+      </entry>
+    </interpolation>
+	<axis>
+		<x1-m>11.20</x1-m> <x2-m>11.91</x2-m>
+		<y1-m>-1.97</y1-m> <y2-m>-1.94</y2-m>
+		<z1-m>0.13</z1-m> <z2-m>0.12</z2-m>
+	</axis>
+  </animation>
+
+<!-- Rear -->
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_LMR_Door_Ext</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-45.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>-45.0</dep>
+      </entry>
+    </interpolation>
+	<axis>
+		<x1-m>12.13</x1-m> <x2-m>14.06</x2-m>
+		<y1-m>-1.81</y1-m> <y2-m>-2.04</y2-m>
+		<z1-m>0.11</z1-m> <z2-m>0.09</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_LMR_Door_Ext</object-name>
+    <property>gear/gear[1]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-45.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>-45.0</dep>
+      </entry>
+    </interpolation>
+	<axis>
+		<x1-m>12.13</x1-m> <x2-m>14.06</x2-m>
+		<y1-m>-1.81</y1-m> <y2-m>-2.04</y2-m>
+		<z1-m>0.11</z1-m> <z2-m>0.09</z2-m>
+	</axis>
+  </animation>
+
+<!-- Right Main -->
+<!-- De-select non-visibile parts when retracted -->
+  <animation>
+    <type>select</type>
+    <object-name>HULL_RM_WWell</object-name>
+	<object-name>HULL_RMR_Door_Int</object-name>
+	<object-name>HULL_RMF_Door_Int</object-name>
+    <object-name>UC_Main_Right_Upper_Strut</object-name>
+    <object-name>UC_Main_Right_Tyre</object-name>
+	<object-name>UC_Main_Right_Hub</object-name>
+	<object-name>UC_Main_Right_Upper_DArm</object-name>
+	<object-name>UC_Main_Right_Lower_DArm</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[2]/position-norm</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+<!-- Upper Strut -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Upper_Strut</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Upper_Strut</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-3.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-3.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Upper_Strut</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.6</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+<!-- Hub (Lower Strut) -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Hub</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Hub</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-3.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-3.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Hub</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.6</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>translate</type>
+	<object-name>UC_Main_Right_Hub</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+	<factor>0.8</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+
+<!-- Tyre -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Tyre</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Tyre</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-3.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-3.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Tyre</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.6</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>translate</type>
+	<object-name>UC_Main_Right_Tyre</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+	<factor>0.8</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+<!-- Upper Damper Arm -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Upper_DArm</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Upper_DArm</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>4.5</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>4.5</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Upper_DArm</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.6</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Upper_DArm</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>13.47</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-1.07</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Lower Damper Arm -->
+<!-- Extend/Retract -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Lower_DArm</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>92.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Lower_DArm</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>4.5</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>4.5</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Lower_DArm</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>-90.0</dep>
+      </entry>
+      <entry>
+        <ind>0.6</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>13.37</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-0.06</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Lower_DArm</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>13.47</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-1.07</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Lower_DArm</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>110</factor>
+    <center>
+      <x-m>13.58</x-m>
+      <y-m>1.63</y-m>
+      <z-m>-1.37</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Doors -->
+<!-- Front -->
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_RMF_Door_Ext</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>110.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>110.0</dep>
+      </entry>
+    </interpolation>
+	<axis>
+		<x1-m>11.20</x1-m> <x2-m>11.91</x2-m>
+		<y1-m>1.97</y1-m> <y2-m>1.94</y2-m>
+		<z1-m>0.13</z1-m> <z2-m>0.12</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_RMF_Door_Int</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>110.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>110.0</dep>
+      </entry>
+    </interpolation>
+	<axis>
+		<x1-m>11.20</x1-m> <x2-m>11.91</x2-m>
+		<y1-m>1.97</y1-m> <y2-m>1.94</y2-m>
+		<z1-m>0.13</z1-m> <z2-m>0.12</z2-m>
+	</axis>
+  </animation>
+
+<!-- Rear -->
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_RMR_Door_Ext</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>45.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>45.0</dep>
+      </entry>
+    </interpolation>
+	<axis>
+		<x1-m>12.13</x1-m> <x2-m>14.06</x2-m>
+		<y1-m>1.81</y1-m> <y2-m>2.04</y2-m>
+		<z1-m>0.11</z1-m> <z2-m>0.09</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>HULL_RMR_Door_Int</object-name>
+    <property>gear/gear[2]/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.5</ind>
+        <dep>45.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>45.0</dep>
+      </entry>
+    </interpolation>
+	<axis>
+		<x1-m>12.13</x1-m> <x2-m>14.06</x2-m>
+		<y1-m>1.81</y1-m> <y2-m>2.04</y2-m>
+		<z1-m>0.11</z1-m> <z2-m>0.09</z2-m>
+	</axis>
+  </animation>
+
+<!-- Engines -->
+<!-- FOD Screens -->
+<!-- Left -->
+<!-- De-select when retracted -->
+  <animation>
+    <type>select</type>
+	<object-name>ENG_Left_Screen</object-name>
+    <condition>
+      <greater-than>
+        	<property>autopilot/FCS/controls/engines/fod-screens-norm</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_Screen</object-name>
+      	<property>autopilot/FCS/controls/engines/fod-screens-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>12.000</x1-m> <x2-m>12.000</x2-m>
+		<y1-m>-1.432</y1-m> <y2-m>-0.729</y2-m>
+		<z1-m>-0.907</z1-m> <z2-m>-0.966</z2-m>
+	</axis>
+  </animation>
+
+<!-- Right -->
+<!-- De-select when retracted -->
+  <animation>
+    <type>select</type>
+	<object-name>ENG_Right_Screen</object-name>
+    <condition>
+      <greater-than>
+        	<property>autopilot/FCS/controls/engines/fod-screens-norm</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_Screen</object-name>
+       	<property>autopilot/FCS/controls/engines/fod-screens-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>12.000</x1-m> <x2-m>12.000</x2-m>
+		<y1-m>1.432</y1-m> <y2-m>0.729</y2-m>
+		<z1-m>-0.907</z1-m> <z2-m>-0.966</z2-m>
+	</axis>
+  </animation>
+
+<!-- Hi-AoA Intake doors -->
+<!-- Left -->
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor00</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>10.4212</x1-m> <x2-m>10.4559</x2-m>
+		<y1-m>-1.3715</y1-m> <y2-m>-0.6810</y2-m>
+		<z1-m>-0.9051</z1-m> <z2-m>-0.9651</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor01</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>10.5528</x1-m> <x2-m>10.5846</x2-m>
+		<y1-m>-1.3763</y1-m> <y2-m>-0.6850</y2-m>
+		<z1-m>-0.9062</z1-m> <z2-m>-0.9662</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor02</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>10.6844</x1-m> <x2-m>10.7132</x2-m>
+		<y1-m>-1.3811</y1-m> <y2-m>-0.6890</y2-m>
+		<z1-m>-0.9073</z1-m> <z2-m>-0.9673</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor03</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>10.8159</x1-m> <x2-m>10.8419</x2-m>
+		<y1-m>-1.3859</y1-m> <y2-m>-0.6929</y2-m>
+		<z1-m>-0.9083</z1-m> <z2-m>-0.9684</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor04</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>10.9475</x1-m> <x2-m>10.9706</x2-m>
+		<y1-m>-1.3906</y1-m> <y2-m>-0.6969</y2-m>
+		<z1-m>-0.9094</z1-m> <z2-m>-0.9695</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor05</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>11.0791</x1-m> <x2-m>11.0992</x2-m>
+		<y1-m>-1.3954</y1-m> <y2-m>-0.7009</y2-m>
+		<z1-m>-0.9105</z1-m> <z2-m>-0.9706</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor06</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>11.2107</x1-m> <x2-m>11.2279</x2-m>
+		<y1-m>-1.4002</y1-m> <y2-m>-0.7049</y2-m>
+		<z1-m>-0.9116</z1-m> <z2-m>-0.9717</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor07</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>11.3422</x1-m> <x2-m>11.3566</x2-m>
+		<y1-m>-1.4050</y1-m> <y2-m>-0.7088</y2-m>
+		<z1-m>-0.9126</z1-m> <z2-m>-0.9727</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor08</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>11.4738</x1-m> <x2-m>11.4852</x2-m>
+		<y1-m>-1.4098</y1-m> <y2-m>-0.7128</y2-m>
+		<z1-m>-0.9137</z1-m> <z2-m>-0.9738</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor09</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>11.6054</x1-m> <x2-m>11.6139</x2-m>
+		<y1-m>-1.4146</y1-m> <y2-m>-0.7168</y2-m>
+		<z1-m>-0.9148</z1-m> <z2-m>-0.9749</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor10</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>11.7370</x1-m> <x2-m>11.7426</x2-m>
+		<y1-m>-1.4193</y1-m> <y2-m>-0.7208</y2-m>
+		<z1-m>-0.9159</z1-m> <z2-m>-0.9760</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Left_LDoor11</object-name>
+	<property>autopilot/FCS/controls/engines/engine[0]/aei-norm</property>
+	<factor>-40</factor>
+	<axis>
+		<x1-m>11.8685</x1-m> <x2-m>11.8712</x2-m>
+		<y1-m>-1.4241</y1-m> <y2-m>-0.7247</y2-m>
+		<z1-m>-0.9169</z1-m> <z2-m>-0.9771</z2-m>
+	</axis>
+  </animation>
+
+<!-- Right -->
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor00</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>10.4212</x1-m> <x2-m>10.4559</x2-m>
+		<y1-m>1.3715</y1-m> <y2-m>0.6810</y2-m>
+		<z1-m>-0.9051</z1-m> <z2-m>-0.9651</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor01</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>10.5528</x1-m> <x2-m>10.5846</x2-m>
+		<y1-m>1.3763</y1-m> <y2-m>0.6850</y2-m>
+		<z1-m>-0.9062</z1-m> <z2-m>-0.9662</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor02</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>10.6844</x1-m> <x2-m>10.7132</x2-m>
+		<y1-m>1.3811</y1-m> <y2-m>0.6890</y2-m>
+		<z1-m>-0.9073</z1-m> <z2-m>-0.9673</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor03</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>10.8159</x1-m> <x2-m>10.8419</x2-m>
+		<y1-m>1.3859</y1-m> <y2-m>0.6929</y2-m>
+		<z1-m>-0.9083</z1-m> <z2-m>-0.9684</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor04</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>10.9475</x1-m> <x2-m>10.9706</x2-m>
+		<y1-m>1.3906</y1-m> <y2-m>0.6969</y2-m>
+		<z1-m>-0.9094</z1-m> <z2-m>-0.9695</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor05</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>11.0791</x1-m> <x2-m>11.0992</x2-m>
+		<y1-m>1.3954</y1-m> <y2-m>0.7009</y2-m>
+		<z1-m>-0.9105</z1-m> <z2-m>-0.9706</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor06</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>11.2107</x1-m> <x2-m>11.2279</x2-m>
+		<y1-m>1.4002</y1-m> <y2-m>0.7049</y2-m>
+		<z1-m>-0.9116</z1-m> <z2-m>-0.9717</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor07</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>11.3422</x1-m> <x2-m>11.3566</x2-m>
+		<y1-m>1.4050</y1-m> <y2-m>0.7088</y2-m>
+		<z1-m>-0.9126</z1-m> <z2-m>-0.9727</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor08</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>11.4738</x1-m> <x2-m>11.4852</x2-m>
+		<y1-m>1.4098</y1-m> <y2-m>0.7128</y2-m>
+		<z1-m>-0.9137</z1-m> <z2-m>-0.9738</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor09</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>11.6054</x1-m> <x2-m>11.6139</x2-m>
+		<y1-m>1.4146</y1-m> <y2-m>0.7168</y2-m>
+		<z1-m>-0.9148</z1-m> <z2-m>-0.9749</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor10</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>11.7370</x1-m> <x2-m>11.7426</x2-m>
+		<y1-m>1.4193</y1-m> <y2-m>0.7208</y2-m>
+		<z1-m>-0.9159</z1-m> <z2-m>-0.9760</z2-m>
+	</axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>ENG_Right_LDoor11</object-name>
+	<property>autopilot/FCS/controls/engines/engine[1]/aei-norm</property>
+	<factor>40</factor>
+	<axis>
+		<x1-m>11.8685</x1-m> <x2-m>11.8712</x2-m>
+		<y1-m>1.4241</y1-m> <y2-m>0.7247</y2-m>
+		<z1-m>-0.9169</z1-m> <z2-m>-0.9771</z2-m>
+	</axis>
+  </animation>
+
+<!-- Nozzle animations -->
+<!-- Left -->
+<!-- Vectoring -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO00</object-name>
+    <object-name>ENG_Left_Nozzle_PO01</object-name>
+    <object-name>ENG_Left_Nozzle_PO02</object-name>
+    <object-name>ENG_Left_Nozzle_PO03</object-name>
+    <object-name>ENG_Left_Nozzle_PO04</object-name>
+    <object-name>ENG_Left_Nozzle_PO05</object-name>
+    <object-name>ENG_Left_Nozzle_PO06</object-name>
+    <object-name>ENG_Left_Nozzle_PO07</object-name>
+    <object-name>ENG_Left_Nozzle_PO08</object-name>
+    <object-name>ENG_Left_Nozzle_PO09</object-name>
+    <object-name>ENG_Left_Nozzle_PO10</object-name>
+    <object-name>ENG_Left_Nozzle_PO11</object-name>
+    <object-name>ENG_Left_Nozzle_PO12</object-name>
+    <object-name>ENG_Left_Nozzle_PO13</object-name>
+    <object-name>ENG_Left_Nozzle_PO14</object-name>
+    <object-name>ENG_Left_Nozzle_PO15</object-name>
+    <object-name>ENG_Left_Nozzle_PI00</object-name>
+    <object-name>ENG_Left_Nozzle_PI01</object-name>
+    <object-name>ENG_Left_Nozzle_PI02</object-name>
+    <object-name>ENG_Left_Nozzle_PI03</object-name>
+    <object-name>ENG_Left_Nozzle_PI04</object-name>
+    <object-name>ENG_Left_Nozzle_PI05</object-name>
+    <object-name>ENG_Left_Nozzle_PI06</object-name>
+    <object-name>ENG_Left_Nozzle_PI07</object-name>
+    <object-name>ENG_Left_Nozzle_PI08</object-name>
+    <object-name>ENG_Left_Nozzle_PI09</object-name>
+    <object-name>ENG_Left_Nozzle_PI10</object-name>
+    <object-name>ENG_Left_Nozzle_PI11</object-name>
+    <object-name>ENG_Left_Nozzle_PI12</object-name>
+    <object-name>ENG_Left_Nozzle_PI13</object-name>
+    <object-name>ENG_Left_Nozzle_PI14</object-name>
+    <object-name>ENG_Left_Nozzle_PI15</object-name>
+    <property>engines/engine[0]/vector-norm</property>
+    <factor>-720</factor>
+    <center>
+      <x-m>18.43</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Position the petals around the nozzle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO01</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>22.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO02</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>45</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO03</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>67.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO04</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>90.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO05</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>112.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO06</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>135.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO07</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>157.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO08</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>180.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO09</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>202.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO10</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>225.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO11</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>247.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO12</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>270.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO13</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>292.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO14</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>315.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO15</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>337.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI00</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>11.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI01</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>33.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI02</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>56.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI03</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>78.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI04</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>101.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI05</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>123.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI06</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>146.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI07</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>168.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI08</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>191.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI09</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>213.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI10</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>236.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI11</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>258.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI12</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>281.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI13</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>303.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI14</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>326.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PI15</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>348.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>-1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Open/Close the petals -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_PO00</object-name>
+    <object-name>ENG_Left_Nozzle_PO01</object-name>
+    <object-name>ENG_Left_Nozzle_PO02</object-name>
+    <object-name>ENG_Left_Nozzle_PO03</object-name>
+    <object-name>ENG_Left_Nozzle_PO04</object-name>
+    <object-name>ENG_Left_Nozzle_PO05</object-name>
+    <object-name>ENG_Left_Nozzle_PO06</object-name>
+    <object-name>ENG_Left_Nozzle_PO07</object-name>
+    <object-name>ENG_Left_Nozzle_PO08</object-name>
+    <object-name>ENG_Left_Nozzle_PO09</object-name>
+    <object-name>ENG_Left_Nozzle_PO10</object-name>
+    <object-name>ENG_Left_Nozzle_PO11</object-name>
+    <object-name>ENG_Left_Nozzle_PO12</object-name>
+    <object-name>ENG_Left_Nozzle_PO13</object-name>
+    <object-name>ENG_Left_Nozzle_PO14</object-name>
+    <object-name>ENG_Left_Nozzle_PO15</object-name>
+    <object-name>ENG_Left_Nozzle_PI00</object-name>
+    <object-name>ENG_Left_Nozzle_PI01</object-name>
+    <object-name>ENG_Left_Nozzle_PI02</object-name>
+    <object-name>ENG_Left_Nozzle_PI03</object-name>
+    <object-name>ENG_Left_Nozzle_PI04</object-name>
+    <object-name>ENG_Left_Nozzle_PI05</object-name>
+    <object-name>ENG_Left_Nozzle_PI06</object-name>
+    <object-name>ENG_Left_Nozzle_PI07</object-name>
+    <object-name>ENG_Left_Nozzle_PI08</object-name>
+    <object-name>ENG_Left_Nozzle_PI09</object-name>
+    <object-name>ENG_Left_Nozzle_PI10</object-name>
+    <object-name>ENG_Left_Nozzle_PI11</object-name>
+    <object-name>ENG_Left_Nozzle_PI12</object-name>
+    <object-name>ENG_Left_Nozzle_PI13</object-name>
+    <object-name>ENG_Left_Nozzle_PI14</object-name>
+    <object-name>ENG_Left_Nozzle_PI15</object-name>
+    <property>engines/engine[0]/n2</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>90.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>100.0</ind>
+        <dep>-16.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.37</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Nozzle base -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Left_Nozzle_Base_Outer</object-name>
+    <object-name>ENG_Left_Nozzle_Base_Inner</object-name>
+    <property>engines/engine[0]/vector-norm</property>
+    <factor>-720</factor>
+    <center>
+      <x-m>18.43</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Reheat -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>L_Reheat</object-name>
+  </animation>
+
+  <animation>
+	<type>translate</type>
+	<object-name>L_Reheat</object-name>
+	<offset-m>18.43</offset-m>
+	<axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+	</axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>L_Reheat</object-name>
+    <condition>
+      <greater-than>
+        <property>/engines/engine[0]/n2</property>
+        <value>98.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>L_Reheat</object-name>
+    <property>engines/engine[0]/reheat-norm</property>
+    <x-factor>1</x-factor>
+    <x-offset>0</x-offset>
+    <x-max>1</x-max>
+    <x-min>0</x-min>
+    <y-factor>0</y-factor>
+    <y-offset>1</y-offset>
+    <z-factor>0</z-factor>
+    <z-offset>1</z-offset>
+  </animation>
+
+  <animation> 
+    <type>blend</type>
+    <object-name>L_Reheat</object-name>
+    <property>engines/engine[0]/reheat-norm</property>
+    <factor>-0.999</factor>
+    <offset>1.0</offset>
+    <max>1.0</max>
+    <min>0.0</min>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>L_Reheat</object-name>
+    <property>engines/engine[0]/vector-norm</property>
+    <factor>-720</factor>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Right -->
+<!-- Vectoring -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO00</object-name>
+    <object-name>ENG_Right_Nozzle_PO01</object-name>
+    <object-name>ENG_Right_Nozzle_PO02</object-name>
+    <object-name>ENG_Right_Nozzle_PO03</object-name>
+    <object-name>ENG_Right_Nozzle_PO04</object-name>
+    <object-name>ENG_Right_Nozzle_PO05</object-name>
+    <object-name>ENG_Right_Nozzle_PO06</object-name>
+    <object-name>ENG_Right_Nozzle_PO07</object-name>
+    <object-name>ENG_Right_Nozzle_PO08</object-name>
+    <object-name>ENG_Right_Nozzle_PO09</object-name>
+    <object-name>ENG_Right_Nozzle_PO10</object-name>
+    <object-name>ENG_Right_Nozzle_PO11</object-name>
+    <object-name>ENG_Right_Nozzle_PO12</object-name>
+    <object-name>ENG_Right_Nozzle_PO13</object-name>
+    <object-name>ENG_Right_Nozzle_PO14</object-name>
+    <object-name>ENG_Right_Nozzle_PO15</object-name>
+    <object-name>ENG_Right_Nozzle_PI00</object-name>
+    <object-name>ENG_Right_Nozzle_PI01</object-name>
+    <object-name>ENG_Right_Nozzle_PI02</object-name>
+    <object-name>ENG_Right_Nozzle_PI03</object-name>
+    <object-name>ENG_Right_Nozzle_PI04</object-name>
+    <object-name>ENG_Right_Nozzle_PI05</object-name>
+    <object-name>ENG_Right_Nozzle_PI06</object-name>
+    <object-name>ENG_Right_Nozzle_PI07</object-name>
+    <object-name>ENG_Right_Nozzle_PI08</object-name>
+    <object-name>ENG_Right_Nozzle_PI09</object-name>
+    <object-name>ENG_Right_Nozzle_PI10</object-name>
+    <object-name>ENG_Right_Nozzle_PI11</object-name>
+    <object-name>ENG_Right_Nozzle_PI12</object-name>
+    <object-name>ENG_Right_Nozzle_PI13</object-name>
+    <object-name>ENG_Right_Nozzle_PI14</object-name>
+    <object-name>ENG_Right_Nozzle_PI15</object-name>
+    <property>engines/engine[1]/vector-norm</property>
+    <factor>-720</factor>
+    <center>
+      <x-m>18.43</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Position the petals around the nozzle -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO01</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>22.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO02</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>45</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO03</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>67.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO04</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>90.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO05</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>112.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO06</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>135.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO07</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>157.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO08</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>180.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO09</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>202.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO10</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>225.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO11</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>247.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO12</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>270.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO13</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>292.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO14</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>315.0</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO15</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>337.5</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI00</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>11.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI01</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>33.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI02</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>56.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI03</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>78.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI04</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>101.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI05</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>123.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI06</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>146.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI07</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>168.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI08</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>191.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI09</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>213.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI10</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>236.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI11</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>258.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI12</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>281.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI13</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>303.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI14</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>326.25</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PI15</object-name>
+    <property>sim/model/nozzle-animation</property>
+    <factor>348.75</factor>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Open/Close the petals -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_PO00</object-name>
+    <object-name>ENG_Right_Nozzle_PO01</object-name>
+    <object-name>ENG_Right_Nozzle_PO02</object-name>
+    <object-name>ENG_Right_Nozzle_PO03</object-name>
+    <object-name>ENG_Right_Nozzle_PO04</object-name>
+    <object-name>ENG_Right_Nozzle_PO05</object-name>
+    <object-name>ENG_Right_Nozzle_PO06</object-name>
+    <object-name>ENG_Right_Nozzle_PO07</object-name>
+    <object-name>ENG_Right_Nozzle_PO08</object-name>
+    <object-name>ENG_Right_Nozzle_PO09</object-name>
+    <object-name>ENG_Right_Nozzle_PO10</object-name>
+    <object-name>ENG_Right_Nozzle_PO11</object-name>
+    <object-name>ENG_Right_Nozzle_PO12</object-name>
+    <object-name>ENG_Right_Nozzle_PO13</object-name>
+    <object-name>ENG_Right_Nozzle_PO14</object-name>
+    <object-name>ENG_Right_Nozzle_PO15</object-name>
+    <object-name>ENG_Right_Nozzle_PI00</object-name>
+    <object-name>ENG_Right_Nozzle_PI01</object-name>
+    <object-name>ENG_Right_Nozzle_PI02</object-name>
+    <object-name>ENG_Right_Nozzle_PI03</object-name>
+    <object-name>ENG_Right_Nozzle_PI04</object-name>
+    <object-name>ENG_Right_Nozzle_PI05</object-name>
+    <object-name>ENG_Right_Nozzle_PI06</object-name>
+    <object-name>ENG_Right_Nozzle_PI07</object-name>
+    <object-name>ENG_Right_Nozzle_PI08</object-name>
+    <object-name>ENG_Right_Nozzle_PI09</object-name>
+    <object-name>ENG_Right_Nozzle_PI10</object-name>
+    <object-name>ENG_Right_Nozzle_PI11</object-name>
+    <object-name>ENG_Right_Nozzle_PI12</object-name>
+    <object-name>ENG_Right_Nozzle_PI13</object-name>
+    <object-name>ENG_Right_Nozzle_PI14</object-name>
+    <object-name>ENG_Right_Nozzle_PI15</object-name>
+    <property>engines/engine[1]/n2</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>90.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>100.0</ind>
+        <dep>-16.0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>18.99</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.37</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Nozzle base -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ENG_Right_Nozzle_Base_Outer</object-name>
+    <object-name>ENG_Right_Nozzle_Base_Inner</object-name>
+    <property>engines/engine[1]/vector-norm</property>
+    <factor>-720</factor>
+    <center>
+      <x-m>18.43</x-m>
+      <y-m>1.15</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Reheat -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>R_Reheat</object-name>
+  </animation>
+
+  <animation>
+	<type>translate</type>
+	<object-name>R_Reheat</object-name>
+	<offset-m>18.43</offset-m>
+	<axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+	</axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>R_Reheat</object-name>
+    <condition>
+      <greater-than>
+        <property>/engines/engine[1]/n2</property>
+        <value>98.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>scale</type>
+    <object-name>R_Reheat</object-name>
+    <property>engines/engine[1]/reheat-norm</property>
+    <x-factor>1</x-factor>
+    <x-offset>0</x-offset>
+    <x-max>1</x-max>
+    <x-min>0</x-min>
+    <y-factor>0</y-factor>
+    <y-offset>1</y-offset>
+    <z-factor>0</z-factor>
+    <z-offset>1</z-offset>
+  </animation>
+
+  <animation> 
+    <type>blend</type>
+    <object-name>R_Reheat</object-name>
+    <property>engines/engine[1]/reheat-norm</property>
+    <factor>-0.999</factor>
+    <offset>1.0</offset>
+    <max>1.0</max>
+    <min>0.0</min>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>R_Reheat</object-name>
+    <property>engines/engine[1]/vector-norm</property>
+    <factor>-720</factor>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.2</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+</PropertyList>
