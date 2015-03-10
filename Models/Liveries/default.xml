@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Default</name>
+        <texture>Liveries/SU-37-top.png</texture> 
+		<texture-pilot>Liveries/fighter_pilot.png</texture-pilot>
+
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>
