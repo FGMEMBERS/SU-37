@@ -69,7 +69,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
    <h>120</h>
   </instrument>
 
-  <instrument include="Aircraft/Instruments/attitude-indicator.xml">
+  <instrument include="Instruments/attitude-indicator.xml">
    <name>Attitude Indicator</name>
    <x>100</x>
    <y>225</y>
@@ -182,7 +182,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
   </instrument>
 
 <!-- end radio stack -->
-  <instrument include="Aircraft/Instruments/throttle-quadrant.xml">
+  <instrument include="Instruments/throttle-quadrant.xml">
    <name>Engine 0 throttle quadrant</name>
    <params>
     <engine-throttle-select>/controls/engines/engine[0]/throttle</engine-throttle-select>
@@ -193,7 +193,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
    <h>80</h>
   </instrument>
 
-  <instrument include="Aircraft/Instruments/throttle-quadrant.xml">
+  <instrument include="Instruments/throttle-quadrant.xml">
    <name>Engine 1 throttle quadrant</name>
    <params>
     <engine-throttle-select>/controls/engines/engine[1]/throttle</engine-throttle-select>
@@ -204,7 +204,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
    <h>80</h>
   </instrument>
 
-  <instrument include="Aircraft/Instruments/flap-quadrant.xml">
+  <instrument include="Instruments/flap-quadrant.xml">
    <name>Flaps quadrant</name>
    <params>
     <flaps-select>/controls/flight/flaps</flaps-select>
@@ -215,7 +215,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
    <h>80</h>
   </instrument>
 
-  <instrument include="Aircraft/Instruments/reheat-quadrant.xml">
+  <instrument include="Instruments/reheat-quadrant.xml">
    <name>Engine 0 reheat quadrant</name>
    <params>
     <engine-reheat-select>/controls/engines/engine[0]/reheat</engine-reheat-select>
@@ -226,7 +226,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
    <h>80</h>
   </instrument>
 
-  <instrument include="Aircraft/Instruments/reheat-quadrant.xml">
+  <instrument include="Instruments/reheat-quadrant.xml">
    <name>Engine 1 reheat quadrant</name>
    <params>
     <engine-reheat-select>/controls/engines/engine[1]/reheat</engine-reheat-select>
