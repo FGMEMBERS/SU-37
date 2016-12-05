@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+  <path>panel.ac</path>
+  
+  <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>100</max-m>
+    </animation>
+  
+  
+  <model>
+    <path>Aircraft/SU-37/Models/Interior/seat2.ac</path>
+	<offsets>
+      <x-m> 5.0 </x-m>
+      <y-m>0.01 </y-m>
+      <z-m>0.6 </z-m>
+	  <pitch-deg>-5</pitch-deg>
+    </offsets>
+  </model>
+  
+   <model>
+   <name>pilot</name>
+    <path>Aircraft/SU-37/Models/Interior/pilot/pilot.xml</path>
+	<offsets>
+      <x-m> 5.0 </x-m>
+      <y-m>0.01 </y-m>
+      <z-m>0.95 </z-m>
+	  <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+  
+   <animation>
+        <type>select</type>
+        <object-name>pilot</object-name>
+		<condition>
+            <not>
+            <property>sim/current-view/internal</property>
+            </not>
+        </condition>
+    </animation>		
+  
+  <!-- instruments -->
+  
+  <!-- Centre top MFD -->
+  <model>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/mfd/mfd-3.xml</path>
+	<offsets>
+      <x-m> 4.223 </x-m>
+      <y-m>0.01 </y-m>
+      <z-m>1 </z-m>
+	  <pitch-deg>-5</pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- Centre lower MFD -->
+  <model>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/mfd/mfd-1.xml</path>
+	<offsets>
+      <x-m> 4.3 </x-m>
+      <y-m>0.01 </y-m>
+      <z-m>0.73 </z-m>
+	  <pitch-deg>-35</pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- left MFD -->
+  <model>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/mfd/mfd-2.xml</path>
+	<offsets>
+      <x-m> 4.223 </x-m>
+      <y-m>-0.24 </y-m>
+      <z-m>1.03 </z-m>
+	  <pitch-deg>-5</pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- right MFD -->
+  <model>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/mfd/mfd-4.xml</path>
+	<offsets>
+      <x-m> 4.223 </x-m>
+      <y-m>0.257 </y-m>
+      <z-m>1.03 </z-m>
+	  <pitch-deg>-5</pitch-deg>
+    </offsets>
+  </model>
+  
+   <!-- hud -->
+  <model>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/hud/hud.xml</path>
+	<offsets>
+      <x-m> 4.223 </x-m>
+      <y-m>0.01 </y-m>
+      <z-m>1.2 </z-m>
+	  <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/ISTR4-2/ISTR4-2.xml</path>
+	<offsets>
+      <x-m> 4.29 </x-m>
+      <y-m>-0.129 </y-m>
+      <z-m>1.22 </z-m>
+	  <pitch-deg>-5</pitch-deg>
+    </offsets>
+  </model>
+  
+<!-- compas --> 
+ <model>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/KI-13/KI-13.xml</path>
+	<offsets>
+      <x-m> 4.45 </x-m>
+      <y-m>0.22 </y-m>
+      <z-m>1.47 </z-m>
+	  <pitch-deg>-5</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/PNP-72-12/PNP-72-12.xml</path>
+	<offsets>
+      <x-m> 4.29 </x-m>
+      <y-m>0.178 </y-m>
+      <z-m>1.2 </z-m>
+	  <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+  
+   <model>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/UV-30-3/UV-30-3.xml</path>
+	<offsets>
+      <x-m> 4.3 </x-m>
+      <y-m>0.279 </y-m>
+      <z-m>1.185 </z-m>
+	  <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

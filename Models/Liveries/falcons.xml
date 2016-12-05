@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">"Falcons of Russia"</name>
+        <texture>Liveries/falcons.png</texture>
+<texture-pilot>Liveries/russian_pilot.png</texture-pilot>
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>

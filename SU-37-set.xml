@@ -10,14 +10,63 @@ SU-37 simulation config.
   <PropertyList>
     <sim>
       <flight-model>yasim</flight-model>
-      <status>experimental</status>
-      <author>Lee Elliott</author>
-      <aero>SU-37-yasim</aero>
-      <fuel-fraction>1.0</fuel-fraction>
+      <status>v0.7</status>
+      <author>Lee Elliott, StuartC, PipK, VooDoo</author>
+      <aero>su37-yasim</aero>
+      <fuel-fraction>0.6</fuel-fraction>
 
       <description>Sukoi SU-37 type aircraft (YASim FDM)</description>
+	  
+	    <rating>
+      <FDM type="int">     3 </FDM>
+      <systems type="int"> 2 </systems>
+      <cockpit type="int"> 3 </cockpit>
+      <model type="int">   3</model>
+    </rating>
 
       <virtual-cockpit archive="y">true</virtual-cockpit>
+		  
+	  <rendering>
+			<redout>
+				<parameters>
+					<blackout-complete-g>9.1</blackout-complete-g>
+					<blackout-onset-g>7.5</blackout-onset-g>
+				</parameters>
+			</redout>
+		</rendering>
+		
+		<multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+         <int n="0" alias="/sim/crashed" />
+		 
+		  
+      <!-- Beacon on -->
+      <int n="1" alias="/controls/lighting/beacon" />
+      <!-- Landing lights on -->
+      <int n="2" alias="/controls/lighting/landing-lights" />
+      <!-- Taxi light on -->
+      <int n="3" alias="/controls/lighting/taxi-light" />
+	  <!-- Nav lights on -->
+      <int n="4" alias="/controls/lighting/nav-lights" />
+	  
+	  <!-- Engine Status -->
+	  
+	  <int n="5" alias="/engines/engine[0]/state" />
+	  <int n="6" alias="/engines/engine[1]/state" />
+	  <int n="7" alias="/sim/crashed" />
+	  
+        
+        <float n="0" alias="/surface-positions/left-taileron-pos-norm"/>
+        <float n="1" alias="/surface-positions/right-taileron-pos-norm"/>
+		<float n="2" alias="/surface-positions/left-flap-pos-norm"/>
+		<float n="3" alias="/surface-positions/right-flap-pos-norm"/>
+		<float n="4" alias="/sim/model/nozzle-animation"/>
+		<float n="8" alias="/engines/engine[0]/afterburner" /> <!-- Reheat Left Engine -->
+	    <float n="9" alias="/engines/engine[1]/afterburner" /> <!-- Reheat Right Engine -->
+			
+      </generic>
+    </multiplay>
 
       <view n="0">
         <internal archive="y">true</internal>
@@ -29,36 +78,30 @@ SU-37 simulation config.
           <default-field-of-view-deg>55</default-field-of-view-deg>
         </config>
       </view>
-
-      <view n="100">
-        <name>Drop View</name>
-        <type>lookat</type>
+	  
+	  
+	   <view n="100">
+	   <name>Pilot cam</name>
+        <internal archive="y">false</internal>
         <config>
-          <eye-lat-deg-path>/sim/view[100]/latitude-deg</eye-lat-deg-path>
-          <eye-lon-deg-path>/sim/view[100]/longitude-deg</eye-lon-deg-path>
-          <eye-alt-ft-path>/sim/view[100]/altitude-ft</eye-alt-ft-path>
-          <eye-roll-deg-path>/sim/view[100]/roll-deg</eye-roll-deg-path>
-          <eye-pitch-deg-path>/sim/view[100]/pitch-deg</eye-pitch-deg-path>
-          <eye-heading-deg-path>/sim/view[100]/heading-deg</eye-heading-deg-path>
-          <at-model type="bool">true</at-model>
-          <at-model-idx type="int">0</at-model-idx>
-          <ground-level-nearplane-m type="double">1.0f</ground-level-nearplane-m>
-          <default-field-of-view-deg type="double">8.0</default-field-of-view-deg>
-          <x-offset-m type="double">0</x-offset-m>
-          <y-offset-m type="double">0</y-offset-m>
-          <z-offset-m type="double">0</z-offset-m>
-          <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+		 <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+          <x-offset-m archive="y">0.00</x-offset-m>
+          <y-offset-m archive="y">1.45</y-offset-m>
+          <z-offset-m archive="y">4.3</z-offset-m>
+          <pitch-offset-deg>0</pitch-offset-deg>
+		  <heading-offset-deg>180</heading-offset-deg>
+          <default-field-of-view-deg>95</default-field-of-view-deg>
         </config>
       </view>
 
-      <current-view>
-        <field-of-view>55.0</field-of-view>
-      </current-view>
+     
 
 <!-- Shift the camera target point back -->
       <view n="1">
         <config>
           <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+		  <pitch-offset-deg archive="y">6</pitch-offset-deg>
         </config>
       </view>
 
@@ -67,35 +110,59 @@ SU-37 simulation config.
           <y-offset-m archive="y" type="double">5.4</y-offset-m>
           <z-offset-m archive="y">-19.7</z-offset-m>
           <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+		  <pitch-offset-deg archive="y">6</pitch-offset-deg>
         </config>
       </view>
 
       <view n="3">
         <config>
+          <y-offset-m archive="y" type="double">5.4</y-offset-m>
+          <z-offset-m archive="y">-19.7</z-offset-m>
           <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+		  <pitch-offset-deg archive="y">6</pitch-offset-deg>
         </config>
       </view>
 
       <view n="4">
         <config>
+           <y-offset-m archive="y" type="double">5.4</y-offset-m>
+          <z-offset-m archive="y">-19.7</z-offset-m>
           <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+		  <pitch-offset-deg archive="y">6</pitch-offset-deg>
         </config>
       </view>
 
       <view n="5">
         <config>
+           <y-offset-m archive="y" type="double">5.4</y-offset-m>
+          <z-offset-m archive="y">-19.7</z-offset-m>
           <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+		  <pitch-offset-deg archive="y">6</pitch-offset-deg>
         </config>
       </view>
 
       <view n="6">
         <config>
+           <y-offset-m archive="y" type="double">5.4</y-offset-m>
+          <z-offset-m archive="y">-19.7</z-offset-m>
           <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+		  <pitch-offset-deg archive="y">6</pitch-offset-deg>
         </config>
       </view>
+	  
+	  <view n="7">
+        <config>
+           <y-offset-m archive="y" type="double">5.4</y-offset-m>
+          <z-offset-m archive="y">-19.7</z-offset-m>
+          <target-z-offset-m archive="y" type="double">10.0</target-z-offset-m>
+		  <pitch-offset-deg archive="y">6</pitch-offset-deg>
+        </config>
+      </view>
+	  
+	 
 
       <sound>
-        <path>Aircraft/SU-37/Sounds/SU-37-sound.xml</path>
+        <path>Aircraft/SU-37/Sounds/SU-27-sound.xml</path>
       </sound>
 
       <model>
@@ -103,22 +170,62 @@ SU-37 simulation config.
         <nozzle-animation type="float">1</nozzle-animation>
       </model>
 
-      <panel>
-        <path>Aircraft/SU-37/Panels/SU-37-vfr-panel.xml</path>
-      </panel>
-      <panel_2>
-        <path>Aircraft/SU-37/Panels/SU-37-mini-panel.xml</path>
-      </panel_2>
-
-      <hud>
-        <visibility n="1">true</visibility>
-      </hud>
+	  <submodels>
+	<serviceable type="bool">1</serviceable>
+	<path>Aircraft/SU-37/Models/Stores/submodels.xml</path>
+    </submodels>
+	  
+      <startup>
+   <splash-texture>Aircraft/SU-37/su37splash.png</splash-texture>
+  </startup>
+  
+  
+<hud>
+   <path n="1">Aircraft/SU-37/Hud/hud.xml</path>
+   <visibility n="1">true</visibility>
+   <palette>
+    <color n="0">
+     <alpha type="float">0.85</alpha>
+     <antialiased type="bool">true</antialiased>
+     <brightness type="float">0.85</brightness>
+     <transparent type="bool">true</transparent>
+     <red type="float">0.38</red>
+     <green type="float">1.0</green>
+     <blue type="float">0.22</blue>
+    </color>
+    <color n="1">
+     <alpha type="float">0.85</alpha>
+     <antialiased type="bool">true</antialiased>
+     <brightness type="float">0.85</brightness>
+     <transparent type="bool">true</transparent>
+     <red type="float">1.0</red>
+     <green type="float">0.2</green>
+     <blue type="float">0.0</blue>
+    </color>
+   </palette>
+ 
+   <clipping>
+            <left type="double">-65</left>
+            <right type="double">70</right>
+            <top type="double">40</top>
+            <bottom type="double">-75</bottom>
+         </clipping>
+  </hud>
 
       <systems>
         <autopilot>
-          <path>Aircraft/SU-37/Systems/SU-37-autopilot.xml</path>
+          <path>Aircraft/SU-37/Systems/autopilot5.xml</path>
         </autopilot>
+		 <electrical>
+    <path>Aircraft/Generic/generic-electrical.xml</path>
+   </electrical>
       </systems>
+	  
+	  <mp-systems>
+<radar-enabled type="bool">true</radar-enabled>
+<ecm-rwr-enabled type="bool">true</ecm-rwr-enabled>
+<combat-enabled type="bool">true</combat-enabled>
+</mp-systems>	
 
       <chase-distance-m type="double" archive="y">-30.0</chase-distance-m>
 
@@ -162,66 +269,155 @@ SU-37 simulation config.
 <!-- Help -->
       <help>
         <title>SU-37</title>
-        <key>
-          <name>Ctrl-z</name>
-          <desc>toggle auto-speedbrake</desc>
-        </key>
-        <key>
-          <name>Ctrl-\</name>
-          <desc>toggle stick mode</desc>
-        </key>
-        <key>
-          <name>d/f</name>
-          <desc>retract/extend slats</desc>
-        </key>
-        <key>
-          <name>j/k</name>
-          <desc>decrease/increase speedbrake</desc>
-        </key>
-        <key>
-          <name>K</name>
-          <desc>toggle trajectory markers</desc>
-        </key>
-        <key>
-          <name>U</name>
-          <desc>update drop view position</desc>
-        </key>
-        <key>
-          <name>Ctrl-k</name>
-          <desc>Try this heading into the wind, at 205kt and > 2000ft - it might work</desc>
-        </key>
-        <line></line>
-        <line>Autopilot</line>
-        <line>  Altitude</line>
-        <line>    AH - Altitude hold</line>
-        <line>    TF - Terrain follow/AGL hold</line>
-        <line>    PH - Pitch hold</line>
-        <line>    AO - AoA hold</line>
-        <line>    VC - VFPS hold</line>
-        <line>    GS - Glideslope hold</line>
-        <line>    MC - Mach Climb</line>
-        <line></line>
-        <line>  Heading</line>
-        <line>    WL - Wing leveler</line>
-        <line>    TH - True Heading hold</line>
-        <line>    DG - DG Heading hold</line>
-        <line>    NV - Nav1 hold</line>
-        <line></line>
-        <line>FCS</line>
-        <line>  SMode</line>
-        <line>    DR - Stick controls elevon and flaperon directly</line>
-        <line>    PT - Stick controls pitch and roll settings</line>
-        <line>    VC - Stick controls climb and roll settings</line>
-        <line></line>
-        <line>  AF - Auto flaps</line>
-        <line>  AS - Auto slats</line>
-        <line>  SB - Auto speedbrake</line>
-        <line>  CI - Cubed Input (Direct mode only)</line>
-        <line>  AR - Auto reheat</line>
-        <line>  ASR - Auto spin recovery</line>
+        <line>Aircraft spawns with "Operationsl" fuel values = 50% of maximum.</line>
+   <line></line>
+   <line>Cruise speed: 870 mph (1,400 km/h) ( 750kts ) at 32,780 ft (10,000m) </line> 
+   <line>Max LevelSpeed  at altitude: 1,490 mph (2,400 km/h)at 32,780 ft (10,000 m), Mach 2.3</line>
+   <line>FCS not yet installed on this aircraft.</line>
+   <line></line>
+   <line> </line>
+   <line></line>
+   <key>
+				<name>}</name>
+				<desc>Startup/Shut down engines</desc>
+			</key>
+			
+			<key>
+				<name>c</name>
+				<desc>Toggle canopy</desc>
+			</key>
+			<key>
+				<name>l</name>
+				<desc>Launch Flares</desc>
+			</key>
+   <line> </line>
       </help>
+	  
+<weight n="0">
+<name>pylon1.L</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight> 
+
+<weight n="1">
+<name>pylon2.L</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight>
+
+<weight n="2">
+<name>pylon3.L</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight>
+
+<weight n="3">
+<name>pylon4.L</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight>
+
+<weight n="4">
+<name>pylon5.L</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight>
+
+
+<weight n="5">
+<name>pylon.C</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight>
+
+<weight n="6">
+<name>pylon5.R</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight>
+
+<weight n="7">
+<name>pylon4.R</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight>
+
+<weight n="8">
+<name>pylon3.R</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight>
+
+<weight n="9">
+<name>pylon2.R</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight>
+
+<weight n="10">
+<name>pylon1.R</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+</weight>
+
+
+
+	  
+	  
+	  <menubar include="Dialogs/menu.xml"/>
 
     </sim>
+	
+	 <systems>
+    <refuel>
+      <type>probe</type>
+      <serviceable type="bool">true</serviceable>
+    </refuel>
+  </systems> 
 		
     <ai>
       <submodels>
@@ -229,197 +425,9 @@ SU-37 simulation config.
       </submodels>
     </ai>
 
-<!-- Keyboard mapping -->
-    <input>
-      <keyboard>
-<!-- AM -->
-        <key n="11">
-          <name>CTRL-k</name>
-          <desc>AM</desc>
-          <binding>
-            <command>nasal</command>
-            <script>SU37AM.m01()</script>
-          </binding>
-        </key>
 
-<!-- Toggle auto-flaps, slats and reheat -->
-        <key n="25">
-          <name>CTRL-y</name>
-          <desc>Toggle auto-flaps, slats and reheat</desc>
-          <binding n="0">
-            <command>nasal</command>
-            <script>SU37KBMAPPING.toggle_auto_flaps()</script>
-          </binding>
-          <binding n="1">
-            <command>nasal</command>
-            <script>SU37KBMAPPING.toggle_auto_slats()</script>
-          </binding>
-          <binding n="2">
-            <command>nasal</command>
-            <script>SU37KBMAPPING.toggle_auto_reheat()</script>
-          </binding>
-        </key>
 
-<!-- Toggle auto-speedbrake -->
-        <key n="26">
-          <name>CTRL-z</name>
-          <desc>Toggle auto-speedbrake</desc>
-          <binding>
-            <command>nasal</command>
-            <script>SU37KBMAPPING.toggle_auto_speedbrake()</script>
-          </binding>
-        </key>
 
-<!-- Stick mode -->
-        <key n="28">
-          <name>CTRL-\</name>
-          <desc>Toggle stick mode</desc>
-          <binding>
-            <command>nasal</command>
-            <script>SU37KBMAPPING.toggle_fcs_stick_mode()</script>
-          </binding>
-        </key>
-
-<!-- Slats -->
-        <key n="100">
-          <name>d</name>
-          <desc>Retract Slats.</desc>
-          <binding>
-            <command>property-adjust</command>
-            <property>/controls/flight/slats</property>
-            <step type="double">-0.25</step>
-          </binding>
-        </key>
-        <key n="102">
-          <name>f</name>
-          <desc>Extend Slats.</desc>
-          <binding>
-            <command>property-adjust</command>
-            <property>/controls/flight/slats</property>
-            <step type="double">0.25</step>
-          </binding>
-        </key>
-
-<!-- Trajectory Markers -->
-        <key n="75">
-          <name>K</name>
-          <desc>Toggle trajectory markers</desc>
-          <binding n="0">
-            <command>nasal</command>
-            <script>SU37TRAJMARKER.toggle_traj_mkr()</script>
-          </binding>
-        </key>
-
-<!-- Update Drop View position -->
-        <key n="85">
-          <name>U</name>
-          <desc>Update Drop View position</desc>
-          <binding n="0">
-            <command>nasal</command>
-            <script>SU37DROPVIEW.update_drop_view_pos()</script>
-          </binding>
-        </key>
-      </keyboard>
-    </input>
-
-    <autopilot>
-<!-- FCS -->
-      <FCS>
-        <controls>
-          <canard-incidence-deg type="double">0.0</canard-incidence-deg>
-          <elevon-pitch-norm type="double">0</elevon-pitch-norm>
-          <elevon-roll-norm type="double">0</elevon-roll-norm>
-          <flaperon-flaps-norm type="double">0</flaperon-flaps-norm>
-          <flaperon-roll-norm type="double">0</flaperon-roll-norm>
-          <rudder-norm type="double">0</rudder-norm>
-          <slats-norm type="double">0</slats-norm>
-          <speedbrake-norm type="double">0</speedbrake-norm>
-          <engines>
-            <fod-screens-pos-norm type="double">0</fod-screens-pos-norm>
-            <engine n="0">
-              <aei-norm type="double">0</aei-norm>
-              <reheat-norm type="double">0</reheat-norm>
-              <throttle-norm type="double">0</throttle-norm>
-              <vector-norm type="double">0</vector-norm>
-            </engine>
-            <engine n="1">
-              <aei-norm type="double">0</aei-norm>
-              <reheat-norm type="double">0</reheat-norm>
-              <throttle-norm type="double">0</throttle-norm>
-              <vector-norm type="double">0</vector-norm>
-            </engine>
-          </engines>
-        </controls>
-        <internal>
-        </internal>
-        <locks>
-          <auto-flaps type="string">off</auto-flaps>
-          <auto-reheat type="string">off</auto-reheat>
-          <auto-slats type="string">off</auto-slats>
-          <auto-speedbrake type="string">off</auto-speedbrake>
-          <auto-spin-recovery type="string">off</auto-spin-recovery>
-          <cubed-input type="string">off</cubed-input>
-          <pitch type="string">off</pitch>
-          <roll type="string">off</roll>
-          <thrust-vectoring type="string">engaged</thrust-vectoring>
-          <vfps type="string">off</vfps>
-        </locks>
-        <modes>
-          <auto-speedbrake type="string">off</auto-speedbrake>
-          <stick type="string">direct</stick>
-        </modes>
-        <settings>
-          <aei-open-aoa-deg type="float">4.0</aei-open-aoa-deg>
-          <aei-open-aoa-factor type="float">0.25</aei-open-aoa-factor>
-          <aei-open-min-agl-ft type="float">100.0</aei-open-min-agl-ft>
-          <auto-reheat-threshold type="float">0.8</auto-reheat-threshold>
-          <fod-screens-agl-ft type="float">100.0</fod-screens-agl-ft>
-          <flaps-extend-mach type="float">0.4</flaps-extend-mach>
-          <flaps-extend-factor type="float">7.0</flaps-extend-factor>
-          <slats-extend-mach type="float">0.5</slats-extend-mach>
-          <slats-extend-factor type="float">5</slats-extend-factor>
-          <low-alt-max-pitch-deg type="float">20</low-alt-max-pitch-deg>
-          <m03-delay type="float">2.0</m03-delay>
-          <m04-delay type="float">4.4</m04-delay>
-          <m05-delay type="float">8.0</m05-delay>
-          <m06-delay type="float">10.0</m06-delay>
-          <max-climb-rate-fps type="float">200</max-climb-rate-fps>
-          <min-climb-rate-fps type="float">-180</min-climb-rate-fps>
-          <max-pitch-deg type="float">70</max-pitch-deg>
-          <min-pitch-deg type="float">-60</min-pitch-deg>
-          <pitch-climb-agl-ft type="float">20</pitch-climb-agl-ft>
-          <roll-factor type="float">50</roll-factor>
-          <rotate-airspeed-kt type="float">100</rotate-airspeed-kt>
-          <speedbrake-extend-kt type="double">0</speedbrake-extend-kt>
-          <speedbrake-extend-mach type="double">0</speedbrake-extend-mach>
-          <take-off-pitch-deg type="float">11</take-off-pitch-deg>
-        </settings>
-        <store>
-          <elevator-trim type="float">0</elevator-trim>
-        </store>
-      </FCS>
-
-<!-- Autopilot -->
-      <locks>
-        <auto-take-off type="string">enabled</auto-take-off>
-        <auto-landing type="string">disabled</auto-landing>
-        <ground-steering type="string">disabled</ground-steering>
-      </locks>
-      <settings>
-        <approach-aoa-deg type="float">7.0</approach-aoa-deg>
-        <climb-out-agl-ft type="float">400</climb-out-agl-ft>
-        <gear-up-agl-ft type="float">25</gear-up-agl-ft>
-        <gear-down-airspeed-kt type="float">200</gear-down-airspeed-kt>
-        <steering-heading-deg type="float">0</steering-heading-deg>
-        <target-agl-ft type="float">200</target-agl-ft>
-        <target-altitude-ft type="float">3000</target-altitude-ft>
-        <target-aoa-deg type="float">11</target-aoa-deg>
-        <target-climb-rate-fps type="double">0</target-climb-rate-fps>
-        <target-pitch-deg type="double">0</target-pitch-deg>
-        <target-speed-kt type="float">400.0</target-speed-kt>
-        <target-mach type="float">0.7</target-mach>
-      </settings>
-    </autopilot>
 
 <!-- Start with the Parking Brake on -->
     <controls>
@@ -457,147 +465,313 @@ SU-37 simulation config.
       <fuel>
         <tank n="0">
           <tank-num type="int">0</tank-num>
+		  <level-gal_us archive="y">869</level-gal_us>
         </tank>
         <tank n="1">
           <tank-num type="int">1</tank-num>
+		  <level-gal_us archive="y">1163</level-gal_us>
         </tank>
         <tank n="2">
           <tank-num type="int">2</tank-num>
+		  <level-gal_us archive="y">928</level-gal_us>
         </tank>
         <tank n="3">
           <tank-num type="int">3</tank-num>
+		  <level-gal_us archive="y">928</level-gal_us>
         </tank>
+		 <tank n="4">
+          <tank-num type="int">4</tank-num>
+		  <level-gal_us archive="y">147</level-gal_us>
+        </tank>
+		 <tank n="5">
+          <tank-num type="int">5</tank-num>
+		  <level-gal_us archive="y">147</level-gal_us>
+        </tank>
+		 <tank n="6">
+          <tank-num type="int">6</tank-num>
+		  <level-gal_us archive="y">67</level-gal_us>
+        </tank>
+		 <tank n="7">
+          <tank-num type="int">7</tank-num>
+		  <level-gal_us archive="y">67</level-gal_us>
+        </tank>
+		
       </fuel>
     </consumables>
+	
+	<environment>
+    <turbulence>
+      <use-cloud-turbulence>true</use-cloud-turbulence>
+    </turbulence>
+  </environment>
+  
+  <input>
+  <keyboard>
+  
+   <key n="99">
+    <name>c</name>
+    <desc>Canopy</desc>
+    <binding>
+      <command>nasal</command>
+      <script>su27.canopy.toggle();</script>
+    </binding>
+  </key>
+  
+  
+   <key n="108">
+	 <name>l</name>
+     <desc>Trigger flare release</desc>
+     <binding>
+      <command>property-toggle</command>
+      <property>ai/submodels/submodel/flare-release</property>
+      <value type="bool">true</value>
+     </binding>
+     <mod-up>
+      <binding>
+       <command>property-assign</command>
+      <property>ai/submodels/submodel/flare-release</property>
+       <value type="bool">false</value>
+      </binding>
+     </mod-up>
+    </key>
+	
+	<key n="70">
+     <name>F</name>
+    <desc>FuelHose</desc>
+    <binding>
+      <command>nasal</command>
+   <script>SU-27.FuelHose.toggle();</script>
+    </binding>
+  </key> 
+  
+  <key n="125">
+     <name>}</name>
+     <desc>Engine Autostart</desc>
+	<binding>
+		<command>nasal</command>
+		 <script>
+		 #su27.engines.engine1.autostart();
+		 #settimer( func { su27.engines.engine2.autostart(); }, 12 );
+         yasimengines.autostart();		 
+		 </script>
+		
+	</binding>
+  </key>
+	
+  </keyboard>
+  </input>
 
-<!-- Terrain Following/Avoidance Radar -->
+  <instrumentation>
+  <illumination>
+   <settings>
+    <lcd-brightness-offset type="double">0.25</lcd-brightness-offset>
+    <led-brightness-offset type="double">0.25</led-brightness-offset>
+   </settings>
+   <lcd-brightness type="double">0.75</lcd-brightness>
+   <led-brightness type="double">0.75</led-brightness>
+   <master-brightness type="double">0.74</master-brightness>
+  </illumination>
+  
+  
+  <rwr>
+ <display-lighting-intens type="double">0.4</display-lighting-intens>
+ <symbology-lighting-intens type="double">1</symbology-lighting-intens>
+</rwr>
+
+<enav><selected type="int">3</selected></enav>
+ <radar>
+  <range type="int" archive="y">40</range>
+  <range-factor type="double" archive="n">0.001888</range-factor>
+  <minimized type="bool" archive="y">false</minimized>
+  <selected type="int">3</selected>
+
+      <!-- inicio en pruebas -->
+  <enabled type="bool">true</enabled>
+  <az-field type="double">120</az-field>
+  <range type="double">150</range>
+  <range-selected type="double">50</range-selected>
+  <radar2-range type="double">150</radar2-range>
+  <display-rdr type="bool">true</display-rdr>
+  <radar-standby type="int">3</radar-standby>
+<mode>
+  <rws type="bool">true</rws>
+  <tws-auto type="bool">false</tws-auto>
+</mode>
+
+</radar> 
+
+
+  <radar2>
+   <sweep-width-m type="double">0.0844</sweep-width-m>
+   <range-width-m type="double">0.0846</range-width-m>
+   <radius-ppi-display-m type="double">0.0846</radius-ppi-display-m>
+   <hud-eye-dist-m type="double">0.6705</hud-eye-dist-m>
+   <hud-radius-m type="double">0.071</hud-radius-m>
+  </radar2>
+
+   <radar-awg-9>
+	<ccm-mode-spl type="bool">false</ccm-mode-spl>
+	<ccm-mode-alt-dhf type="bool">false</ccm-mode-alt-dhf>
+	<ccm-mode-trs type="bool">false</ccm-mode-trs>
+	<display-rdr type="bool">true</display-rdr>
+	<display-ir type="bool">false</display-ir>
+	<display-iff type="bool">false</display-iff>
+	<mode type="string">PDS</mode> <!-- PDS, RWS, TWS, PDSTT, PSTT, VSL -->
+	<ant-trk-light type="bool">false</ant-trk-light>
+	<rd-rot-light type="bool">false</rd-rot-light>
+	<jat-light type="bool">false</jat-light>
+	<irot-light type="bool">false</irot-light>
+	</radar-awg-9>
+	
+<!--	
+ <transponder>
+  <standby type="bool">false</standby>
+  <interrogator-standby type="bool">false</interrogator-standby>
+  <modes>
+   <mode-1>
+    <interrogate type="bool">true</interrogate>
+	<respond type="bool">true</respond>
+	<code type="int">78</code>
+   </mode-1>
+   <mode-3A>
+    <interrogate type="bool">true</interrogate>
+	<respond type="bool">true</respond>
+	<code type="int">1001</code>
+   </mode-3A>
+   <mode-C>
+    <interrogate type="bool">true</interrogate>
+	<respond type="bool">true</respond>
+	<pressure-altitude type="int">0</pressure-altitude>
+   </mode-C>
+  </modes> 
+ </transponder>
+  -->
+<!--en pruebas fin -->
+
+ <MDEF>
+  <subsystem-selected type="string">aids</subsystem-selected>
+ </MDEF>
+    <magnetic-compass>
+       <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
+    </magnetic-compass>
+	<tacan>
+	 <power type="bool">1</power>
+	</tacan>
+  <warnings>
+   <warning-suppress type="bool">false</warning-suppress>
+   <attention-lights type="bool">false</attention-lights>
+   <signals>
+    <cat-1-warning type="bool">false</cat-1-warning>
+	<cat-2-warning type="bool">false</cat-2-warning> 
+	<cat-3-warning type="bool">false</cat-3-warning> 
+	<cat-4-warning type="bool">false</cat-4-warning>   
+   </signals>
+   <flags>
+    <gear-limit type="bool">true</gear-limit>
+   </flags>
+  </warnings>
+  
+  <efis>
+
+			<ecam>
+					<display-mode type="string">FUEL</display-mode>
+			</ecam>
+			<nd>
+					<display-mode type="string">VOR</display-mode>
+					<display-mode-knob type="int">2</display-mode-knob>
+					<display-range type="int">40</display-range>
+				
+			</nd>
+			<input>
+				<vor-adf-1 type="int">1</vor-adf-1>
+				<vor-adf-2 type="int">1</vor-adf-2>
+				<CSTR type="bool">1</CSTR>
+				<WPT type="bool">1</WPT>
+				<VORD type="bool">1</VORD>
+				<NDB type="bool">1</NDB>
+				<ARPT type="bool">1</ARPT>
+				<WX type="bool">1</WX>
+				<TERR type="bool">1</TERR>
+				<TRAF type="bool">1</TRAF>
+				<taxi type="bool">1</taxi>
+				
+				
+			</input>
+
+		
+		</efis>
+</instrumentation>
+ 
+
+<nasal>
+    <SU-27>
+      
+	  
+	  <file>Aircraft/SU-37/Nasal/refuel.nas</file>
+	   <file>Aircraft/SU-37/Nasal/Explode.nas</file>
+    </SU-27>
+	
+	<eno>
+     <file>Aircraft/SU-37/Nasal/eno.nas</file>
+    </eno>
+	
+    <lights>
+      <file>Aircraft/SU-37/Nasal/Lights.nas</file>
+    </lights>
+
+    <livery>
+	   <file>Aircraft/SU-37/Nasal/liveries.nas</file>
+    </livery>
+  
+    <aar> 
+       <file>Aircraft/Generic/aar.nas</file>
+    </aar>
+    <rwr>
+       <file>Aircraft/SU-37/Models/Interior/Instruments/mfd/radar/rwr.nas</file>
+    </rwr> 
+    <radardist>
+      <file>Aircraft/Instruments-3d/radardist/radardist.nas</file>
+    </radardist>
+
+    <radar>
+      <file>Aircraft/SU-37/Models/Interior/Instruments/mfd/radar/radar.nas</file> 
+    </radar>
+
+    <radar2>
+     <file>Aircraft/SU-37/Models/Interior/Instruments/mfd/radar/radar2.nas</file>
+    </radar2>  
+
+    <enav>
+      <file>Aircraft/SU-37/Nasal/enav.nas</file>
+    </enav>
+    <terrain-map>
+      <file>Aircraft/SU-37/Nasal/terrain-map.nas</file>
+    </terrain-map> 
+    <low>
+      <file>Aircraft/SU-37/Nasal/low.nas</file>
+    </low> 
+    <phd>
+      <file>Aircraft/SU-37/Nasal/phd.nas</file>
+    </phd>
+    <tfs>
+		<file>Aircraft/SU-37/Nasal/terrain_follow.nas</file>
+	</tfs>
     <instrumentation>
-      <radar>
-        <range type="int" archive="y">40</range>
-        <minimized type="bool" archive="y">true</minimized>
-      </radar>
-      <terrain-radar>
-        <hi-elev>
-          <alt-ft type="double">-9999.9</alt-ft>
-          <lat-deg type="double">-9999.9</lat-deg>
-          <lon-deg type="double">-9999.9</lon-deg>
-          <dist-m type="double">-9999.9</dist-m>
-          <collision-status type="string">initialised</collision-status>
-        </hi-elev>
-        <settings>
-          <mode type="string">extend</mode>
-          <state type="string">off</state>
-          <range-m type="double">2500</range-m>
-          <step-m type="double">250</step-m>
-          <max-climb-rate-fps type="double">120</max-climb-rate-fps>
-          <hi-elev-markers type="bool">false</hi-elev-markers>
-        </settings>
-      </terrain-radar>
+      <file>Aircraft/SU-37/Nasal/instrumentation.nas</file>
+      <file>Aircraft/SU-37/Nasal/ILS-31_sup.nas</file>
     </instrumentation>
+	
+	<maintenance>
+     <file>Aircraft/SU-37/Nasal/maintenance.nas</file>
+    </maintenance>
+	
+	<yasimengines>
+     <file>Aircraft/SU-37/Nasal/yasim-engines.nas</file>
+    </yasimengines>
 
-    <nasal>
-      <SU37KBMAPPING>
-        <file>Aircraft/SU-37/Nasal/SU-37-keyboard-mapping.nas</file>
-      </SU37KBMAPPING>
-
-      <SU37DROPVIEW>
-        <file>Aircraft/SU-37/Nasal/SU-37-drop-view.nas</file>
-        <script>initialise();</script>
-      </SU37DROPVIEW>
-
-      <SU37TRAJMARKER>
-        <file>Aircraft/SU-37/Nasal/SU-37-trajectory-markers.nas</file>
-      </SU37TRAJMARKER>
-
-      <SU37APFCS>
-        <file>Aircraft/SU-37/Nasal/SU-37-AP-FCS-instrument.nas</file>
-      </SU37APFCS>
-
-      <SU37FCSSTICKMODE>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-stick-mode.nas</file>
-        <script>initialise();</script>
-      </SU37FCSSTICKMODE>
-
-      <SU37FCSELEVONPITCHINPUT>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-elevon-pitch-input.nas</file>
-        <script>initialise();</script>
-      </SU37FCSELEVONPITCHINPUT>
-
-      <SU37FCSELEVONROLLINPUT>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-elevon-roll-input.nas</file>
-        <script>initialise();</script>
-      </SU37FCSELEVONROLLINPUT>
-
-      <SU37FCSFLAPERONFLAPS>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-flaperon-flaps.nas</file>
-        <script>initialise();</script>
-      </SU37FCSFLAPERONFLAPS>
-
-      <SU37FCSFLAPERONROLL>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-flaperon-roll.nas</file>
-        <script>initialise();</script>
-      </SU37FCSFLAPERONROLL>
-
-      <SU37FCSSLATS>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-slats.nas</file>
-        <script>initialise();</script>
-      </SU37FCSSLATS>
-
-      <SU37FCSTHROTTLES>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-throttles.nas</file>
-        <script>initialise();</script>
-      </SU37FCSTHROTTLES>
-
-      <SU37FCSTHRUSTVECTORING>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-thrust-vectoring.nas</file>
-        <script>initialise();</script>
-      </SU37FCSTHRUSTVECTORING>
-
-      <SU37FCSAUTOSPEEDBRAKE>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-auto-speedbrake.nas</file>
-        <script>initialise();</script>
-      </SU37FCSAUTOSPEEDBRAKE>
-
-      <SU37APLISTENERS>
-        <file>Aircraft/SU-37/Nasal/SU-37-autopilot-listeners.nas</file>
-        <script>initialise();</script>
-      </SU37APLISTENERS>
-
-      <SU37AUTOTAKEOFF>
-        <file>Aircraft/SU-37/Nasal/SU-37-auto-take-off.nas</file>
-      </SU37AUTOTAKEOFF>
-
-      <SU37AUTOLAND>
-        <file>Aircraft/SU-37/Nasal/SU-37-auto-land.nas</file>
-      </SU37AUTOLAND>
-
-      <SU37FCSCANARDS>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-canards.nas</file>
-        <script>initialise();</script>
-      </SU37FCSCANARDS>
-
-      <SU37AEIANIMATION>
-        <file>Aircraft/SU-37/Nasal/SU-37-AEI-animation.nas</file>
-        <script>initialise();</script>
-      </SU37AEIANIMATION>
-
-      <SU37FODSCREENSANIMATION>
-        <file>Aircraft/SU-37/Nasal/SU-37-FOD-screens-animation.nas</file>
-        <script>initialise();</script>
-      </SU37FODSCREENSANIMATION>
-
-      <SU37AM>
-        <file>Aircraft/SU-37/Nasal/SU-37-AM.nas</file>
-      </SU37AM>
-
-      <SU37FCSSPINRECVR>
-        <file>Aircraft/SU-37/Nasal/SU-37-FCS-auto-spin-recovery.nas</file>
-        <script>initialise();</script>
-      </SU37FCSSPINRECVR>
-
-      <SU37TFA>
-        <file>Aircraft/SU-37/Nasal/SU-37-tfa.nas</file>
-      </SU37TFA>
-    </nasal>
+	<su27>
+     <file>Aircraft/SU-37/Nasal/SU-27.nas</file>
+    </su27>
+  </nasal>   
 
   </PropertyList>
