@@ -1,4 +1,16 @@
+USA Tour Ready FlightGear SU-37 
+================================
+
+Derived from the SU-37 by FGUK HANGAR
+
+![image FGUK](http://www.fguk.eu/images/jdownloads/screenshots/fgfs-screen-020.png)
+
+http://www.fguk.eu/index.php/hangar/download/7-military-jets/111-su-37-v031
+
+***
+
 SU-37 (YASim) readme.
+----------------------
 
 This is not intended to be an accurate representation of an SU-37 but
 of an SU-37 'type' aircraft.  The SU-37 designation applies as much
@@ -11,7 +23,8 @@ system features, it should be remembered that is very much an
 experimental development test-bed.
 
 AP/FCS Instrument
-=================
+-----------------
+
 The AP/FCS instrument, available on the mini panel allows most of
 the autopilot/flight control systems functions to be engaged or
 switched off.  It doesn't make any provision for changing settings
@@ -24,121 +37,142 @@ and red = engaged.
 
 The legends for the controls (not all of which currently work) is below
 
-Autopilot
-  Altitude
-    AH  Altitude hold
-    TF  Terrainf follow
-    PH  Pitch hold
-    AO  AoA hold
-    VC  Climb-rate hold
-    GS  Glide-slope hold
-    MC  Mach-climb
+* Autopilot
+  * Altitude
+     * AH  Altitude hold
+     * TF  Terrainf follow
+     * PH  Pitch hold
+     * AO  AoA hold
+     * VC  Climb-rate hold
+     * GS  Glide-slope hold
+     * MC  Mach-climb
 
-  Heading
-    WL  Wing-leveler
-    TH  True heading-hold
-    DG  DG heading hold
-    NV  Nav1 hold
+  * Heading
+     * WL  Wing-leveler
+     * TH  True heading-hold
+     * DG  DG heading hold
+     * NV  Nav1 hold
 
-FCS
-  SMode
-      DR                    Direct - stick controls pitch and roll deflection
-                            elevons and flaperons directly.
-      PT                    Pitch - stick controls pitch angle and roll settings.
-      VC                    VFPS - stick controls climb and roll setings.
+* FCS
+  * SMode
+      * DR                    Direct - stick controls pitch and roll deflection elevons and flaperons directly.
+      * PT                    Pitch - stick controls pitch angle and roll settings.
+      * VC                    VFPS - stick controls climb and roll setings.
 
-    Auto take-off/landing
-      TO                    Auto take-off
-      LD                    Auto landing
-  AF                        Auto flaps
-  AS                        Auto slats
-  SB                        Auto speedbrake
-  AR                        Auto reheat
-
-
-
+    * Auto take-off/landing
+      * TO                    Auto take-off
+      * LD                    Auto landing
+  * AF                        Auto flaps
+  * AS                        Auto slats
+  * SB                        Auto speedbrake
+  * AR                        Auto reheat
 
 
 YASim control input bindings
-============================
-Object      Control     Axis
+----------------------------
 
-wing        FLAP0       /autopilot/FCS/controls/flaperon-flap-norm
-wing        FLAP0       /autopilot/FCS/controls/flaperon-roll-norm
-wing        SLAT        /autopilot/FCS/controls/slats-norm
+| Object   |   Control  |   Axis|
+|:-------|:------------|:------|
+|wing     |   FLAP0  |     /autopilot/FCS/controls/flaperon-flap-norm|
+|wing |       FLAP0 |      /autopilot/FCS/controls/flaperon-roll-norm|
+|wing  |      SLAT   |     /autopilot/FCS/controls/slats-norm|
+|       |             |      |
+|hstab   |    FLAP0   |    /controls/flight/elevator-trim |
+|hstab    |   FLAP0    |   /autopilot/FCS/controls/elevon-pitch-norm|
+|hstab    |   FLAP0     |  /autopilot/FCS/controls/elevon-roll-norm| 
+|          |         |            |
+|vstab (L) |  FLAP0   |    /autopilot/FCS/controls/rudder-norm |
+|vstab (R) |  FLAP0    |   /autopilot/FCS/controls/rudder-norm|
+|        |           |            |
+|mstab   |    SPOILER |    /autopilot/FCS/controls/spoiler-norm |
+|        |               | |
+|jet (L) |    THROTTLE  | /autopilot/FCS/controls/engines/engine[0]/throttle-norm |
+|jet (L)  |   REHEAT  | |/autopilot/FCS/controls/engines/engine[0]/reheat-norm |
+|jet (L)   |  VECTOR   | /autopilot/FCS/controls/engines/engine[0]/vector-norm | 
+|          |          |        |
+|jet (R)  |   THROTTLE | /autopilot/FCS/controls/engines/engine[0]/throttle-norm | 
+|jet (R)   |  REHEAT   | /autopilot/FCS/controls/engines/engine[0]/reheat-norm | 
+|jet (R)   |  VECTOR   | |/autopilot/FCS/controls/engines/engine[0]/vector-norm | 
 
-hstab       FLAP0       /controls/flight/elevator-trim
-hstab       FLAP0       /autopilot/FCS/controls/elevon-pitch-norm
-hstab       FLAP0       /autopilot/FCS/controls/elevon-roll-norm
-
-vstab (L)   FLAP0       /autopilot/FCS/controls/rudder-norm
-vstab (R)   FLAP0       /autopilot/FCS/controls/rudder-norm
-
-mstab       SPOILER     /autopilot/FCS/controls/spoiler-norm
-
-jet (L)     THROTTLE    /autopilot/FCS/controls/engines/engine[0]/throttle-norm
-jet (L)     REHEAT      /autopilot/FCS/controls/engines/engine[0]/reheat-norm
-jet (L)     VECTOR      /autopilot/FCS/controls/engines/engine[0]/vector-norm
-
-jet (R)     THROTTLE    /autopilot/FCS/controls/engines/engine[0]/throttle-norm
-jet (R)     REHEAT      /autopilot/FCS/controls/engines/engine[0]/reheat-norm
-jet (R)     VECTOR      /autopilot/FCS/controls/engines/engine[0]/vector-norm
 
 YASim control output bindings
-=============================
-Object      Control     Axis
+-----------------------------
 
-wing        FLAP0       /surface-positions/left-flaperon-pos-norm
-wing        FLAP0       /surface-positions/right-flaperon-pos-norm
-wing        FLAP0       /surface-positions/flaperon-pos-norm
-wing        SLAT        /surface-positions/left-slat-pos-norm
-wing        SLAT        /surface-positions/right-slat-pos-norm
-wing        SLAT        /surface-positions/slat-pos-norm
-
-hstab       FLAP0       /surface-positions/left-elevon-pos-norm
-hstab       FLAP0       /surface-positions/right-elevon-pos-norm
-hstab       FLAP0       /surface-positions/elevon-pos-norm
-
-vstab (L)   FLAP0       /surface-positions/left-rudder-pos-norm
-vstab (R)   FLAP0       /surface-positions/right-rudder-pos-norm
-
-mstab       FLAP0       /surface-positions/spoiler-pos-norm
-
-jet (L)     THROTTLE    /engines/engine[0]/throttle-norm
-jet (L)     REHEAT      /engines/engine[0]/reheat-norm
-jet (L)     VECTOR      /engines/engine[0]/vector-norm
-
-jet (R)     THROTTLE    /engines/engine[0]/throttle-norm
-jet (R)     REHEAT      /engines/engine[0]/reheat-norm
-jet (R)     VECTOR      /engines/engine[0]/vector-norm
+| Object   |    Control |     Axis |
+|:---------|:----------|:---------|
+|wing    |    FLAP0      | /surface-positions/left-flaperon-pos-norm |
+|wing    |    FLAP0      | /surface-positions/right-flaperon-pos-norm |
+|wing    |    FLAP0      | /surface-positions/flaperon-pos-norm |
+|wing    |    SLAT       | /surface-positions/left-slat-pos-norm |
+|wing    |    SLAT       | /surface-positions/right-slat-pos-norm |
+|wing    |    SLAT       | /surface-positions/slat-pos-norm |
+|        |           |          |
+|hstab   |    FLAP0      | /surface-positions/left-elevon-pos-norm |
+|hstab   |    FLAP0      | /surface-positions/right-elevon-pos-norm |
+|hstab   |    FLAP0      | /surface-positions/elevon-pos-norm |
+|        |           |          |
+|vstab (L) |  FLAP0      | /surface-positions/left-rudder-pos-norm |
+|vstab (R) |  FLAP0      | /surface-positions/right-rudder-pos-norm |
+|        |           |          |
+|mstab    |   FLAP0      | /surface-positions/spoiler-pos-norm |
+|        |           |          |
+|jet (L)  |   THROTTLE   | /engines/engine[0]/throttle-norm |
+|jet (L)  |   REHEAT     | /engines/engine[0]/reheat-norm |
+|jet (L)  |   VECTOR     | /engines/engine[0]/vector-norm |
+|        |           |          |
+|jet (R)  |   THROTTLE   | /engines/engine[0]/throttle-norm |
+|jet (R)  |   REHEAT     | /engines/engine[0]/reheat-norm |
+|jet (R)  |   VECTOR     | /engines/engine[0]/vector-norm |
 
 
 FCS Listeners
-=============
-axis                            Listener
+--------------
 
-/autopilot/FCS/locks/engines    SU37FCSLOCKS.engines_lock_monitor
-/autopilot/FCS/locks/fcs        SU37FCSLOCKS.fcs_lock_monitor
-/autopilot/FCS/locks/flaps      SU37FCSLOCKS.fcs_flaps_monitor
-/autopilot/FCS/locks/pitch      SU37FCSLOCKS.pitch_lock_monitor
-/autopilot/FCS/locks/roll       SU37FCSLOCKS.roll_lock_monitor
-/autopilot/FCS/locks/speed      SU37FCSLOCKS.speed_lock_monitor
-/autopilot/locks/altitude       SU37APLOCKS.altitude_lock_monitor
-/autopilot/locks/heading        SU37APLOCKS.heading_lock_monitor
-/autopilot/locks/speed          SU37APLOCKS.speed_lock_monitor
-/controls/flight/aileron        SU37FCSFLIGHT.aileron_monitor
-/controls/flight/elevator       SU37FCSFLIGHT.elevator_monitor
-/controls/flight/flaps          SU37FCSFLIGHT.flaps_monitor
-/controls/flight/slats          SU37FCSFLIGHT.slats_monitor
-/controls/flight/spoiler        SU37FCSFLIGHT.spoiler_monitor
-/orientation/alpha-deg          SU37ORIENTATION.aoa_monitor
-/position/altitude-ft           SU37POSITION.altitude_monitor
-/position/altitude-agl-ft       SU37POSITION.agl_monitor
-/velocities/airspeed-kt         SU37VELOCITIES.kias_monitor
-/velocities/mach                SU37VELOCITIES.mach_monitor
-
-
-
+| axis      |                      Listener| 
+|:---------|:--------------|
+|/autopilot/FCS/locks/engines    | SU37FCSLOCKS.engines_lock_monitor  |
+|/autopilot/FCS/locks/fcs        | SU37FCSLOCKS.fcs_lock_monitor  |
+|/autopilot/FCS/locks/flaps      | SU37FCSLOCKS.fcs_flaps_monitor  |
+|/autopilot/FCS/locks/pitch      | SU37FCSLOCKS.pitch_lock_monitor  |
+|/autopilot/FCS/locks/roll       | SU37FCSLOCKS.roll_lock_monitor  |
+|/autopilot/FCS/locks/speed      | SU37FCSLOCKS.speed_lock_monitor  |
+|/autopilot/locks/altitude       | SU37APLOCKS.altitude_lock_monitor  |
+|/autopilot/locks/heading        | SU37APLOCKS.heading_lock_monitor  |
+|/autopilot/locks/speed          | SU37APLOCKS.speed_lock_monitor  |
+|/controls/flight/aileron        | SU37FCSFLIGHT.aileron_monitor  |
+|/controls/flight/elevator       | SU37FCSFLIGHT.elevator_monitor  |
+|/controls/flight/flaps          | SU37FCSFLIGHT.flaps_monitor  |
+|/controls/flight/slats          | SU37FCSFLIGHT.slats_monitor  |
+|/controls/flight/spoiler        | SU37FCSFLIGHT.spoiler_monitor  |
+|/orientation/alpha-deg          | SU37ORIENTATION.aoa_monitor  |
+|/position/altitude-ft           | SU37POSITION.altitude_monitor  |
+|/position/altitude-agl-ft       | SU37POSITION.agl_monitor  |
+|/velocities/airspeed-kt         | SU37VELOCITIES.kias_monitor  |
+|/velocities/mach                | SU37VELOCITIES.mach_monitor  |
 
 
-Lee Elliott.     2006/10/11
+*Lee Elliott, 2006/10/11*
+
+***
+
+:copyright: 2014 Jabberwocky (P. Brendt) <br>
+:copyright: 2016 IAHM-COL (I. Hernandez) <br>
+:copyright: 2016 Lee Elliott <br>
+
+***
+
+License: GPL2+, notice:
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
