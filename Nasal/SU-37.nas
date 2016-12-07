@@ -24,7 +24,7 @@
 	###
 	# Presets 
 	
-	var acname = "SU-27"; # Script Display Name
+	var acname = "SU-37"; # Script Display Name
 	var main_loop_interval = 1; # Main loop update period in seconds
 	var aux_loop_interval = 60; # Auxiliary loop update period in seconds
 	

@@ -514,7 +514,7 @@ SU-37 simulation config.
     <desc>Canopy</desc>
     <binding>
       <command>nasal</command>
-      <script>su27.canopy.toggle();</script>
+      <script>su37.canopy.toggle();</script>
     </binding>
   </key>
   
@@ -541,7 +541,7 @@ SU-37 simulation config.
     <desc>FuelHose</desc>
     <binding>
       <command>nasal</command>
-   <script>SU-27.FuelHose.toggle();</script>
+   <script>SU-37.FuelHose.toggle();</script>
     </binding>
   </key> 
   
@@ -551,8 +551,8 @@ SU-37 simulation config.
 	<binding>
 		<command>nasal</command>
 		 <script>
-		 #su27.engines.engine1.autostart();
-		 #settimer( func { su27.engines.engine2.autostart(); }, 12 );
+		 #su37.engines.engine1.autostart();
+		 #settimer( func { su37.engines.engine2.autostart(); }, 12 );
          yasimengines.autostart();		 
 		 </script>
 		
@@ -705,12 +705,12 @@ SU-37 simulation config.
  
 
 <nasal>
-    <SU-27>
+    <SU-37>
       
 	  
 	  <file>Aircraft/SU-37/Nasal/refuel.nas</file>
 	   <file>Aircraft/SU-37/Nasal/Explode.nas</file>
-    </SU-27>
+    </SU-37>
 	
 	<eno>
      <file>Aircraft/SU-37/Nasal/eno.nas</file>
@@ -770,9 +770,9 @@ SU-37 simulation config.
      <file>Aircraft/SU-37/Nasal/yasim-engines.nas</file>
     </yasimengines>
 
-	<su27>
-     <file>Aircraft/SU-37/Nasal/SU-27.nas</file>
-    </su27>
+	<su37>
+     <file>Aircraft/SU-37/Nasal/SU-37.nas</file>
+    </su37>
   </nasal>   
 
   </PropertyList>
