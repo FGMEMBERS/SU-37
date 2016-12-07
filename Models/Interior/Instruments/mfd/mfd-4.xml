@@ -15,7 +15,7 @@
   </model>
   
  <model>
-    <path>Aircraft/SU-47/Models/Interior/Instruments/mfd/radar/radar.xml</path>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/mfd/radar/radar.xml</path>
 	<offsets>
       <x-m> 0.085 </x-m>
       <y-m>0.002 </y-m>
