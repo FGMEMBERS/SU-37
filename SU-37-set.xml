@@ -176,8 +176,9 @@ SU-37 simulation config.
     </submodels>
 	  
       <startup>
-   <splash-texture>Aircraft/SU-37/su37splash.png</splash-texture>
-  </startup>
+         <splash-texture>Aircraft/SU-37/Splash/su37splash1.png</splash-texture>
+         <splash-texture>Aircraft/SU-37/Splash/su37splash2.png</splash-texture>
+     </startup>
   
   
 <hud>
