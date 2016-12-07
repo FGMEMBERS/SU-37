@@ -162,7 +162,7 @@ SU-37 simulation config.
 	 
 
       <sound>
-        <path>Aircraft/SU-37/Sounds/SU-27-sound.xml</path>
+        <path>Aircraft/SU-37/Sounds/SU-37-sound.xml</path>
       </sound>
 
       <model>
