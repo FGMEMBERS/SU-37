@@ -15,7 +15,7 @@
   </model>
   
   <model>
-    <path>Aircraft/SU-47/Models/Interior/Instruments/mfd/terrain-map-pixel.xml</path>
+    <path>Aircraft/SU-37/Models/Interior/Instruments/mfd/terrain-map-pixel.xml</path>
 	<offsets>
       <x-m> 0.085 </x-m>
       <y-m>-0.015 </y-m>
