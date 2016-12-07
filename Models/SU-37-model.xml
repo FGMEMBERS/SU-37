@@ -426,7 +426,7 @@ livery_update.stop();
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>Liveries/SU-37-top.rgb</texture>
+    <texture>Liveries/SU-37-top.png</texture>
 
   </animation>
   

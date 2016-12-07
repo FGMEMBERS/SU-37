@@ -514,7 +514,7 @@ kids 0
 OBJECT poly
 name "face"
 loc -0.00317598 0.00830883 -0.00855012
-texture "asi-mach-2-4-center.rgb"
+texture "asi-mach-2-4-center.png"
 crease 45.000000
 numvert 35
 0 0.0174888 0.000179005
@@ -729,7 +729,7 @@ kids 0
 OBJECT poly
 name "mach-scale"
 loc -0.0047806 0.00534165 -0.00846552
-texture "asi-mach-2-4-mn-scale.rgb"
+texture "asi-mach-2-4-mn-scale.png"
 crease 45.000000
 numvert 17
 0 -0.000204133 0.0228252
@@ -850,7 +850,7 @@ kids 0
 OBJECT poly
 name "bkg"
 loc -0.00650251 0.00619197 -0.0085659
-texture "asi-mach-2-4.rgb"
+texture "asi-mach-2-4.png"
 crease 45.000000
 numvert 4
 0 0.0386322 -0.0393844

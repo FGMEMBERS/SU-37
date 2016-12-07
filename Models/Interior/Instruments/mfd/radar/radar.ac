@@ -1659,7 +1659,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ship1"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 4
 0.009056 0.00947 0.00871
@@ -1677,7 +1677,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ship0"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 4
 0.008474 0.00947 0.00871
@@ -1695,7 +1695,7 @@ refs 4
 kids 0
 OBJECT poly
 name "target4"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 3
 0.005486 0.000794 0.006779
@@ -1711,7 +1711,7 @@ refs 3
 kids 0
 OBJECT poly
 name "target5"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 3
 0.005998 0.000794 0.006779
@@ -1727,7 +1727,7 @@ refs 3
 kids 0
 OBJECT poly
 name "target6"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 3
 0.006583 0.000794 0.006779
@@ -1743,7 +1743,7 @@ refs 3
 kids 0
 OBJECT poly
 name "target7"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 3
 0.007168 0.000794 0.006779
@@ -1759,7 +1759,7 @@ refs 3
 kids 0
 OBJECT poly
 name "target3"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 3
 0.005058 0.000794 0.006779
@@ -1775,7 +1775,7 @@ refs 3
 kids 0
 OBJECT poly
 name "target2"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 3
 0.004588 0.000794 0.006779
@@ -1791,7 +1791,7 @@ refs 3
 kids 0
 OBJECT poly
 name "target1"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 3
 0.004003 0.000794 0.006779
@@ -1807,7 +1807,7 @@ refs 3
 kids 0
 OBJECT poly
 name "target0"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 3
 0.003491 0.000794 0.006779
@@ -1823,7 +1823,7 @@ refs 3
 kids 0
 OBJECT poly
 name "boreBG"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 20
 0.001356 0.053089 -0.042161
@@ -1963,7 +1963,7 @@ refs 4
 kids 0
 OBJECT poly
 name "searchBG"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 20
 0.001935 0.053089 -0.042161
@@ -2103,7 +2103,7 @@ refs 4
 kids 0
 OBJECT poly
 name "airToAirBG"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 20
 0.009377 0.053089 -0.042161
@@ -2243,7 +2243,7 @@ refs 4
 kids 0
 OBJECT poly
 name "airToSurfBG"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 20
 0.003191 0.053089 -0.042161
@@ -2383,7 +2383,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Menu"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 20
 0.002626 0.053089 -0.042161
@@ -2523,7 +2523,7 @@ refs 4
 kids 0
 OBJECT poly
 name "locking"
-texture "radar2.rgb"
+texture "radar2.png"
 texrep 1 1
 numvert 4
 0.008482 -0.018898 0.000149
@@ -2541,7 +2541,7 @@ refs 4
 kids 0
 OBJECT poly
 name "locked"
-texture "radar2.rgb"
+texture "radar2.png"
 texrep 1 1
 numvert 4
 0.008482 -0.009861 -0.026987
@@ -2559,7 +2559,7 @@ refs 4
 kids 0
 OBJECT poly
 name "sTarget0"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 13
 0.003791 -0.022286 0.008259
@@ -2651,7 +2651,7 @@ refs 3
 kids 0
 OBJECT poly
 name "sTarget1"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 13
 0.00414 -0.022286 0.008259
@@ -2743,7 +2743,7 @@ refs 3
 kids 0
 OBJECT poly
 name "sTarget2"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 13
 0.004523 -0.022286 0.008259
@@ -2835,7 +2835,7 @@ refs 3
 kids 0
 OBJECT poly
 name "sTarget3"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 13
 0.00497 -0.022286 0.008259
@@ -2927,7 +2927,7 @@ refs 3
 kids 0
 OBJECT poly
 name "sTarget4"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 13
 0.005415 -0.022286 0.008259
@@ -3019,7 +3019,7 @@ refs 3
 kids 0
 OBJECT poly
 name "sTarget5"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 13
 0.005893 -0.022286 0.008259
@@ -3111,7 +3111,7 @@ refs 3
 kids 0
 OBJECT poly
 name "sTarget6"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 13
 0.006372 -0.022286 0.008259
@@ -3203,7 +3203,7 @@ refs 3
 kids 0
 OBJECT poly
 name "sTarget7"
-texture "radar.rgb"
+texture "radar.png"
 texrep 1 1
 numvert 13
 0.006755 -0.022286 0.008259
@@ -3295,7 +3295,7 @@ refs 3
 kids 0
 OBJECT poly
 name "a10_0"
-texture "radar2.rgb"
+texture "radar2.png"
 texrep 1 1
 numvert 6
 0.010966 0.011495 -0.012647
@@ -3322,7 +3322,7 @@ refs 4
 kids 0
 OBJECT poly
 name "a10_1"
-texture "radar2.rgb"
+texture "radar2.png"
 texrep 1 1
 numvert 6
 0.01157 0.011224 -0.033387
@@ -3349,7 +3349,7 @@ refs 4
 kids 0
 OBJECT poly
 name "a5_0"
-texture "radar2.rgb"
+texture "radar2.png"
 texrep 1 1
 numvert 4
 0.011109 0.011495 -0.012647
@@ -3367,7 +3367,7 @@ refs 4
 kids 0
 OBJECT poly
 name "s20_0"
-texture "radar2.rgb"
+texture "radar2.png"
 texrep 1 1
 numvert 6
 0.010806 0.013854 -0.002407
@@ -3394,7 +3394,7 @@ refs 4
 kids 0
 OBJECT poly
 name "a20_1"
-texture "radar2.rgb"
+texture "radar2.png"
 texrep 1 1
 numvert 6
 0.011408 0.011227 -0.033399
@@ -3421,7 +3421,7 @@ refs 4
 kids 0
 OBJECT poly
 name "s40_1"
-texture "radar2.rgb"
+texture "radar2.png"
 texrep 1 1
 numvert 6
 0.011257 0.043147 -0.021372
@@ -3448,7 +3448,7 @@ refs 4
 kids 0
 OBJECT poly
 name "s20_1"
-texture "radar2.rgb"
+texture "radar2.png"
 texrep 1 1
 numvert 6
 0.010806 0.043151 -0.021378
@@ -3475,7 +3475,7 @@ refs 4
 kids 0
 OBJECT poly
 name "s10_0"
-texture "radar2.rgb"
+texture "radar2.png"
 texrep 1 1
 numvert 6
 0.010966 0.013858 -0.002406

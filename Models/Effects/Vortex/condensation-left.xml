@@ -15,7 +15,7 @@
       <heading-deg> 0.000 </heading-deg>
     </offsets>
 
-    <texture>condensation.rgb</texture>
+    <texture>condensation.png</texture>
 
     <condition>
       <property>sim/multiplay/generic/int[4]</property>

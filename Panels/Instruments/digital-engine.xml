@@ -25,7 +25,7 @@
     <layer>
       <name>background</name>
       <texture>
-        <path>Aircraft/SU-37/Panels/Instruments/Textures/trans-dgrey-bg.rgb</path>
+        <path>Aircraft/SU-37/Panels/Instruments/Textures/trans-dgrey-bg.png</path>
       </texture>
       <w>380</w>
       <h>40</h>

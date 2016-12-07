@@ -18,7 +18,7 @@ name "HULL"
 kids 29
 OBJECT poly
 name "HULL_Nose_Door_Rear_Ext"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 34
 8.03699 -0.0470799 -0.128936
@@ -603,7 +603,7 @@ refs 3
 kids 0
 OBJECT poly
 name "HULL_Nose_Door_Front_Ext"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 49
 7.5 -0.0614091 -0.128937
@@ -1410,7 +1410,7 @@ refs 4
 kids 0
 OBJECT poly
 name "HULL_RMR_Door_Ext"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 64
 13.4973 -0.248721 -1.51763
@@ -1823,7 +1823,7 @@ refs 4
 kids 0
 OBJECT poly
 name "HULL_RMF_Door_Ext"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 50
 11.9642 -0.159227 -1.60902
@@ -3870,7 +3870,7 @@ refs 3
 kids 0
 OBJECT poly
 name "HULL_LMR_Door_Ext"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 64
 13.7482 -0.256689 1.54347
@@ -4283,7 +4283,7 @@ refs 4
 kids 0
 OBJECT poly
 name "HULL_LMF_Door_Ext"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 50
 11.9589 -0.176504 1.51445
@@ -6580,7 +6580,7 @@ refs 3
 kids 0
 OBJECT poly
 name "HULL_Canopy_Fairing"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 30
 6.85 1.42127 -0.0971485
@@ -6799,7 +6799,7 @@ refs 4
 kids 0
 OBJECT poly
 name "HULL_Speedbrake_Outer"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 91
 9.53632 1.19964 1.75174e-015
@@ -9677,7 +9677,7 @@ refs 4
 kids 0
 OBJECT poly
 name "HULL_Optical_Sensor"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 225
 3.4211 1.01366 -0.218969
@@ -11480,7 +11480,7 @@ refs 4
 kids 0
 OBJECT poly
 name "HULL_Refuelling_Probe_Fairing"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 24
 4 0.750353 0.578767
@@ -12051,7 +12051,7 @@ refs 4
 kids 0
 OBJECT poly
 name "HULL_Ariels"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 107
 6.42221 1.09286 0.666727
@@ -12839,7 +12839,7 @@ refs 4
 kids 0
 OBJECT poly
 name "HULL_Hull_Nose"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 500
 4.35 0.507025 -0.662254
@@ -16918,7 +16918,7 @@ refs 4
 kids 0
 OBJECT poly
 name "HULL_Hull_Lower_Vent_Liner"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 33
 19.1086 -0.0908217 3.38246e-015
@@ -17138,7 +17138,7 @@ refs 3
 kids 0
 OBJECT poly
 name "HULL_Hull_Lower"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 999
 20 0.15 0.3
@@ -24355,7 +24355,7 @@ refs 4
 kids 0
 OBJECT poly
 name "HULL_Hull_Upper"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 1613
 8.45844 1.32594 1.55374e-015
@@ -36948,7 +36948,7 @@ name "WNG"
 kids 6
 OBJECT poly
 name "WNG_Right_Slat"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 45
 10.4928 0.300238 -2.15
@@ -37306,7 +37306,7 @@ refs 4
 kids 0
 OBJECT poly
 name "WNG_Right_Flaperon"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 32
 14.7389 0.2645 -2.15
@@ -37595,7 +37595,7 @@ refs 4
 kids 0
 OBJECT poly
 name "WNG_Right"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 414
 12.0741 0.419143 -2.15
@@ -40890,7 +40890,7 @@ refs 4
 kids 0
 OBJECT poly
 name "WNG_Left_Slat"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 45
 10.4867 0.27614 2.15
@@ -41248,7 +41248,7 @@ refs 4
 kids 0
 OBJECT poly
 name "WNG_Left_Flaperon"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 32
 15.9129 0.254598 5.25
@@ -41537,7 +41537,7 @@ refs 4
 kids 0
 OBJECT poly
 name "WNG_Left"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 414
 14.2634 0.33182 5.25
@@ -44837,7 +44837,7 @@ kids 2
 OBJECT poly
 name "ELV_Elevon_Right"
 loc -0.0012207 0 -3.29215
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 70
 -0.670057 -0.208193 1.19243
@@ -45474,7 +45474,7 @@ kids 0
 OBJECT poly
 name "ELV_Elevon_Left"
 loc 0.0012207 0 3.29215
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 70
 -0.672499 -0.208193 -1.19243
@@ -46113,7 +46113,7 @@ name "TF"
 kids 5
 OBJECT poly
 name "TF_Right_Rudder"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 28
 17.5528 2.7 -2.0272
@@ -46355,7 +46355,7 @@ refs 4
 kids 0
 OBJECT poly
 name "TF_Right_TailFin"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 154
 17.1557 3.81154 -2.03036
@@ -47407,7 +47407,7 @@ refs 9
 kids 0
 OBJECT poly
 name "TF_Left_Rudder"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 28
 17.8657 2.7 2.04006
@@ -47649,7 +47649,7 @@ refs 4
 kids 0
 OBJECT poly
 name "TF_Left_TailFin"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 154
 17.1524 3.81272 2.03816
@@ -48701,7 +48701,7 @@ refs 9
 kids 0
 OBJECT poly
 name "TF_Lower_TailFins"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 36
 16.2105 -1.22775 -2.05731
@@ -48935,7 +48935,7 @@ name "CNRD"
 kids 2
 OBJECT poly
 name "CNRD_Right"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 19
 10.1236 0.248903 -3.10516
@@ -49095,7 +49095,7 @@ refs 3
 kids 0
 OBJECT poly
 name "CNRD_Left"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 19
 10.0058 0.248861 3.10496
@@ -62339,7 +62339,7 @@ kids 101
 OBJECT poly
 name "ENG_Left_Outer"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 536
 16 -0.873715 1.08199
@@ -66537,7 +66537,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Inner"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 158
 10.0178 -0.89249 0.656368
@@ -67848,7 +67848,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Screen"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Intake-Screen.rgb"
+texture "SU-37-Intake-Screen.png"
 crease 45.000000
 numvert 4
 12.0001 -0.906862 1.433
@@ -67872,7 +67872,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor00"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 10.4559 -0.965109 0.680127
@@ -67930,7 +67930,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor01"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 10.5846 -0.966192 0.684499
@@ -67988,7 +67988,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor02"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 10.7132 -0.967274 0.688871
@@ -68046,7 +68046,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor03"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 10.8419 -0.968357 0.693243
@@ -68104,7 +68104,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor04"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 10.9706 -0.969439 0.697615
@@ -68162,7 +68162,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor05"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.0993 -0.970522 0.701988
@@ -68220,7 +68220,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor06"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.2279 -0.971604 0.70636
@@ -68278,7 +68278,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor07"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.3566 -0.972687 0.710732
@@ -68336,7 +68336,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor08"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.4853 -0.973769 0.715104
@@ -68394,7 +68394,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor09"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.614 -0.974852 0.719476
@@ -68452,7 +68452,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor10"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.7426 -0.975934 0.723848
@@ -68510,7 +68510,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_LDoor11"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.8713 -0.977017 0.728221
@@ -68568,7 +68568,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Outer"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 536
 16 -0.875643 -1.2
@@ -72766,7 +72766,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Inner"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 158
 9.98357 -0.833189 -1.33856
@@ -74077,7 +74077,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Screen"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Intake-Screen.rgb"
+texture "SU-37-Intake-Screen.png"
 crease 45.000000
 numvert 4
 12.0001 -0.966942 -0.731633
@@ -74101,7 +74101,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor00"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 10.4212 -0.905029 -1.37128
@@ -74159,7 +74159,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor01"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 10.5528 -0.906112 -1.37651
@@ -74217,7 +74217,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor02"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 10.6844 -0.907194 -1.38173
@@ -74275,7 +74275,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor03"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 10.8159 -0.908277 -1.38695
@@ -74333,7 +74333,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor04"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 10.9475 -0.909359 -1.39218
@@ -74391,7 +74391,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor05"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.0791 -0.910442 -1.3974
@@ -74449,7 +74449,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor06"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.2106 -0.911524 -1.40262
@@ -74507,7 +74507,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor07"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.3422 -0.912607 -1.40785
@@ -74565,7 +74565,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor08"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.4737 -0.913689 -1.41307
@@ -74623,7 +74623,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor09"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.6053 -0.914772 -1.41829
@@ -74681,7 +74681,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor10"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.7369 -0.915854 -1.42352
@@ -74739,7 +74739,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_LDoor11"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 8
 11.8684 -0.916937 -1.42874
@@ -75911,7 +75911,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_Base_Outer"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 128
 18.4286 -0.780652 1.15
@@ -76719,7 +76719,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_Base_Inner"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 128
 18.9976 -0.774441 1.15
@@ -77527,7 +77527,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO00"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -77603,7 +77603,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO01"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -77679,7 +77679,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO02"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -77755,7 +77755,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO03"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -77831,7 +77831,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO04"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -77907,7 +77907,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO05"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -77983,7 +77983,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO06"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -78059,7 +78059,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO07"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -78135,7 +78135,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO08"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -78211,7 +78211,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO09"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -78287,7 +78287,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO10"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -78363,7 +78363,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO11"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -78439,7 +78439,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO12"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -78515,7 +78515,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO13"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -78591,7 +78591,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO14"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -78667,7 +78667,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PO15"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.369495 1.03672
@@ -78743,7 +78743,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI00"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -78819,7 +78819,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI01"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -78895,7 +78895,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI02"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -78971,7 +78971,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI03"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79047,7 +79047,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI04"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79123,7 +79123,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI05"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79199,7 +79199,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI06"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79275,7 +79275,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI07"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79351,7 +79351,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI08"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79427,7 +79427,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI09"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79503,7 +79503,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI10"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79579,7 +79579,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI11"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79655,7 +79655,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI12"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79731,7 +79731,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI13"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79807,7 +79807,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI14"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79883,7 +79883,7 @@ kids 0
 OBJECT poly
 name "ENG_Left_Nozzle_PI15"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 18.9984 0.360455 1.03852
@@ -79959,7 +79959,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_Base_Outer"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 128
 18.9984 -0.780652 -1.15
@@ -80767,7 +80767,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_Base_Inner"
 loc -0.164202 -0.000805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 128
 18.429 -0.77444 -1.15
@@ -81575,7 +81575,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO00"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -81651,7 +81651,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO01"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -81727,7 +81727,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO02"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -81803,7 +81803,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO03"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -81879,7 +81879,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO04"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -81955,7 +81955,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO05"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82031,7 +82031,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO06"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82107,7 +82107,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO07"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82183,7 +82183,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO08"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82259,7 +82259,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO09"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82335,7 +82335,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO10"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82411,7 +82411,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO11"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82487,7 +82487,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO12"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82563,7 +82563,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO13"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82639,7 +82639,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO14"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82715,7 +82715,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PO15"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.116632 -1.08702
@@ -82791,7 +82791,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI00"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -82867,7 +82867,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI01"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -82943,7 +82943,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI02"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83019,7 +83019,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI03"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83095,7 +83095,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI04"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83171,7 +83171,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI05"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83247,7 +83247,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI06"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83323,7 +83323,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI07"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83399,7 +83399,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI08"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83475,7 +83475,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI09"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83551,7 +83551,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI10"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83627,7 +83627,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI11"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83703,7 +83703,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI12"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83779,7 +83779,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI13"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83855,7 +83855,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI14"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -83931,7 +83931,7 @@ kids 0
 OBJECT poly
 name "ENG_Right_Nozzle_PI15"
 loc -0.164202 -0.000805119 0
-texture "SU-37-Petal.rgb"
+texture "SU-37-Petal.png"
 crease 45.000000
 numvert 12
 19.9651 0.111607 -1.08802
@@ -84007,7 +84007,7 @@ kids 0
 OBJECT poly
 name "ENG_Upper_Nacelles"
 loc 16.4202 0.0805119 0
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 230
 0.912373 -0.292965 -1.7322
@@ -89650,7 +89650,7 @@ refs 4
 kids 0
 OBJECT poly
 name "CPT_Canopy_Frame_Rear_Outer"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 120
 6.35 1.25483 0.340073
@@ -90273,7 +90273,7 @@ refs 3
 kids 0
 OBJECT poly
 name "CPT_Canopy_Frame_Front_Outer"
-texture "SU-37-top.rgb"
+texture "SU-37-top.png"
 crease 45.000000
 numvert 74
 3.31535 1.0713 6.08999e-016

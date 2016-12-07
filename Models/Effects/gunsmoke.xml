@@ -15,7 +15,7 @@
       <heading-deg> 180.000 </heading-deg>
     </offsets>
 
-    <texture>smoke.rgb</texture>
+    <texture>smoke.png</texture>
 
     <condition>
         <property>controls/armament/trigger</property>

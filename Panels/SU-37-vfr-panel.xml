@@ -37,7 +37,7 @@ Hacked by Lee Elliott for the SU-37 mock panel
 <PropertyList>
 
  <name>SU-37 mock VFR Panel</name>
- <background>Aircraft/SU-37/Panels/Textures/SU-37-panel-bg.rgb</background>
+ <background>Aircraft/SU-37/Panels/Textures/SU-37-panel-bg.png</background>
  <w>1424</w>
  <h>468</h>
  <y-offset>0</y-offset>

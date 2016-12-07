@@ -7,7 +7,7 @@ xsaint
 
 <particlesystem>
 	 <name>explosion</name>
-	 <texture>explosion.rgb</texture>
+	 <texture>explosion.png</texture>
 	 <emissive>true</emissive>
 	 <lighting>false</lighting>
 

@@ -28,7 +28,7 @@ xsaint
 
 <particlesystem>
   <name>fire</name>
-  <texture>fire.rgb</texture>
+  <texture>fire.png</texture>
   <emissive>true</emissive>
   <lighting>false</lighting>
   <offsets>

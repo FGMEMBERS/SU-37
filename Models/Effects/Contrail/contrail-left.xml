@@ -15,7 +15,7 @@
       <heading-deg> 0.000 </heading-deg>
     </offsets>
 
-    <texture>contrail.rgb</texture>
+    <texture>contrail.png</texture>
 
     <condition>
       <property>sim/multiplay/generic/int[5]</property>
