@@ -4,8 +4,6 @@
 
  <path>EJ200.ac</path>
  
- 
- 
   <effect>
    <inherits-from>Effects/model-transparent</inherits-from>
    <condition>
@@ -113,9 +111,9 @@
    <object-name>ReheatInner</object-name>
    <object-name>ExternalFlame</object-name>
    <emission>
-    <red>1</red>
-    <green>1</green>
-    <blue>1</blue>
+    <red>0.85</red>
+    <green>0.85</green>
+    <blue>0.85</blue>
 	<factor-prop>sim/multiplay/generic/float[9]</factor-prop>
    </emission>
  </animation>
