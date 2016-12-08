@@ -300,6 +300,7 @@ If the vectors would be setting to more than 20 degrees You must to change this 
 (src0="-0.65" dst0="0.0" src1="1" dst1="1.0" control="VECTOR") SRC0="minus zero dot six five   (pay attention)
 If dont, the animation of the vectors will be wrong 
 PM for me if you have doubt -->
+
 	 <jet x="-16.90" y="1.14" z="-0.26"
        mass="3527"
        thrust="19434"
@@ -310,7 +311,9 @@ PM for me if you have doubt -->
 	
 	<control-input axis="/controls/engines/engine[0]/throttle" src0="0.0" dst0="0.0" src1="0.86" dst1="1.0" control="THROTTLE"/>
 	<control-input axis="/controls/engines/engine[0]/throttle" src0="0.88" dst0="0.0" src1="1.0" dst1="1.0" control="REHEAT"/>
-	<control-input axis="/surface-positions/left-elevon-pos-norm" control="VECTOR" src0="-1" src1="1" dst0="0.52083" dst1="0.47916"/>
+	<!--control-input axis="/surface-positions/left-elevon-pos-norm" control="VECTOR" src0="-1" src1="1" dst0="0.52083" dst1="0.47916"/-->
+	<!--control-input axis="/surface-positions/left-elevator-pos-norm" src0="-0.65" dst0="0.0" src1="1" dst1="1.0" control="VECTOR"/-->
+	<control-input axis="/afcs/thrust-vector" control="VECTOR" src0="-1" src1="1" dst0="0.0" dst1="1.0"/>
 	<control-output control="REHEAT" prop="engines/engine[0]/afterburner" />
 	<control-output control="VECTOR" prop="/engines/engine[0]/vector-norm"/>
 	<control-speed control="THROTTLE" transition-time="4.0"/>
@@ -329,7 +332,9 @@ PM for me if you have doubt -->
 	
 	<control-input axis="/controls/engines/engine[1]/throttle" src0="0.0" dst0="0.0" src1="0.86" dst1="1.0" control="THROTTLE"/>
 	<control-input axis="/controls/engines/engine[1]/throttle" src0="0.88" dst0="0.0" src1="1.0" dst1="1.0" control="REHEAT"/>
-	<control-input axis="/surface-positions/left-elevon-pos-norm" control="VECTOR" src0="-1" src1="1" dst0="0.52083" dst1="0.47916"/>
+	<!--control-input axis="/surface-positions/left-elevon-pos-norm" control="VECTOR" src0="-1" src1="1" dst0="0.52083" dst1="0.47916"/-->
+	<!--control-input axis="/surface-positions/left-elevator-pos-norm" src0="-0.65" dst0="0.0" src1="1" dst1="1.0" control="VECTOR"/-->
+	<control-input axis="/afcs/thrust-vector" control="VECTOR" src0="-1" src1="1" dst0="0.0" dst1="1.0"/>
 	<control-output control="REHEAT" prop="engines/engine[1]/afterburner" />
 	<control-output control="VECTOR" prop="/engines/engine[1]/vector-norm"/>
 	<control-speed control="THROTTLE" transition-time="4.0"/>
@@ -337,6 +342,19 @@ PM for me if you have doubt -->
 
 
   </jet>
+  
+    <!-- thrusters for pushback -->
+  <thruster x="3.764" y="4.929" z="3.307"
+            vx="-1" vy="0" vz="0"
+            thrust="2000">
+            <control-input axis="/controls/engines/engine[0]/reverser" control="THROTTLE" src0="0" src1="1" dst0="0" dst1="1"/>
+  </thruster>
+
+  <thruster x="3.764" y="-4.929" z="3.307"
+            vx="-1" vy="0" vz="0"
+            thrust="2000">
+            <control-input axis="/controls/engines/engine[0]/reverser" control="THROTTLE" src0="0" src1="1" dst0="0" dst1="1"/>
+  </thruster>
 
 	<!-- U/C - Nose -->
   <gear x="-7.55" y="0.00" z="-2.29" compression="0.5" spring="0.4">
@@ -402,5 +420,26 @@ PM for me if you have doubt -->
 
 <!-- Trim ballast -->
   <ballast x="-6" y="0" z="0.0" mass="3000"/>
+
+ <!-- Hook -->
+	<hook x="-6.3"
+				y="0.0"
+				z="-0.561891"
+				length="2.7"
+				down-angle="77"
+				up-angle="-13">
+		<control-input axis="/controls/gear/tailhook"
+									 control="HEXTEND"/>
+		<control-speed control="HEXTEND"
+									 transition-time="5"/>
+	</hook>
+
+
+	<!-- Launch-bar 			-0.780453-->
+	<launchbar 	x="3.5" y="0.0" z="-1.0" length="3.5052" >
+		<control-input axis="/controls/gear/launchbar" control="LEXTEND"/>
+		<control-speed control="LEXTEND" transition-time="1"/>
+	    <control-input axis="/controls/gear/launchbar/acceleration-norm" control="LACCEL"/>
+	</launchbar>
 
 	</airplane>

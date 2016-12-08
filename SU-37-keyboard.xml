@@ -1,0 +1,920 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+SU-37 keyboard config.
+
+2006-06-04 Lee Elliott, 2016-01-31 Warty
+************************************************************************
+-->
+  <PropertyList> 
+   <key n="1"><name>Ctrl-A</name>              <desc>Toggle autopilot altitude lock</desc>
+  <binding>
+   <command>nasal</command>
+   <script>
+     var node = props.globals.getNode("/autopilot/locks/altitude", 1);
+     if ( node.getValue() == "altitude-hold" ) {
+       node.setValue( "" );
+     } else {
+       node.setValue( "altitude-hold" );
+       setprop("/autopilot/settings/target-altitude-ft", getprop("/position/altitude-ft"));
+     }
+   </script>
+  </binding>
+ </key>
+ 
+  <key n="8"><name>Ctrl-H</name>                <desc>Toggle autopilot heading lock</desc>
+  <binding>
+   <command>nasal</command>
+   <script>
+     var node = props.globals.getNode("/autopilot/locks/heading", 1);
+     if ( node.getValue() == "dg-heading-hold" ) {
+       node.setValue( "" );
+     } else {
+       setprop("/autopilot/settings/heading-bug-deg",  getprop("/orientation/heading-magnetic-deg"));
+       setprop("/autopilot/settings/true-heading-deg", getprop("/orientation/heading-deg"));
+       node.setValue( "dg-heading-hold" );
+     }
+   </script>
+  </binding>
+ </key>
+ 
+  <key n="19"><name>Ctrl-S</name>                   <desc>Toggle auto-throttle lock</desc>
+  <binding>
+   <command>nasal</command>
+   <script>
+     var node = props.globals.getNode("/autopilot/locks/speed", 1);
+     if ( node.getValue() == "speed-with-throttle" ) {
+       node.setValue( "" );
+     } else {
+        setprop("/autopilot/settings/target-speed-kt", getprop("/velocities/airspeed-kt"));
+        setprop("/autopilot/locks/speed", "speed-with-throttle");
+     }
+   </script>
+  </binding>
+ </key>
+ 
+  <key n="26"><!-- ============== good for final approach : Ctrl-Z = Disable AP Alt+Hdg-->
+    <name>Ctrl-Z</name>
+    <desc>Disable AP Alt+Hdg</desc>
+    <binding>
+      <command>nasal</command>
+      <script>
+          setprop("/autopilot/locks/altitude", "");
+        setprop("/autopilot/locks/heading",  "");
+      </script>
+    </binding>
+  </key>    
+<key n="32"> <!-- =======================================  pushback/speedbrake = SPACE -->
+    <name>SPACE</name> <!-- PTT (via FGCom) on default keyboard-->
+    <desc>speedbrake</desc>
+    <binding>
+    <command>nasal</command>
+    <script>
+    if(getprop("/gear/gear/wow") == 1){ # toggle pushback
+         if(getprop("/controls/engines/engine[0]/reverser") == 1){
+               setprop("/controls/engines/engine[0]/reverser", 0); 
+               setprop("/controls/gear/brake-parking", 1);
+         }
+        else{ 
+            setprop("/controls/engines/engine[0]/reverser", 1); 
+            setprop("/controls/gear/brake-parking", 0);}
+    }
+    else{ # airborne: so toggle speed brake
+         if(getprop("/controls/flight/speedbrake") == '1'){
+               setprop("/controls/flight/speedbrake", 0); 
+         }
+        else{ setprop("/controls/flight/speedbrake", 1); }
+    }
+    </script>
+    </binding>
+</key>
+<!-- key n="33" = >!< = Select first engine -->    
+<!-- key n="34" = > < = @ / second engine?? -->    
+<!-- key n="35" = >#< = Select third engine -->    
+<!-- key n="36" = >$< = Select fourth engine -->
+   <key n="37"> <!-- ================================== % -->
+    <name>percent</name>
+    <desc>test37</desc>
+    <binding>
+      <command>nasal</command>
+      <script>setprop("sim/keytest", "percent")</script>
+    </binding>
+  </key>    
+   <key n="38"> <!-- ================================== & -->
+    <name>ampersand</name>
+    <desc>key38</desc>
+    <binding>
+      <command>nasal</command>
+      <script>setprop("sim/keytest", "ampersand")</script>
+    </binding>
+  </key>
+<!-- key n="39" = >'< = used to be ATC-dialog (but nowadays unused) -->
+   <key n="40"> <!-- ====================================================== ( = left 10-->
+    <name>left_bracket</name>
+    <desc>left 10</desc>
+    <binding>
+      <command>nasal</command>
+      <script>setprop("sim/keytest", "left bracket");
+        setprop("/autopilot/settings/heading-bug-deg",  getprop("/autopilot/settings/heading-bug-deg") -10);
+        setprop("/autopilot/settings/true-heading-deg", getprop("/autopilot/settings/true-heading-deg") -10);
+      </script>
+    </binding>
+  </key>
+   <key n="41"> <!-- ===================================================== ) = right 10-->
+    <name>right_bracket</name>
+    <desc>right 10</desc>
+    <binding>
+      <command>nasal</command>
+      <script>setprop("sim/keytest", "right bracket");
+        setprop("/autopilot/settings/heading-bug-deg",  getprop("/autopilot/settings/heading-bug-deg") +10);
+        setprop("/autopilot/settings/true-heading-deg", getprop("/autopilot/settings/true-heading-deg") +10);
+      </script>
+    </binding>
+  </key>
+
+<key n="42"> <!-- ============== Cut engines and disable autopilot (for threshold) = * -->
+    <name>star</name><!--for coming to a full stop-->
+    <desc>Cut power and AP</desc>
+    <binding>
+        <command>nasal</command>
+        <script>
+            setprop("/autopilot/settings/target-speed-kt", 0);    
+            setprop("/autopilot/locks/altitude", "");
+            setprop("/autopilot/locks/heading", "");
+            setprop("/autopilot/locks/speed", "");
+            setprop("/controls/engines/engine[0]/throttle", 0.0);
+            setprop("/controls/engines/engine[1]/throttle", 0.0);
+            setprop("/sim/landing/status", "STOPPING");
+            setprop("/controls/flight/flaps", 0.0);
+            setprop("/controls/gear/brake-parking", 1);
+            #setprop("/controls/flight/speedbrake", 1);
+        </script>        
+    </binding>    
+</key> 
+<key n="43"><!-- ========================================= set AP to current values = +-->
+  <name>+</name><!-- repeat last message on default keyboard -->
+  <desc>Set  AP to current values</desc>
+  <binding>
+          <condition><!-- NOT Weight On Wheels -->
+            <not><property>/gear/gear/wow</property></not>
+        </condition>
+    <command>nasal</command>
+    <script>
+        setprop("/autopilot/settings/target-speed-kt", getprop("/velocities/airspeed-kt"));
+        setprop("/autopilot/locks/speed", "speed-with-throttle");
+                
+        setprop("/autopilot/settings/heading-bug-deg",  getprop("/orientation/heading-magnetic-deg"));
+        setprop("/autopilot/settings/true-heading-deg", getprop("/orientation/heading-deg"));                
+        setprop("/autopilot/locks/heading", "dg-heading-hold");
+                
+        setprop("/autopilot/settings/target-altitude-ft", getprop("/position/altitude-ft"));        
+        setprop("/autopilot/locks/altitude", "altitude-hold");
+        setprop("/autopilot/settings/vertical-speed-fpm", 0);        
+        setprop("/sim/landing/status", ""); 
+        setprop("/devices/status/mice/mouse/mode", 0);   
+    </script>
+  </binding>
+ </key>
+<!-- key n="44" = >,< = Left brake  -->    
+<!-- key n="45" = >-< = Chat Menu on default keyboard, though, with the map open, it's 
+                        ignored/over-ridden and just zooms the map out -->
+<!-- key n="46" = >.< = Right  brake -->       
+<key n="47"><!-- =================================== Set up for approach to runway = / ?????????????????????????????????????  -->
+  <name>/</name><!-- Open property browser on default keyboard -->
+  <desc>Approach configuration</desc>
+      <binding>
+        <condition>
+            <not><!-- Weight On Wheels -->
+                <property>/gear/gear/wow</property>
+            </not>
+        </condition>
+        <command>nasal</command>
+        <script>            
+            setprop("/autopilot/settings/target-speed-kt", 150);
+            setprop("/autopilot/locks/speed", "speed-with-throttle");        
+            #setprop("/autopilot/locks/altitude", "vertical-speed-hold");
+            #setprop("/autopilot/settings/vertical-speed-fpm", 0);
+            setprop("/autopilot/settings/heading-bug-deg",  getprop("/orientation/heading-magnetic-deg"));
+            setprop("/autopilot/settings/true-heading-deg", getprop("/orientation/heading-deg"));                
+            #setprop("/autopilot/locks/heading", "dg-heading-hold");
+            setprop("/controls/flight/flaps", 0.0);
+            setprop("/controls/gear/gear-down", 1);
+            setprop("/controls/gear/brake-parking", 1);
+            setprop("/sim/landing/status", "approach");
+            
+            setprop("/afcs/flight-mode", "Approach");
+        </script>        
+    </binding>
+</key>
+<!-- key n="48" = >0< = Left rudder  ... LEAVE ALONE -->
+<key n="49"><!-- ============================================ Decrease tgt range = 1 -->
+  <name>1</name><!-- Decrease elevator trim on default keyboard -->
+  <desc>Decrease tgt range</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+        setprop("sim/keytest", "Decr tgt range");
+        setprop("/afcs/target-tracking/goal-range-nm", 
+          getprop("/afcs/target-tracking/goal-range-nm") / 2);
+          gui.popupTip(sprintf("Track range: %s", getprop("/afcs/target-tracking/goal-range-nm") ), 2);
+        </script>        
+    </binding>
+</key>
+<!-- key n="50" = >2< = Elevator up or increase autopilot altitude  -->
+<key n="50"><!-- ============================================ Decrease AP altitude = 2 -->
+  <name>2</name><!-- Decrease elevator trim on default keyboard -->
+  <desc>Decrease AP altitude</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+        if (getprop("/autopilot/locks/altitude") == "altitude-hold"){
+            setprop("sim/keytest", "alt -100");
+            setprop("/autopilot/settings/target-altitude-ft", 
+              getprop("autopilot/settings/target-altitude-ft") -150);
+        }
+        if (getprop("/autopilot/locks/altitude") == "vertical-speed-hold"){
+            setprop("sim/keytest", "vsi -100");
+            setprop("/autopilot/settings/vertical-speed-fpm", 
+              getprop("autopilot/settings/vertical-speed-fpm") -100);
+        }
+        </script>        
+    </binding>
+</key>
+<!-- key n="51" = >3< = Decrease throttle or autopilot autothrottle LEAVE ALONE -->
+ <key n="51">
+  <name>3</name>
+  <desc>Decrease throttle or autopilot autothrottle</desc>
+  <repeatable type="bool">true</repeatable>
+  <binding>
+   <command>nasal</command>
+      <script>
+    if (getprop("/autopilot/locks/speed") == "speed-with-throttle"){
+        if(getprop("/autopilot/settings/target-speed-kt") >= 150){
+              setprop("/autopilot/settings/target-speed-kt", 
+             getprop("/autopilot/settings/target-speed-kt") - 10);
+        }
+        else{
+              setprop("/autopilot/settings/target-speed-kt", 
+              getprop("/autopilot/settings/target-speed-kt") - 5);    
+        }
+    }
+    else{controls.incThrottle(-0.01, -1.0);}     
+   </script>
+  </binding>
+  <mod-shift>
+   <desc>Look back right</desc>
+   <binding>
+    <command>property-assign</command>
+    <property>/sim/current-view/goal-heading-offset-deg</property>
+    <property>/sim/view/config/back-right-direction-deg</property>
+   </binding>
+  </mod-shift>
+ </key>
+
+<key n="52"><!-- ============================================= Decrease AP heading = 4 -->
+  <name>4</name><!--   Move aileron left (or adjust AP heading.)  on default keyboard -->
+  <desc>Decrease AP heading</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+        setprop("sim/keytest", "left 1 deg");
+        setprop("/autopilot/settings/heading-bug-deg", getprop("/autopilot/settings/heading-bug-deg") -1);
+        setprop("/autopilot/settings/true-heading-deg", getprop("/autopilot/settings/true-heading-deg") -1);
+        </script>        
+    </binding>
+</key>
+
+
+<!-- key n="53" = >5< = Center aileron, elevator, and rudder     !!!!!!!!!!! OK -->
+<key n="54"><!-- ============================================= Increase AP heading = 6 -->
+  <name>6</name><!--   Move aileron right (or adjust AP heading.)  on default keyboard -->
+  <desc>Increase AP heading</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+        setprop("sim/keytest", "right 1 deg");
+        setprop("/autopilot/settings/heading-bug-deg", getprop("/autopilot/settings/heading-bug-deg") +1);
+        setprop("/autopilot/settings/true-heading-deg", getprop("/autopilot/settings/true-heading-deg") +1);
+        </script>        
+    </binding>
+</key> 
+
+
+
+
+<key n="55"><!-- =========================================== Increase tgt range = 7 -->
+  <name>7</name><!--  Increase elevator trim  on default keyboard -->
+  <desc>Inrcease tgt range</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+        setprop("sim/keytest", "Incr tgt range");
+        setprop("/afcs/target-tracking/goal-range-nm", 
+          getprop("/afcs/target-tracking/goal-range-nm") * 2);
+          gui.popupTip(sprintf("Track range: %s", getprop("/afcs/target-tracking/goal-range-nm") ), 2);
+        </script>        
+    </binding>
+</key>
+<!-- key n="56" = >8< = Elevator dn or decrease autopilot altitude -->
+<key n="56"><!-- =========================================== Increase AP altitude = 8 -->
+  <name>8</name><!--  Increase elevator trim  on default keyboard -->
+  <desc>Inrcease AP altitude</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+        if (getprop("/autopilot/locks/altitude") == "altitude-hold"){
+            setprop("sim/keytest", "alt +100");
+            setprop("/autopilot/settings/target-altitude-ft", 
+              getprop("autopilot/settings/target-altitude-ft") +100);
+        }
+        if (getprop("/autopilot/locks/altitude") == "vertical-speed-hold"){
+            setprop("sim/keytest", "vsi +100");
+            setprop("/autopilot/settings/vertical-speed-fpm", 
+              getprop("autopilot/settings/vertical-speed-fpm") +100);
+        }  
+        </script>        
+    </binding>
+</key>
+<key n="57"><name>9</name>        <desc>Increase throttle or autopilot autothrottle</desc>
+  <repeatable type="bool">true</repeatable>
+  <binding>
+  <command>nasal</command>
+   <script>
+    if (getprop("/autopilot/locks/speed") == "speed-with-throttle"){
+        if(getprop("/autopilot/settings/target-speed-kt") >= 100){
+              setprop("/autopilot/settings/target-speed-kt", 
+             getprop("/autopilot/settings/target-speed-kt") + 10);
+        }
+        else{
+              setprop("/autopilot/settings/target-speed-kt", 
+              getprop("/autopilot/settings/target-speed-kt") + 5);    
+        }
+    }
+    else{controls.incThrottle(0.01, 1.0);}     
+   </script>
+  </binding>
+  
+  <mod-shift>
+   <desc>Look front right</desc>
+   <binding>
+    <command>property-assign</command>
+    <property>/sim/current-view/goal-heading-offset-deg</property>
+    <property>/sim/view/config/front-right-direction-deg</property>
+   </binding>
+  </mod-shift>
+ </key>
+ 
+ 
+ <!-- =============================================================================== -->
+ <!-- key n="113" 'q' toggles the tracking state  -->
+ <!-- key n="81"  'Q' selects the tracking target -->
+<key n="81"><name>Q</name>                                    <desc>Select AI or MP</desc>
+  <binding>
+    <command>nasal</command>
+    <script>
+    if(getprop("/afcs/target_type") == 'AI'){ # do NOT switch to MP unless there are valid targets!
+      var targetList = props.globals.getNode("ai/models/").getChildren("multiplayer");
+      var maxTargets = size(targetList); 
+      var validModels = 0 ;
+      if(maxTargets == 0){gui.popupTip(sprintf("No MP targets to track!"), 2);}
+      else{ # but make sure there is AT LEAST one valid target
+        var maxTargetID = maxTargets-1; 
+        for ( var i = 0 ; maxTargets > i ; i += 1) {
+          if (targetList[i].getValue("valid") != 0){validModels = validModels +1;}
+        } # end of for i = 0 .. maxTargets
+        if(validModels != 0){
+          setprop("/afcs/target_type", 'MP'); 
+          setprop("/afcs/target-tracking/target-root", '/ai/models/multiplayer[0]' );
+        } # end of if(validModels != 0)
+        else {gui.popupTip(sprintf("No valid MP targets to track!"), 2);}
+      } # end of else check for a valid target
+    } # end of if target_type == 'AI'
+    else{
+      setprop("/afcs/target_type", 'AI'); 
+      setprop("/afcs/target-tracking/target-root", '/ai/models/aircraft[0]' );
+    }
+   </script>
+  </binding>
+</key>
+
+<!-- this doesn't appear to work
+ <key n="83">
+  <name>S</name>
+  <desc>Swap panels</desc>
+  <binding>
+   <command>nasal</command>
+   <script>
+     var currentPanel = getprop("/sim/panel/path");
+     if(currentPanel != "Aircraft/SU-37/Panels/SU-37-mini-panel.xml"){
+       setprop("/sim/panel/path", "Aircraft/SU-37/Panels/SU-37-mini-panel.xml" );
+       gui.popupTip("Mini Panel", 1);
+     }
+     else{
+       setprop("/sim/panel/path", "Aircraft/SU-37/Panels/SU-37-mini-panel-W1.xml" );
+       gui.popupTip("Warty Panel", 1);
+    }
+     </script> 
+  </binding>
+ 
+  
+ </key> -->
+  <!--<binding>
+   <command>property-swap</command>
+   <property>/sim/panel/path</property>
+   <property>/sim/panel_2/path</property> 
+   <command>panel-load</command>
+  </binding>--> 
+<key n="84"><name>T</name>                               <desc>Target marker toggle</desc>
+  <binding>
+    <command>nasal</command>
+    <script>
+      if(getprop("afcs/target_shown") == 0){
+        setprop("afcs/target_shown", 1);
+      }
+      else{
+        setprop("afcs/target_shown", 0);
+      }
+    </script>
+  </binding>
+</key>
+ 
+  
+<!--key n="97"><name>a</name>< Accelerate time warp -->
+<!--key n="98"><name>b</name>< Brakes -->
+
+  
+<key n="99">                                       <name>c</name><desc>Canopy toggle</desc>
+    <binding>
+      <command>nasal</command>
+      <script>su27.canopy.toggle();</script>
+    </binding>
+  </key>
+<key n="100"><name>d</name>                        <desc>Cycle through weapons</desc>
+  <binding>
+    <command>nasal</command>
+    <script>
+        var currentlySelected = getprop("/controls/armament/selected");
+        if(   currentlySelected == 0){
+            setprop("/controls/armament/selected", 1); 
+            setprop("/controls/armament/gunsight/computer-on", 0); 
+            setprop("/controls/armament/gunsight/muzzleVelocity", 2910);
+            setprop("/controls/armament/gunsight/computer-on", 1);            
+        }
+        elsif(currentlySelected == 1){
+            setprop("/controls/armament/selected", 2); 
+            setprop("/controls/armament/gunsight/computer-on", 0); 
+            setprop("/controls/armament/gunsight/muzzleVelocity", 1970);
+            setprop("/controls/armament/gunsight/computer-on", 1);        
+        }
+        elsif(currentlySelected == 2){
+            setprop("/controls/armament/selected", 3); 
+            setprop("/controls/armament/gunsight/computer-on", 0); 
+            setprop("/controls/armament/gunsight/muzzleVelocity", 3250);
+            setprop("/controls/armament/gunsight/computer-on", 1);        
+        }
+        elsif(currentlySelected == 3){
+            setprop("/controls/armament/selected", 4);
+            setprop("/controls/armament/gunsight/computer-on", 0); 
+            setprop("/controls/armament/gunsight/muzzleVelocity", 500);
+            setprop("/controls/armament/gunsight/computer-on", 1);
+        }
+        elsif(currentlySelected == 4){
+            setprop("/controls/armament/selected", 0); 
+            setprop("/controls/armament/gunsight/computer-on", 0); 
+            setprop("/controls/armament/gunsight/muzzleVelocity", 2569);
+            setprop("/controls/armament/gunsight/computer-on", 1);            
+        }
+    </script>    
+  </binding>
+</key>
+<key n="101"><name>e</name>                         <desc>Toggle the tracking state</desc>
+  <binding>
+    <command>nasal</command>
+      <script>
+      if(getprop("/afcs/trackType") != 'OFF'){
+        if(getprop("/afcs/target-tracking/enable") == 0){
+            setprop("/afcs/target-tracking/enable", 1);
+        }
+        else{
+            setprop("/afcs/target-tracking/enable", 0);
+            setprop("/autopilot/locks/altitude", "");
+            setprop("/autopilot/locks/heading",  "");
+            setprop("/autopilot/locks/speed",  "");
+        }
+      }
+      else{
+          setprop("/afcs/target-tracking/enable", 0);
+      }
+    </script>
+  </binding>
+</key>
+<key n="102"><name>f</name>                              <desc>Fire selected weapon</desc>
+        <binding>
+          <command>nasal</command>
+          <script>
+              var currentlySelected = getprop("/controls/armament/selected");
+            if( currentlySelected == 0){setprop("/controls/armament/trigger",  1); }
+            if( currentlySelected == 1){setprop("/controls/armament/trigger1", 1); }
+            if( currentlySelected == 2){setprop("/controls/armament/trigger2", 1); }
+            if( currentlySelected == 3){setprop("/controls/armament/trigger3", 1); }
+            if( currentlySelected == 4){setprop("/controls/armament/trigger4", 1); }
+          </script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>
+                setprop("/controls/armament/trigger",  0);
+                setprop("/controls/armament/trigger1", 0);
+                setprop("/controls/armament/trigger2", 0);
+                setprop("/controls/armament/trigger3", 0);
+                setprop("/controls/armament/trigger4", 0);
+            </script>
+          </binding>
+        </mod-up>
+      </key>   
+
+   <!-- ========================= l = Trigger flare release (not working anyway ???)-->        
+   <!--key n="108"> 
+     <name>l</name>
+     <desc>Trigger flare release</desc>
+     <binding>
+      <command>property-toggle</command>
+      <property>ai/submodels/submodel/flare-release</property>
+      <value type="bool">true</value>
+     </binding>
+     <mod-up>
+      <binding>
+       <command>property-assign</command>
+      <property>ai/submodels/submodel/flare-release</property>
+       <value type="bool">false</value>
+      </binding>
+     </mod-up>
+    </key-->
+<key n="108"><name>l</name>                              <desc>Toggle landing light</desc>
+  <binding>
+    <command>nasal</command>
+    <script>
+         if(getprop("/controls/lighting/landing-lights") == 1){
+           setprop ("/controls/lighting/landing-lights", 0);
+           setprop ("/controls/switches/landing-light", 0);
+         }
+         else{setprop("/controls/lighting/landing-lights", 1);
+           setprop ("/controls/switches/landing-light", 1);
+         }
+    </script>
+  </binding>
+</key>
+ <key m="109">
+  <name>m</name>
+  <desc>Map</desc>
+  <binding>
+   <command>nasal</command>
+   <script>
+    gui.showDialog("map");
+   </script>
+  </binding>
+ </key>
+ 
+ <key n="110">
+  <name>n</name>
+  <desc>No map</desc>
+  <binding>
+   <command>nasal</command>
+   <script>
+    fgcommand("dialog-close", props.Node.new({ "dialog-name": "map" }));
+   </script>
+  </binding>
+ </key>
+     
+ <!-- ================================================================================ -->
+ <!-- key n="81"  'Q' toggles AI/MP -->
+<!-- ================================================================================= -->
+<!-- ================================= scrolls backwards through available targets = q --> 
+<key n="113"><name>q</name>                                    <desc>tgt scroll bwd </desc>
+  <binding>
+    <command>nasal</command>
+      <script>
+      var currentTargetID = getprop("/afcs/target_ID");
+      var nextTargetID = -1;
+      var finalValidID = 0;
+      var validModels = 0; # assume the worst      
+      # check how many targets are available
+      if(getprop("/afcs/target_type") == 'AI'){
+          var targetList = props.globals.getNode("ai/models/").getChildren("aircraft");
+      }
+      else{
+          var targetList = props.globals.getNode("ai/models/").getChildren("multiplayer");
+      }
+      var maxTargets = size(targetList);
+      if(maxTargets == 0){
+          gui.popupTip(sprintf("No targets to track!"), 2);
+      }
+      else{
+          var maxTargetID = maxTargets-1;
+          for ( var i = 0 ; maxTargets > i ; i += 1) {
+            if ( targetList[i].getValue("valid") != 0){
+                validModels = validModels +1; 
+                if(currentTargetID > i){
+                    nextTargetID = i;
+                }
+                else{
+                    finalValidID = i;
+                }
+            } # end of a valid model
+          } # end of fo i = 0 .. maxTargets
+          if(nextTargetID == -1){ # then we have failed to find a valid model with a lower ID 
+          # so we need to find the LAST available one or, if none exists, stay with the same target
+            nextTargetID = finalValidID;
+          }            
+      } # end of else
+      if(validModels !=0 and nextTargetID != -1){ # Just in case
+          setprop("/afcs/target_ID", nextTargetID);
+             if(getprop("/afcs/target_type") == 'AI'){
+               var TargetString = sprintf("/ai/models/aircraft[%u]", nextTargetID) ;
+             }
+             if(getprop("/afcs/target_type") == 'MP'){
+               var TargetString = sprintf("/ai/models/multiplayer[%u]", nextTargetID) ;
+             }
+             setprop("/afcs/target-tracking/target-root", TargetString);
+             var tgtCallsign = getprop(sprintf("%s/callsign", TargetString));
+             gui.popupTip(sprintf("Tracking: %s", tgtCallsign ), 2);
+         }
+         else{
+            gui.popupTip(sprintf("No targets to track!"), 2);
+            setprop("/afcs/trackType", 'OFF'); setprop("/afcs/target_shown", 0);
+            setprop("/afcs/target_ID", -1); setprop("/afcs/target_last", -1);
+         }
+         </script>
+  </binding>
+ </key>
+ 
+ <key n="114"><name>r</name>                                     <desc>reverse view</desc>
+  <binding>
+    <command>nasal</command>
+      <script>
+        setprop ("/sim/current-view/view-number", 1); # model view
+        setprop("/sim/current-view/heading-offset-deg", 180);
+      </script>
+  </binding>
+     <mod-up>
+     <binding>
+         <command>nasal</command>
+          <script>
+            setprop ("/sim/current-view/view-number", 0); # cockpit view
+            setprop("/sim/current-view/heading-offset-deg", 0);
+        </script>
+     </binding>
+   </mod-up>
+ </key>
+<key n="115"><name>s</name>                   <desc>show nearest airport and runway</desc>
+  <binding>
+    <command>nasal</command>
+      <script>
+        var myLat = getprop("/position/latitude-deg");
+        var myLon = getprop("/position/longitude-deg");
+        var myAlt = getprop("/position/altitude-ft");
+        var info = airportinfo("airport");
+        var closestDist = 99999.9 ;
+        var closestRwy = 0;        
+        var closestCourse = 0 ;
+        var altDiff = math.round(myAlt - info.elevation* M2FT);
+        var cseDiff = 180.0;
+        foreach(var rwy; keys(info.runways)) {
+            var to = {lat: info.runways[rwy].lat, lon: info.runways[rwy].lon};
+            var (course, dist) = courseAndDistance(myLat, myLon, to);
+            cseDiff = info.runways[rwy].heading - course;
+            if(closestDist >= dist){
+                closestRwy = rwy ;
+                closestDist = dist;
+                closestCourse = course ;
+            }
+        }
+        var txt = ["CLOSEST = Rw",closestRwy, ";", sprintf("%.2f", closestDist), "nm @", math.round(closestCourse), "deg", info.name,"[",info.id,"]"];
+        txt = string.join(" ", txt);
+        gui.popupTip(txt, 10);
+         </script>
+  </binding>
+   </key>
+ 
+<key n="116"><name>t</name>                       <desc>Target tracking mode toggle</desc>
+  <binding>
+    <command>nasal</command>
+    <script>
+      # check how many targets are available
+      var validModels = getprop("/afcs/target-tracking/validModels"); # calculated by afcs.nas
+      #gui.popupTip(sprintf("%s validModels", validModels), 2);
+      if(validModels == 0){
+        gui.popupTip(sprintf("No targets to track!"), 2);
+        setprop("/afcs/trackType", 'OFF'); setprop("/afcs/target_shown", 0);
+        setprop("/afcs/target_ID", -1); setprop("/afcs/target_last", -1);
+      }
+      else{
+        if(getprop("/afcs/trackType")    == 'OFF') {setprop("/afcs/trackType", 'AUTO')  ; setprop("/afcs/target_shown", 1); }
+        elsif(getprop("/afcs/trackType") == 'AUTO'){setprop("/afcs/trackType", 'MANUAL'); setprop("/afcs/target_shown", 1); }
+        else                                       {setprop("/afcs/trackType", 'OFF')   ; setprop("/afcs/target_shown", 0); }
+      }
+    </script>
+  </binding>
+</key>
+
+ <!-- Increase warp on default keyboard -->
+ <!--========================== scroll fwd through available targets = w -->
+<key n="119"><name>w</name>                                    <desc>tgt scroll fwd</desc>
+  <binding>
+    <command>nasal</command>
+      <script>
+      var currentTargetID = getprop("/afcs/target_ID");
+      var nextTargetID = -1;
+      var finalValidID = 0;
+      var validModels = 0; # assume the worst      
+      # check how many targets are available
+      if(getprop("/afcs/target_type") == 'AI'){
+          var targetList = props.globals.getNode("ai/models/").getChildren("aircraft");
+      }
+      else{
+          var targetList = props.globals.getNode("ai/models/").getChildren("multiplayer");
+      }
+      var maxTargets = size(targetList);
+      if(maxTargets == 0){
+          gui.popupTip(sprintf("No targets to track! [724]"), 2);
+      }
+      else{
+          var maxTargetID = maxTargets-1; 
+          for ( var i = maxTargetID ; i > -1 ; i -= 1) { # work down the list
+            if ( targetList[i].getValue("valid") != 0){
+                validModels = validModels +1; 
+                if(i > currentTargetID){
+                    nextTargetID = i;
+                }
+                else{
+                    finalValidID = i;
+                }
+            } # end of a valid model    
+          } # end of for i = maxTargetID .. 0
+          if(nextTargetID == -1){ # then we have failed to find a valid model with a lower ID 
+          # so we need to find the LAST available one or, if none exists, stay with the same target
+            nextTargetID = finalValidID;
+          }            
+      } # end of else 
+      if(validModels !=0 and nextTargetID != -1){ # Just in case
+          setprop("/afcs/target_ID", nextTargetID);
+             if(getprop("/afcs/target_type") == 'AI'){
+               var TargetString = sprintf("/ai/models/aircraft[%u]", nextTargetID) ;
+             }
+             if(getprop("/afcs/target_type") == 'MP'){
+               var TargetString = sprintf("/ai/models/multiplayer[%u]", nextTargetID) ;
+             }
+             setprop("/afcs/target-tracking/target-root", TargetString);
+             var tgtCallsign = getprop(sprintf("%s/callsign", TargetString));
+             gui.popupTip(sprintf("Tracking: %s", tgtCallsign ), 2);
+         }
+         else{
+            gui.popupTip(sprintf("No targets to track! [758]"), 2);
+            setprop("/afcs/trackType", 'OFF'); setprop("/afcs/target_shown", 0);
+            setprop("/afcs/target_ID", -1); setprop("/afcs/target_last", -1);
+         }
+         </script>
+  </binding>
+ </key>
+   
+<key n="122"><!-- ================================================ Altitude hold  = 'a' -->
+  <name>z</name>
+  <desc>Altitude hold</desc>
+    <binding>
+        <command>nasal</command>
+   <script>  
+    var altStatus = getprop("/afcs/alt");
+    setprop("/afcs/targetAltRate", 0);
+    if (altStatus == 1){
+        setprop("/afcs/alt", 0 );
+        setprop("sim/keytest", "alt hold off");    
+        setprop("/autopilot/locks/speed", "speed-with-throttle");
+    }
+    else               {
+        setprop("/afcs/alt", 1 );
+        setprop("sim/keytest", "*ALT HOLDING ON*");
+        setprop("/autopilot/locks/speed", "");
+    }
+   </script>
+    </binding>
+ </key>
+<!-- ============================================================================= a-z -->  
+<!-- ================================================================================= -->
+    
+
+<!-- ======================================================================== Pre-sets -->  
+    <key n="127"><!-- this is a bit of a cheat key -->
+        <name>Delete</name>
+        <desc>Cut power and AP</desc>
+        <binding><command>nasal</command>
+            <script>
+            setprop("/autopilot/settings/target-speed-kt", 0);    
+            setprop("/autopilot/locks/altitude", "");
+            setprop("/autopilot/locks/heading", "");
+            setprop("/autopilot/locks/speed", "");
+            setprop("/controls/engines/engine/throttle", 0.0);
+            setprop("/controls/engines/engine[1]/throttle", 0.0);
+            setprop("/controls/gear/brake-parking", 1);
+            setprop("/controls/engines/engine[0]/reverser", 1);
+            
+            setprop("/afcs/flight-mode", "STOPPING (Del key)");
+        </script>
+        </binding>
+        </key>
+<key n="360"><name>PageUp</name>                                    <desc>Climb out</desc>
+   <binding><command>nasal</command>
+        <script>
+            setprop("/autopilot/settings/target-speed-kt", 600);
+            setprop("/autopilot/locks/speed", "speed-with-throttle");
+            setprop("/autopilot/locks/altitude", "");
+            setprop("/autopilot/locks/heading", "");
+            setprop("/controls/flight/flaps", 0.0);
+            setprop("/afcs/flight-mode", "Climb out");
+        </script>
+   </binding>
+</key>
+<key n="361"><name>PageDown</name>                                   <desc>Approach</desc>
+   <binding><command>nasal</command>
+        <script>
+            setprop("/autopilot/settings/target-speed-kt", 200);
+            setprop("/autopilot/locks/speed", "speed-with-throttle");
+            setprop("/autopilot/locks/altitude", "");
+            setprop("/autopilot/locks/heading", "");
+            setprop("/controls/flight/flaps", 0.0);
+            setprop("/afcs/flight-mode", "Approach");
+        </script>
+   </binding>
+</key>
+<key n="362"><name>Home</name>                                       <desc>Take Off</desc>
+  <binding><command>nasal</command>
+        <script>
+            setprop("/controls/engines/engine[0]/reverser", 0); # just in case
+            setprop("/autopilot/settings/target-speed-kt", 250);
+            setprop("/autopilot/locks/speed", "speed-with-throttle");
+            setprop("/autopilot/locks/altitude", "");
+            setprop("/autopilot/locks/heading", "");
+            setprop("/controls/flight/flaps", 0.20);
+            setprop("/controls/gear/brake-parking", 0);
+            setprop("/afcs/flight-mode", "Take off");
+        </script>
+     </binding>
+ </key>
+<key n="363"><name>End</name>                                         <desc>Landing</desc>
+  <binding><command>nasal</command>
+  <script>
+            setprop("/autopilot/settings/target-speed-kt", 130);
+            setprop("/autopilot/locks/speed", "speed-with-throttle");
+            setprop("/autopilot/locks/altitude", "");
+            setprop("/autopilot/settings/heading-bug-deg",  getprop("/orientation/heading-magnetic-deg"));
+            setprop("/autopilot/settings/true-heading-deg", getprop("/orientation/heading-deg"));
+            setprop("/autopilot/locks/heading", "");
+            setprop("/controls/flight/flaps", 0.60);
+            setprop("/controls/gear/gear-down", 1);
+            setprop("/controls/gear/brake-parking", 1);
+            setprop("/afcs/flight-mode", "Landing");
+            # SU-37-hudCanvas.nas will lower hook if Carrier is within 10nm and "/afcs/flight-mode"= "Landing"
+            setprop("/sim/current-view/field-of-view", 73.5); # Zoom in (90 deg is default)
+  </script>
+  </binding>
+</key>
+<key n="67"><name>C</name>                           <desc>Catapult Launch Command.</desc>
+   <binding>
+     <command>property-assign</command>
+     <property>/controls/gear/catapult-launch-cmd</property>
+     <value type="bool">true</value>
+   </binding>
+   <mod-up>
+     <binding>
+       <command>property-assign</command>
+       <property>/controls/gear/catapult-launch-cmd</property>
+       <value type="bool">false</value>
+     </binding>
+   </mod-up>
+</key>
+<key n="76"><name>L</name>                                 <desc>Launch-bar engage.</desc>
+   <binding>
+     <command>property-assign</command>
+     <property>/controls/gear/launchbar</property>
+     <value type="bool">true</value>
+   </binding>
+   <mod-up>
+     <binding>
+       <command>property-assign</command>
+       <property>/controls/gear/launchbar</property>
+       <value type="bool">false</value>
+     </binding>
+   </mod-up>
+</key>
+<key n="111"><name>o</name>                                       <desc>Hook toggle</desc>
+  <binding><command>nasal</command>
+  <script>
+    if(getprop("/controls/gear/tailhook") == 0.0){
+       setprop("/controls/gear/tailhook",    1.0);
+    }
+    else{ setprop("/controls/gear/tailhook", 0.0);}
+  </script>
+  </binding>
+</key>
+
+  </PropertyList>
