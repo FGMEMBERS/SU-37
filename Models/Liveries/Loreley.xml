@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Loreley</name>
+        <texture>Liveries/Loreley-top.png</texture> 
+        <texture-pilot>Liveries/fighter_pilot.png</texture-pilot>
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>
