@@ -44,7 +44,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>arm-selector</object-name>
-		<property>sim/model/f-14b/controls/armament/stick-selector</property>
+		<property>sim/model/SU-37/controls/armament/stick-selector</property>
 		<factor>30</factor>
 		<center>
 			<x-m>0.0842</x-m>

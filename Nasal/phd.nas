@@ -1,27 +1,25 @@
 # Simulates a Terrain Clearance Radar Mode on the A-6A pilots radar display. 
 
-
-
 var disp_length	= 0.0856; # lenght of the plots line in m (3D model).
 var disp_def	= 100; # number of plots in the line (3D model).
 var dev_calibration = 2.5; # factors vert. deviation for better readability.
 
 var UPDATE_PERIOD = 0.2;
 
-var TCrealistic = props.globals.getNode("/sim/model/F-23C/controls/PHD/TCrealistic-shadow", 1);
-var TCon_off    = props.globals.getNode("/sim/model/F-23C/controls/PHD/off-stdby-on", 1);
-var instr       = props.globals.getNode("/sim/model/F-23C/instrumentation/PHD");
-var phdTCrng    = props.globals.getNode("/sim/model/F-23C/instrumentation/PHD/TCrange");
-var v_rng_dev   = props.globals.getNode("/sim/model/F-23C/instrumentation/PHD/v-deviation");
-var h_rng_dev   = props.globals.getNode("/sim/model/F-23C/instrumentation/PHD/h-deviation");
-var plots_out   = props.globals.getNode("/sim/model/F-23C/instrumentation/PHD/plots-out-of-range");
-var ac_hdg      = props.globals.getNode("/orientation/heading-deg");
-var pitch       = props.globals.getNode("/orientation/pitch-deg");
-var ac_lon      = props.globals.getNode("/position/longitude-deg");
-var ac_lat      = props.globals.getNode("/position/latitude-deg");
-var ac_alt      = props.globals.getNode("/position/altitude-ft");
-var view_name   = props.globals.getNode("sim/current-view/name");
-var view_pitch  = props.globals.getNode("sim/current-view/pitch-offset-deg");
+var TCrealistic = props.globals.getNode("/sim/model/SU-37/controls/PHD/TCrealistic-shadow", 1);
+var TCon_off    = props.globals.getNode("/sim/model/SU-37/controls/PHD/off-stdby-on", 1);
+var instr       = props.globals.getNode("/sim/model/SU-37/instrumentation/PHD", 1);
+var phdTCrng    = props.globals.getNode("/sim/model/SU-37/instrumentation/PHD/TCrange", 1);
+var v_rng_dev   = props.globals.getNode("/sim/model/SU-37/instrumentation/PHD/v-deviation", 1);
+var h_rng_dev   = props.globals.getNode("/sim/model/SU-37/instrumentation/PHD/h-deviation", 1);
+var plots_out   = props.globals.getNode("/sim/model/SU-37/instrumentation/PHD/plots-out-of-range", 1);
+var ac_hdg      = props.globals.getNode("/orientation/heading-deg", 1);
+var pitch       = props.globals.getNode("/orientation/pitch-deg", 1);
+var ac_lon      = props.globals.getNode("/position/longitude-deg", 1);
+var ac_lat      = props.globals.getNode("/position/latitude-deg", 1);
+var ac_alt      = props.globals.getNode("/position/altitude-ft", 1);
+var view_name   = props.globals.getNode("sim/current-view/name", 1);
+var view_pitch  = props.globals.getNode("sim/current-view/pitch-offset-deg", 1);
 
 var rng_m        = 0;
 var phd_scale    = 0;
@@ -122,7 +120,7 @@ make_beam = func {
 		} elsif ( counter == 7 ) {
 			for (var i = 0; i < 100; i += 1) {
 				# Define coords and elev of each plot.
-				var name = "/sim/model/F-23C/instrumentation/PHD/s[" ~ i ~ "]";
+				var name = "/sim/model/SU-37/instrumentation/PHD/s[" ~ i ~ "]";
 				var s = props.globals.getNode(name, 1);
 				var i_elev = elevs_list[i];
 				var i_dev = i_elev * phd_scale;
@@ -156,8 +154,11 @@ var get_remote_elev = func(d, h, o) {
 }
 
 var TCsettings = func {
-	# radar display scale.
-	var  rng_mls = phdTCrng.getValue();
+	# radar display scale
+	var rng_mls=0.1;
+	if(getprop("/sim/model/SU-37/instrumentation/PHD/TCrange")!=nil){
+		rng_mls = phdTCrng.getValue();
+	}
 	## print("     rng_mls:" ~ rng_mls);
 	rng_m = NM2M * rng_mls;
 	phd_scale = disp_length / rng_m;
@@ -169,7 +170,7 @@ var TCsettings = func {
 # init #################
 init = func {
 	print("Initializing Terrain Clearance E-scan");
-	setlistener("/sim/model/F-23C/instrumentation/PHD/TCrange", TCsettings);
+	setlistener("/sim/model/SU-37/instrumentation/PHD/TCrange", TCsettings);
 	for (var i = 0; i < 100; i += 1) { append(elevs_list, 0) }
 	TCsettings();
 	update_loop();
