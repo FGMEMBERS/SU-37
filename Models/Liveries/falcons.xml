@@ -5,9 +5,9 @@
   <sim>
     <model>
       <livery>
-        <name type="string">"Falcons of Russia"</name>
+        <name type="string">Falcons of Russia</name>
         <texture>Liveries/falcons.png</texture>
-<texture-pilot>Liveries/russian_pilot.png</texture-pilot>
+        <texture-pilot>Liveries/russian_pilot.png</texture-pilot>
       </livery>
     </model>
   </sim>

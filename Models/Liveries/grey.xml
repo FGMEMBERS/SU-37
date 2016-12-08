@@ -5,9 +5,9 @@
   <sim>
     <model>
       <livery>
-        <name type="string">GreyTest</name>
-        <texture>Liveries/test.jpg</texture>
-
+        <name type="string">Grey</name>
+        <texture>Liveries/grey.png</texture>
+        <texture-pilot>Liveries/fighter_pilot.png</texture-pilot>
       </livery>
     </model>
   </sim>

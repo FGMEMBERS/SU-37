@@ -155,9 +155,11 @@ FCS Listeners
 
 ***
 
-:copyright: 2014 Jabberwocky (P. Brendt) <br>
+
 :copyright: 2016 IAHM-COL (I. Hernandez) <br>
-:copyright: 2016 Lee Elliott <br>
+:copyright: 2016 Warty <br>
+:copyright: 2014 Jabberwocky (P. Brendt) <br>
+:copyright: 2006 Lee Elliott <br>
 
 ***
 

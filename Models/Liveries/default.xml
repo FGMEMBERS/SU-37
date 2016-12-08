@@ -7,8 +7,7 @@
       <livery>
         <name type="string">Default</name>
         <texture>Liveries/SU-37-top.png</texture> 
-		<texture-pilot>Liveries/fighter_pilot.png</texture-pilot>
-
+        <texture-pilot>Liveries/fighter_pilot.png</texture-pilot>
       </livery>
     </model>
   </sim>

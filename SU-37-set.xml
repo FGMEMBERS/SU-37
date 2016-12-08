@@ -178,9 +178,9 @@ SU-37 simulation config.
       <startup>
          <splash-texture>Aircraft/SU-37/Splash/su37splash1.png</splash-texture>
          <splash-texture>Aircraft/SU-37/Splash/su37splash2.png</splash-texture>
+         <splash-texture>Aircraft/SU-37/Splash/su37splash3.png</splash-texture>
      </startup>
-  
-  
+    
 <hud>
    <path n="1">Aircraft/SU-37/Hud/hud.xml</path>
    <visibility n="1">true</visibility>

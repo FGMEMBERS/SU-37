@@ -6,8 +6,8 @@
     <model>
       <livery>
         <name type="string">All black</name>
-        <texture>Liveries/black.jpg</texture>
-
+        <texture>Liveries/black.png</texture>
+        <texture-pilot>Liveries/fighter_pilot.png</texture-pilot>
       </livery>
     </model>
   </sim>
