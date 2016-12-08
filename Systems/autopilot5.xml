@@ -231,7 +231,10 @@
       <u_max>0.35</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
-  
+<!-- =============================================================== -->
+ <!-- Altitude Modes                                                  -->
+ <!-- =============================================================== -->
+  <!-- Pitch hold  -->
   <pid-controller>
   <name>System Command: Pitch</name>
   <debug>false</debug>
