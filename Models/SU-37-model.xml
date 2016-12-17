@@ -355,7 +355,6 @@ settimer(flameBright, 0.02);
 <unload>
 livery_update.stop();
 
-      stopFire();
       disintegrated = 0;
       removelistener(listenCrash);
       
